@@ -132,7 +132,7 @@ Level 3 引入了可发现性(Discoverability)，它可以使协议拥有自我�
 这一模型帮助我们思考我们想要提供的HTTP服务是何种类型的，同时也勾勒出人们和它进行交互时的期望。
 
 
-#### 从应用角度来分析：
+#### b、从应用角度来分析：
 一、REST描述的是在网络中client和server的一种交互形式；REST本身不实用，实用的是如何设计 RESTful API（REST风格的网络接口）；
 二、Server提供的RESTful API中，URL中只使用名词来指定资源，原则上不使用动词。“资源”是REST架构或者说整个网络处理的核心。
 URL定位资源，用HTTP动词（GET,POST,DELETE,DETC）描述操作。
