@@ -125,7 +125,7 @@ Level3的Restful API，给使用者带来了很大的遍历，使用者只需要
 现在绝大多数的RESTful接口都做到了Level2的层次，做到Level3的比较少。当然，这个模型并不是一种规范，只是用来理解Restful的工具。所以，做到了Level2，也就是面向资源和使用Http动词，就已经很Restful了。
 
 
-##### Levels的意义
+#### Levels的意义
 Level 1 解释了如何通过分治法(Divide and Conquer)来处理复杂问题，将一个大型的服务端点(Service Endpoint)分解成多个资源。
 Level 2 引入了一套标准的动词，用来以相同的方式应对类似的场景，移除不要的变化。
 Level 3 引入了可发现性(Discoverability)，它可以使协议拥有自我描述(Self-documenting)的能力。
