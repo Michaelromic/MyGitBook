@@ -10,7 +10,7 @@ Resource：资源，即数据（前面说过网络的核心）。比如 newsfeed
 Representational：某种表现形式，比如用JSON，XML，JPEG等；
 State Transfer：状态变化。通过HTTP动词实现。
 
-## 为什么要用RESTful结构呢？
+# 2. 为什么要用RESTful结构呢？
 大家都知道"古代"网页是前端后端融在一起的，比如之前的PHP，JSP等。在之前的桌面时代问题不大，但是近年来移动互联网的发展，各种类型的Client层出不穷，RESTful可以通过一套统一的接口为 Web，iOS和Android提供服务。另外对于广大平台来说，比如Facebook platform，微博开放平台，微信公共平台等，它们不需要有显式的前端，只需要一套提供服务的接口，于是RESTful更是它们最好的选择。
 
 #### 从原理角度来分析：
