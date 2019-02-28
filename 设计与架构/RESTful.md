@@ -156,7 +156,7 @@ UPDATE http://api.qc.com/v1/profile: 更新个人资料
 四、Server和Client之间传递某资源的一个表现形式，比如用JSON，XML传输文本，或者用JPG，WebP传输图片等。当然还可以压缩HTTP传输时的数据（on-wire data compression）。
 五、用 HTTP Status Code传递Server的状态信息。比如最常用的 200 表示成功，500 表示Server内部错误等。
 
-## 总结
+# 3. 总结
 好了，理解了RESTful的概念，究竟如何应用，这是个问题。根据项目的需求不同，我们的API设计规范也存在差别，完全看自身理解，满足自身需求，大的理念不变，根据需求制定项目的API规范就是好的RESTful。
 
 
