@@ -1,2 +1,2 @@
-#### 转自： [通俗易懂RESTful，如何设计RESTful风格API](https://blog.csdn.net/a78270528/article/details/78469758)
+#### 转自： [.md即markdown文件的基本常用编写语法（图文并茂）](https://www.cnblogs.com/liugang-vip/p/6337580.html)
 
