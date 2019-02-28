@@ -1,7 +1,7 @@
 # Summary
 
 * [About](./README.md)
-* 其他
+* [其他](qi-ta.md)
 
 ## Linux
 
