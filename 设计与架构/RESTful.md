@@ -125,14 +125,14 @@ Level3的Restful API，给使用者带来了很大的遍历，使用者只需要
 现在绝大多数的RESTful接口都做到了Level2的层次，做到Level3的比较少。当然，这个模型并不是一种规范，只是用来理解Restful的工具。所以，做到了Level2，也就是面向资源和使用Http动词，就已经很Restful了。
 
 
-#### Levels的意义
+##### Levels的意义
 Level 1 解释了如何通过分治法(Divide and Conquer)来处理复杂问题，将一个大型的服务端点(Service Endpoint)分解成多个资源。
 Level 2 引入了一套标准的动词，用来以相同的方式应对类似的场景，移除不要的变化。
 Level 3 引入了可发现性(Discoverability)，它可以使协议拥有自我描述(Self-documenting)的能力。
 这一模型帮助我们思考我们想要提供的HTTP服务是何种类型的，同时也勾勒出人们和它进行交互时的期望。
 
 
-从应用角度来分析：
+#### 从应用角度来分析：
 一、REST描述的是在网络中client和server的一种交互形式；REST本身不实用，实用的是如何设计 RESTful API（REST风格的网络接口）；
 二、Server提供的RESTful API中，URL中只使用名词来指定资源，原则上不使用动词。“资源”是REST架构或者说整个网络处理的核心。
 URL定位资源，用HTTP动词（GET,POST,DELETE,DETC）描述操作。
@@ -156,6 +156,7 @@ UPDATE http://api.qc.com/v1/profile: 更新个人资料
 四、Server和Client之间传递某资源的一个表现形式，比如用JSON，XML传输文本，或者用JPG，WebP传输图片等。当然还可以压缩HTTP传输时的数据（on-wire data compression）。
 五、用 HTTP Status Code传递Server的状态信息。比如最常用的 200 表示成功，500 表示Server内部错误等。
 
+## 总结
 好了，理解了RESTful的概念，究竟如何应用，这是个问题。根据项目的需求不同，我们的API设计规范也存在差别，完全看自身理解，满足自身需求，大的理念不变，根据需求制定项目的API规范就是好的RESTful。
 
 
