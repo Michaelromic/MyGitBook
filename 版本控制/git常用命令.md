@@ -22,7 +22,6 @@
 * 新建 gh-pages 分支:
 
 `git push origin gh-pages`
-
 * 切换回master分支
 
 `git checkout master`
