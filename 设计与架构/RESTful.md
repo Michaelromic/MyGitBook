@@ -1,6 +1,6 @@
 #### 转自： [通俗易懂RESTful，如何设计RESTful风格API](https://blog.csdn.net/a78270528/article/details/78469758)
 
-## 概念
+## 1. 概念
 REST -- REpresentational State Transfer 直译：表现层状态转移。这个中文直译经常出现在很多文章中。尼玛，谁听得懂“表现层状态转移”，这是人话吗？
 
 那就逐个单词来理解REST名称
