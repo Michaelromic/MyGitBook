@@ -3,11 +3,11 @@
 * [About](./README.md)
 * [其他](qi-ta.md)
 
-## Linux
+## linux
 
 * [1-1](./chap01/1-1.md)
 
-## NodeJs
+## nodejs
 
 * [2-1](./chap02/2-1.md)
 
