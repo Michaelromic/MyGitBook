@@ -35,9 +35,9 @@
 
 ## 设计与架构
 
-* [RESTful](//chap01/1-1.md)
+* [RESTful](./设计与架构/RESTful.md)
 
-## 其他
+## 辅助工具
 
-* [markdown语法](qi-ta/markdownyu-fa.md)
+* [在线工具](./辅助工具/在线工具.md)
 
