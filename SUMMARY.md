@@ -13,7 +13,7 @@
 ## 区块链
 
 * bitcoin
-  * [2-1](./nodejs/2-1.md)
+  * [README](./区块链/bitcoin/README.md)
 
 ## 设计与架构
 
