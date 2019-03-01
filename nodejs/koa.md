@@ -6,7 +6,6 @@ Node 主要用在开发 Web 应用。这决定了使用 Node，往往离不开 W
 ![](http://www.ruanyifeng.com/blogimg/asset/2017/bg2017080801.png)
 
 [Koa](http://koajs.com/) 就是一种简单好用的 Web 框架。它的特点是优雅、简洁、表达力强、自由度高。本身代码只有1000多行，所有功能都通过插件实现，很符合 Unix 哲学。
-
 ## 一、基本用法
 
 ### 1.1 架设 HTTP 服务
@@ -16,7 +15,7 @@ Node 主要用在开发 Web 应用。这决定了使用 Node，往往离不开 W
 > <code class="language-javascript">// demos/01.js
 > const Koa = require('koa');
 > const app = new Koa();
-> 
+>
 > app.listen(3000);</code>
 
 运行这个脚本。
@@ -36,11 +35,11 @@ Koa 提供一个 Context 对象，表示一次对话的上下文（包括 HTTP �
 > <code class="language-javascript">// demos/02.js
 > const Koa = require('koa');
 > const app = new Koa();
-> 
+>
 > const main = ctx => {
->   ctx.response.body = 'Hello World';
+> ctx.response.body = 'Hello World';
 > };
-> 
+>
 > app.use(main);
 > app.listen(3000);</code>
 
@@ -62,19 +61,19 @@ Koa 默认的返回类型是`text/plain`，如果想返回其他类型的内容�
 
 > <code class="language-javascript">// demos/03.js
 > const main = ctx => {
->   if (ctx.request.accepts('xml')) {
->     ctx.response.type = 'xml';
->     ctx.response.body = '<data>Hello World</data>';
->   } else if (ctx.request.accepts('json')) {
->     ctx.response.type = 'json';
->     ctx.response.body = { data: 'Hello World' };
->   } else if (ctx.request.accepts('html')) {
->     ctx.response.type = 'html';
->     ctx.response.body = '<p>Hello World</p>';
->   } else {
->     ctx.response.type = 'text';
->     ctx.response.body = 'Hello World';
->   }
+> if (ctx.request.accepts('xml')) {
+> ctx.response.type = 'xml';
+> ctx.response.body = '<data>Hello World</data>';
+> } else if (ctx.request.accepts('json')) {
+> ctx.response.type = 'json';
+> ctx.response.body = { data: 'Hello World' };
+> } else if (ctx.request.accepts('html')) {
+> ctx.response.type = 'html';
+> ctx.response.body = '<p>Hello World</p>';
+> } else {
+> ctx.response.type = 'text';
+> ctx.response.body = 'Hello World';
+> }
 > };</code>
 
 运行这个 demo。
@@ -91,10 +90,10 @@ Koa 默认的返回类型是`text/plain`，如果想返回其他类型的内容�
 
 > <code class="language-javascript">// demos/04.js
 > const fs = require('fs');
-> 
+>
 > const main = ctx => {
->   ctx.response.type = 'html';
->   ctx.response.body = fs.createReadStream('./demos/template.html');
+> ctx.response.type = 'html';
+> ctx.response.body = fs.createReadStream('./demos/template.html');
 > };</code>
 
 运行这个 Demo。
@@ -113,12 +112,12 @@ Koa 默认的返回类型是`text/plain`，如果想返回其他类型的内容�
 
 > <code class="language-javascript">// demos/05.js
 > const main = ctx => {
->   if (ctx.request.path !== '/') {
->     ctx.response.type = 'html';
->     ctx.response.body = '<a href="/">Index Page</a>';
->   } else {
->     ctx.response.body = 'Hello World';
->   }
+> if (ctx.request.path !== '/') {
+> ctx.response.type = 'html';
+> ctx.response.body = '<a href="/">Index Page</a>';
+> } else {
+> ctx.response.body = 'Hello World';
+> }
 > };</code>
 
 运行这个 demo。
@@ -135,16 +134,16 @@ Koa 默认的返回类型是`text/plain`，如果想返回其他类型的内容�
 
 > <code class="language-javascript">// demos/06.js
 > const route = require('koa-route');
-> 
+>
 > const about = ctx => {
->   ctx.response.type = 'html';
->   ctx.response.body = '<a href="/">Index Page</a>';
+> ctx.response.type = 'html';
+> ctx.response.body = '<a href="/">Index Page</a>';
 > };
-> 
+>
 > const main = ctx => {
->   ctx.response.body = 'Hello World';
+> ctx.response.body = 'Hello World';
 > };
-> 
+>
 > app.use(route.get('/', main));
 > app.use(route.get('/about', about));</code>
 
@@ -163,7 +162,7 @@ Koa 默认的返回类型是`text/plain`，如果想返回其他类型的内容�
 > <code class="language-javascript">// demos/12.js
 > const path = require('path');
 > const serve = require('koa-static');
-> 
+>
 > const main = serve(path.join(__dirname));
 > app.use(main);</code>
 
@@ -179,10 +178,10 @@ Koa 默认的返回类型是`text/plain`，如果想返回其他类型的内容�
 
 > <code class="language-javascript">// demos/13.js
 > const redirect = ctx => {
->   ctx.response.redirect('/');
->   ctx.response.body = '<a href="/">Index Page</a>';
+> ctx.response.redirect('/');
+> ctx.response.body = '<a href="/">Index Page</a>';
 > };
-> 
+>
 > app.use(route.get('/redirect', redirect));</code>
 
 运行这个 demo。
@@ -201,8 +200,8 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 > <code class="language-javascript">// demos/07.js
 > const main = ctx => {
->   console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`);
->   ctx.response.body = 'Hello World';
+> console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`);
+> ctx.response.body = 'Hello World';
 > };</code>
 
 运行这个 Demo。
@@ -219,8 +218,8 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 > <code class="language-javascript">// demos/08.js
 > const logger = (ctx, next) => {
->   console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`);
->   next();
+> console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`);
+> next();
 > }
 > app.use(logger);</code>
 
@@ -238,35 +237,35 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 多个中间件会形成一个栈结构（middle stack），以"先进后出"（first-in-last-out）的顺序执行。
 
-> 1.  最外层的中间件首先执行。
-> 2.  调用`next`函数，把执行权交给下一个中间件。
-> 3.  ...
-> 4.  最内层的中间件最后执行。
-> 5.  执行结束后，把执行权交回上一层的中间件。
-> 6.  ...
-> 7.  最外层的中间件收回执行权之后，执行`next`函数后面的代码。
+> 1. 最外层的中间件首先执行。
+> 2. 调用`next`函数，把执行权交给下一个中间件。
+> 3. ...
+> 4. 最内层的中间件最后执行。
+> 5. 执行结束后，把执行权交回上一层的中间件。
+> 6. ...
+> 7. 最外层的中间件收回执行权之后，执行`next`函数后面的代码。
 
 请看下面的例子（完整代码看[这里](https://github.com/ruanyf/koa-demos/blob/master/demos/09.js)）。
 
 > <code class="language-javascript">// demos/09.js
 > const one = (ctx, next) => {
->   console.log('>> one');
->   next();
->   console.log('<< one');
+> console.log('>> one');
+> next();
+> console.log('<< one');
 > }
-> 
+>
 > const two = (ctx, next) => {
->   console.log('>> two');
->   next(); 
->   console.log('<< two');
+> console.log('>> two');
+> next();
+> console.log('<< two');
 > }
-> 
+>
 > const three = (ctx, next) => {
->   console.log('>> three');
->   next();
->   console.log('<< three');
+> console.log('>> three');
+> next();
+> console.log('<< three');
 > }
-> 
+>
 > app.use(one);
 > app.use(two);
 > app.use(three);</code>
@@ -288,18 +287,18 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 ### 3.4 异步中间件
 
-迄今为止，所有例子的中间件都是同步的，不包含异步操作。如果有异步操作（比如读取数据库），中间件就必须写成 [async 函数](http://es6.ruanyifeng.com/#docs/async)。请看下面的例子（完整代码看[这里](https://github.com/ruanyf/koa-demos/blob/master/demos/10.js)）。
+迄今为止，所有例子的中间件都是同步的，不包含异步操作。如果有异步操作（比如读取数据库），中间件就必须写成 [async 函数](http://es6.ruanyifeng.com/#docs/async)。请看下面的例子（完整代码看[这里](https://github.com/ruanyf/koa-demos/blob/master/demos/10.js)）。
 
 > <code class="language-javascript">// demos/10.js
 > const fs = require('fs.promised');
 > const Koa = require('koa');
 > const app = new Koa();
-> 
+>
 > const main = async function (ctx, next) {
->   ctx.response.type = 'html';
->   ctx.response.body = await fs.readFile('./demos/template.html', 'utf8');
+> ctx.response.type = 'html';
+> ctx.response.body = await fs.readFile('./demos/template.html', 'utf8');
 > };
-> 
+>
 > app.use(main);
 > app.listen(3000);</code>
 
@@ -317,16 +316,16 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 > <code class="language-javascript">// demos/11.js
 > const compose = require('koa-compose');
-> 
+>
 > const logger = (ctx, next) => {
->   console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`);
->   next();
+> console.log(`${Date.now()} ${ctx.request.method} ${ctx.request.url}`);
+> next();
 > }
-> 
+>
 > const main = ctx => {
->   ctx.response.body = 'Hello World';
+> ctx.response.body = 'Hello World';
 > };
-> 
+>
 > const middlewares = compose([logger, main]);
 > app.use(middlewares);</code>
 
@@ -344,7 +343,7 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 > <code class="language-javascript">// demos/14.js
 > const main = ctx => {
->   ctx.throw(500);
+> ctx.throw(500);
 > };</code>
 
 运行这个 demo。
@@ -361,8 +360,8 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 > <code class="language-javascript">// demos/15.js
 > const main = ctx => {
->   ctx.response.status = 404;
->   ctx.response.body = 'Page Not Found';
+> ctx.response.status = 404;
+> ctx.response.body = 'Page Not Found';
 > };</code>
 
 运行这个 demo。
@@ -379,20 +378,20 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 > <code class="language-javascript">// demos/16.js
 > const handler = async (ctx, next) => {
->   try {
->     await next();
->   } catch (err) {
->     ctx.response.status = err.statusCode || err.status || 500;
->     ctx.response.body = {
->       message: err.message
->     };
->   }
+> try {
+> await next();
+> } catch (err) {
+> ctx.response.status = err.statusCode || err.status || 500;
+> ctx.response.body = {
+> message: err.message
 > };
-> 
+> }
+> };
+>
 > const main = ctx => {
->   ctx.throw(500);
+> ctx.throw(500);
 > };
-> 
+>
 > app.use(handler);
 > app.use(main);</code>
 
@@ -400,7 +399,7 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 > <code class="language-bash">$ node demos/16.js</code>
 
-访问 http://127.0.0.1:3000 ，你会看到一个500页，里面有报错提示 `{"message":"Internal Server Error"}`。
+访问 http://127.0.0.1:3000 ，你会看到一个500页，里面有报错提示 `{"message":"Internal Server Error"}`。
 
 ![](http://www.ruanyifeng.com/blogimg/asset/2017/bg2017080809.png)
 
@@ -410,11 +409,11 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 > <code class="language-javascript">// demos/17.js
 > const main = ctx => {
->   ctx.throw(500);
+> ctx.throw(500);
 > };
-> 
+>
 > app.on('error', (err, ctx) =>
->   console.error('server error', err);
+> console.error('server error', err);
 > );</code>
 
 运行这个 demo。
@@ -429,23 +428,23 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 > <code class="language-javascript">// demos/18.js`
 > const handler = async (ctx, next) => {
->   try {
->     await next();
->   } catch (err) {
->     ctx.response.status = err.statusCode || err.status || 500;
->     ctx.response.type = 'html';
->     ctx.response.body = '<p>Something wrong, please contact administrator.</p>';
->     ctx.app.emit('error', err, ctx);
->   }
+> try {
+> await next();
+> } catch (err) {
+> ctx.response.status = err.statusCode || err.status || 500;
+> ctx.response.type = 'html';
+> ctx.response.body = '<p>Something wrong, please contact administrator.</p>';
+> ctx.app.emit('error', err, ctx);
+> }
 > };
-> 
+>
 > const main = ctx => {
->   ctx.throw(500);
+> ctx.throw(500);
 > };
-> 
+>
 > app.on('error', function(err) {
->   console.log('logging error ', err.message);
->   console.log(err);
+> console.log('logging error ', err.message);
+> console.log(err);
 > });</code>
 
 上面代码中，`main`函数抛出错误，被`handler`函数捕获。`catch`代码块里面使用`ctx.app.emit()`手动释放`error`事件，才能让监听函数监听到。
@@ -464,9 +463,9 @@ Koa 的最大特色，也是最重要的一个设计，就是中间件（middlew
 
 > <code class="language-javascript">// demos/19.js
 > const main = function(ctx) {
->   const n = Number(ctx.cookies.get('view') || 0) + 1;
->   ctx.cookies.set('view', n);
->   ctx.response.body = n + ' views';
+> const n = Number(ctx.cookies.get('view') || 0) + 1;
+> ctx.cookies.set('view', n);
+> ctx.response.body = n + ' views';
 > }</code>
 
 运行这个 demo。
@@ -483,13 +482,13 @@ Web 应用离不开处理表单。本质上，表单就是 POST 方法发送到�
 
 > <code class="language-javascript">// demos/20.js
 > const koaBody = require('koa-body');
-> 
+>
 > const main = async function(ctx) {
->   const body = ctx.request.body;
->   if (!body.name) ctx.throw(400, '.name required');
->   ctx.body = { name: body.name };
+> const body = ctx.request.body;
+> if (!body.name) ctx.throw(400, '.name required');
+> ctx.body = { name: body.name };
 > };
-> 
+>
 > app.use(koaBody());</code>
 
 运行这个 demo。
@@ -500,7 +499,7 @@ Web 应用离不开处理表单。本质上，表单就是 POST 方法发送到�
 
 > <code class="language-bash">$ curl -X POST --data "name=Jack" 127.0.0.1:3000
 > {"name":"Jack"}
-> 
+>
 > $ curl -X POST --data "name" 127.0.0.1:3000
 > name required</code>
 
@@ -514,24 +513,24 @@ Web 应用离不开处理表单。本质上，表单就是 POST 方法发送到�
 > const os = require('os');
 > const path = require('path');
 > const koaBody = require('koa-body');
-> 
+>
 > const main = async function(ctx) {
->   const tmpdir = os.tmpdir();
->   const filePaths = [];
->   const files = ctx.request.body.files || {};
-> 
->   for (let key in files) {
->     const file = files[key];
->     const filePath = path.join(tmpdir, file.name);
->     const reader = fs.createReadStream(file.path);
->     const writer = fs.createWriteStream(filePath);
->     reader.pipe(writer);
->     filePaths.push(filePath);
->   }
-> 
->   ctx.body = filePaths;
+> const tmpdir = os.tmpdir();
+> const filePaths = [];
+> const files = ctx.request.body.files || {};
+>
+> for (let key in files) {
+> const file = files[key];
+> const filePath = path.join(tmpdir, file.name);
+> const reader = fs.createReadStream(file.path);
+> const writer = fs.createWriteStream(filePath);
+> reader.pipe(writer);
+> filePaths.push(filePath);
+> }
+>
+> ctx.body = filePaths;
 > };
-> 
+>
 > app.use(koaBody({ multipart: true }));</code>
 
 运行这个 demo。
@@ -545,6 +544,6 @@ Web 应用离不开处理表单。本质上，表单就是 POST 方法发送到�
 
 ## 六、参考链接
 
-*   [koa workshop](https://github.com/koajs/workshop)
-*   [kick-off-koa](https://github.com/koajs/kick-off-koa)
-*   [Koa Examples](https://github.com/koajs/examples)
+* [koa workshop](https://github.com/koajs/workshop)
+* [kick-off-koa](https://github.com/koajs/kick-off-koa)
+* [Koa Examples](https://github.com/koajs/examples)
