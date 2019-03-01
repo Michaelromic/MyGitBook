@@ -12,7 +12,7 @@
 
 ## 区块链
 
-* [bitcoin1](qu-kuai-lian/bitcoin.md)
+* bitcoin
   * [2-1](./nodejs/2-1.md)
 
 ## 设计与架构
