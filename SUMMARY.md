@@ -12,9 +12,8 @@
 
 ## 区块链
 
-   ### bitcoin
-
-* [2-1](./nodejs/2-1.md)
+   * [bitcoin](./nodejs/2-1.md)
+      * [2-1](./nodejs/2-1.md)
 
 
 ## 设计与架构
