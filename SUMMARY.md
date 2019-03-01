@@ -29,6 +29,11 @@
 
 * [jmeter压力测试](./测试工具/jmeter压力测试.md)
 
+## 版本控制
+
+* [jmeter压力测试](./版本控制
+/jmeter压力测试.md)
+
 ## 设计与架构
 
 * [RESTful](//chap01/1-1.md)
