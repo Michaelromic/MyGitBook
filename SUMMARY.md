@@ -12,7 +12,7 @@
 
 ## 区块链
 
-* [bitcoin]()
+* bitcoin
     * [2-1](./nodejs/2-1.md)
 
 
