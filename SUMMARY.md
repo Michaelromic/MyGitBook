@@ -21,6 +21,14 @@
 * 其他
   * [README](./区块链/其他/README.md)
 
+## 文档编写
+
+* [markdown语法](./文档编写/markdown语法.md)
+
+## 测试工具
+
+* [jmeter压力测试](./测试工具/jmeter压力测试.md)
+
 ## 设计与架构
 
 * [RESTful](//chap01/1-1.md)
