@@ -35,4 +35,4 @@
 `git branch`
 
 * clone其他分支代码
-`git clone -b luoming git@github.com:Michaelromic/MyGitBook.git ./MyGitBook_luoming`
+`git clone -b branchname git@github.com:Michaelromic/MyGitBook.git ./branchname `
