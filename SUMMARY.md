@@ -8,7 +8,7 @@
 
 ## nodejs
 
-* [2-1](./nodejs/2-1.md)
+* [koa](./nodejs/2-1.md)
 
 ## 区块链
 
