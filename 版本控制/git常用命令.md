@@ -33,3 +33,6 @@
 * 查看本地分支
 
 `git branch`
+
+* clone其他分支代码
+`git clone -b luoming git@github.com:Michaelromic/MyGitBook.git ./MyGitBook_luoming`
