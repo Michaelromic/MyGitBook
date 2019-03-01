@@ -14,6 +14,12 @@
 
 * bitcoin
   * [README](./区块链/bitcoin/README.md)
+* eos
+  * [README](./区块链/eos/README.md)
+* ethereum
+  * [README](./区块链/ethereum/README.md)
+* 其他
+  * [README](./区块链/其他/README.md)
 
 ## 设计与架构
 
