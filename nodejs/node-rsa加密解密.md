@@ -41,8 +41,6 @@ function encrypt() {
 encrypt();
 ```
 
-然后执行 `node index.js` 终端里会输出一串类似 `fH1aVCUceJYVvt1tZ7WYc1Dh5dVCd952GY5CX283V/wK2229FLgT9WfRNAPMjbTtwL9ghVeYD4Lsi6yM1t4OqA==` 的base64字符串，这就是用私钥加密后的密文了
-
 ## 解密
 
 把上一步加密获得的密文复制粘贴到下面要解密的方法内
