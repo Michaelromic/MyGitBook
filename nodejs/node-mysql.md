@@ -1,4 +1,4 @@
-# Node连接MySQL并封装其增删查改
+# [Node连接MySQL并封装其增删查改](https://juejin.im/post/5afd4aeb6fb9a07ab458d78a)
 
 ## 调用方法
 1. 连接Mysql
