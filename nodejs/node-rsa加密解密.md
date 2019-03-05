@@ -50,6 +50,5 @@ function decrypt() {
         console.log(rawText);
     });
 }
-decrypt();
 ```
 
