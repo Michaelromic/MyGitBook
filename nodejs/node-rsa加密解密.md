@@ -56,7 +56,7 @@ function decrypt() {
 ```
 
 const fs = require("fs");
-var NodeRSA = require('node-rsa')
+const NodeRSA = require('node-rsa')
 
 function encrypt(data) {
     return new Promise((resolve,reject)=>{
