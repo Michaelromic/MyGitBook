@@ -13,12 +13,12 @@ function generator() {
     var publicPem = key.exportKey('pkcs1-public-pem')
     
     fs.writeFile('./pem/public.pem', publicPem, (err) => {
-    if (err) throw err
-    console.log('公钥已保存！')
+        if (err) throw err
+        console.log('公钥已保存！')
     })
     fs.writeFile('./pem/private.pem', privatePem, (err) => {
-    if (err) throw err
-    console.log('私钥已保存！')
+        if (err) throw err
+        console.log('私钥已保存！')
     })
 }
 generator();
