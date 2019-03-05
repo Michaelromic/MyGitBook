@@ -74,29 +74,19 @@ mysql@2.5.4 node_modules\mysql
 2、编写nodejs与mysql交互的代码
 
 //mysql.js
-
 //首先需要安装nodejs 的mysql包
-
 //npm install mysql
 
 //编写nodejs与mysql交互的代码
-
 var mysql = require('mysql'); 
-
 var TEST_DATABASE = 'my_news_test'; 
-
 var TEST_TABLE = 'node_user'; 
 
 //创建连接 
-
 var client = mysql.createConnection({ 
-
   user: 'root', 
-
   password: 'root123', 
-
 }); 
-
 client.connect();
 
 client.query("use " + TEST_DATABASE);
