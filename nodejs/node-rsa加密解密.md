@@ -36,8 +36,8 @@ generator();
 ## 加密
 
 加密 `hello world` 这个字符串
-
- <code>function encrypt() {
+```
+function encrypt() {
   fs.readFile('./pem/private.pem', function (err, data) {
     var key = new NodeRSA(data);
     let cipherText = key.encryptPrivate('hello world', 'base64');
@@ -46,7 +46,8 @@ generator();
 }
 
 //generator();
-encrypt();</code> 
+encrypt();
+```
 
 然后执行 `node index.js` 终端里会输出一串类似 `fH1aVCUceJYVvt1tZ7WYc1Dh5dVCd952GY5CX283V/wK2229FLgT9WfRNAPMjbTtwL9ghVeYD4Lsi6yM1t4OqA==` 的base64字符串，这就是用私钥加密后的密文了
 
@@ -54,7 +55,8 @@ encrypt();</code>
 
 把上一步加密获得的密文复制粘贴到下面要解密的方法内
 
- <code>function decrypt() {
+```
+function decrypt() {
   fs.readFile('./pem/public.pem', function (err, data) {
     var key = new NodeRSA(data);
     let rawText = key.decryptPublic('fH1aVCUceJYVvt1tZ7WYc1Dh5dVCd952GY5CX283V/wK2229FLgT9WfRNAPMjbTtwL9ghVeYD4Lsi6yM1t4OqA==', 'utf8');
@@ -64,6 +66,7 @@ encrypt();</code>
 
 //generator();
 //encrypt();
-decrypt();</code> 
+decrypt();
+```
 
 执行 `node index.js` 会发现又拿到 `hello world` 了
