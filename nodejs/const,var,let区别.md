@@ -1,6 +1,6 @@
 # [js中const,var,let区别](https://www.cnblogs.com/ksl666/p/5944718.html)
 
-js中三种定义变量的方式const， var， let的区别。
+## js中三种定义变量的方式const， var， let的区别。
 
 ### 1. const定义的变量不可以修改，而且必须初始化。
 ```
