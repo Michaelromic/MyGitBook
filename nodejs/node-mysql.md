@@ -2,7 +2,6 @@
 
 ## 调用方法
 ##### 1. 连接Mysql
-
 ```
 const mysql = require('mysql');
 
