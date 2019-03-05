@@ -3,16 +3,15 @@
 js中三种定义变量的方式const， var， let的区别。
 
 1.const定义的变量不可以修改，而且必须初始化。
-
+```
  1 const b = 2;//正确
 2 // const b;//错误，必须初始化 
 3 console.log('函数外const定义b：' + b);//有输出值
 4 // b = 5;
 5 // console.log('函数外修改const定义b：' + b);//无法输出 
+```
 
 2.var定义的变量可以修改，如果不初始化会输出undefined，不会报错。
-
- <a title="复制代码">![复制代码](http://common.cnblogs.com/images/copycode.gif)</a>
 
 1 var a = 1;
 2 // var a;//不会报错
