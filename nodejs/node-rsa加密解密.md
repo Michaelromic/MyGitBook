@@ -35,8 +35,6 @@ function encrypt() {
         console.log(cipherText);
     });
 }
-
-//generator();
 encrypt();
 ```
 
@@ -52,9 +50,6 @@ function decrypt() {
         console.log(rawText);
     });
 }
-
-//generator();
-//encrypt();
 decrypt();
 ```
 
