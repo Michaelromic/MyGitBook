@@ -1,7 +1,7 @@
 # [Node连接MySQL并封装其增删查改](https://juejin.im/post/5afd4aeb6fb9a07ab458d78a)
 
 ## 调用方法
-1. 连接Mysql
+##### 1. 连接Mysql
 
 ```
 const mysql = require('mysql');
@@ -21,7 +21,7 @@ connection.connect(function(err) {
   console.log('连接成功 id ' + connection.threadId);
 });
 ```
-2. 查询
+##### 2. 查询
 
 ```
 connection.query('SELECT * FROM t_user WHERE username = "whg"', (err, results, fields) => {
