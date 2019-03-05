@@ -22,7 +22,6 @@ connection.connect(function(err) {
 });
 ```
 ##### 2. 查询
-
 ```
 connection.query('SELECT * FROM t_user WHERE username = "whg"', (err, results, fields) => {
     if(err){
