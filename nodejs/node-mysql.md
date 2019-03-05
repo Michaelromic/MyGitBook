@@ -64,7 +64,7 @@ connection.end(function(err) {
 connection.destroy();
 
 ```
----
+-----
 ## 封装
 1.数据库配置文件
 ```
