@@ -17,17 +17,14 @@ var connection = mysql.createConnection({
 });
 ```
 代码什么意思很直白，如果想深入，可以去上面的官网查。像host，user之类的配置，写过MySQL数据库应用程序的，应该都很清楚，请自行修改相应参数。后面的代码，假定数据库”my_news_test”中有一个叫node_use的表，表有3个属性
-
 id: 自增主键
-
 name：名字，有unique的限制
-
 age
 
 测试MySQL　　MySQL版本：5.5
 
-二、建库并插入5条记录
-
+### 二、建库并插入5条记录
+```
 Source Database       : my_news_test
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -41,15 +38,10 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE IF EXISTS `node_user`;
 
 CREATE TABLE `node_user` (
-
   `id` int(11) NOT NULL AUTO_INCREMENT,
-
   `name` varchar(30) DEFAULT NULL,
-
   `age` int(8) DEFAULT NULL,
-
   PRIMARY KEY (`id`)
-
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -57,18 +49,13 @@ CREATE TABLE `node_user` (
 -- Records of node_user
 
 -- ----------------------------
-
 INSERT INTO `node_user` VALUES ('1', 'admin', '32');
-
 INSERT INTO `node_user` VALUES ('2', 'dans88', '45');
-
 INSERT INTO `node_user` VALUES ('3', '张三', '35');
-
 INSERT INTO `node_user` VALUES ('4', 'ABCDEF', '88');
-
 INSERT INTO `node_user` VALUES ('5', '李小二', '65');
-
-三、先测试一下环境
+```
+### 三、先测试一下环境
 
 1、  首先需要安装nodejs 的mysql包
 
