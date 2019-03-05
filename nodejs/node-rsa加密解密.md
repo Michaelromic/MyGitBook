@@ -35,7 +35,6 @@ function encrypt() {
         console.log(cipherText);
     });
 }
-encrypt();
 ```
 
 ## 解密
