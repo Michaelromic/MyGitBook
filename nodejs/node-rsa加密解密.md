@@ -27,7 +27,7 @@ generator();
 
 ## 加密
 
-加密 hello world 这个字符串
+加密 "hello world" 这个字符串
 ```
 function encrypt() {
   fs.readFile('./pem/private.pem', function (err, data) {
