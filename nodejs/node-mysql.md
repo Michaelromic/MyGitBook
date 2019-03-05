@@ -7,21 +7,15 @@ nodejs的教程，大多以操作mongodb为示例。但是mongodb有一些局限
 下面这个项目的package name是 mysql，版本是mysql@ 2.5.4
 
 先说明下面的所示代码，均已以下代码开头，后面不在说明
-
+```
 var connection = mysql.createConnection({
-
-  host     : '127.0.0.1',
-
-  user     : 'root',
-
-  password : 'root123',
-
-  port: '3306',
-
-  database: 'my_news_test',
-
+    host     : '127.0.0.1',
+    user     : 'root',
+    password : 'root123',
+    port: '3306',
+    database: 'my_news_test',
 });
-
+```
 代码什么意思很直白，如果想深入，可以去上面的官网查。像host，user之类的配置，写过MySQL数据库应用程序的，应该都很清楚，请自行修改相应参数。后面的代码，假定数据库”my_news_test”中有一个叫node_use的表，表有3个属性
 
 id: 自增主键
