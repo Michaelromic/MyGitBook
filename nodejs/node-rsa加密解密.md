@@ -54,11 +54,10 @@ function decrypt() {
 ---
 ## 上面的例子是私钥加密，公钥解密，下面自测，用公钥加密，私钥解密
 ```
-
 const fs = require("fs");
 const NodeRSA = require('node-rsa')
 
-function encrypt(data) {
+function rsaEncrypt(data) {
     return new Promise((resolve,reject)=>{
         fs.readFile('./rsa_key/rsa_public_key.pem', function (err, pubkey) {
             if(err){
@@ -77,7 +76,7 @@ function encrypt(data) {
     })
 }
 
-function decrypt(data) {
+function rsaDecrypt(data) {
     fs.readFile('./rsa_key/rsa_private_key.pem', function (err, privkey) {
         var key = new NodeRSA(privkey);
         let rawText = key.decrypt(data, 'utf8');
@@ -88,10 +87,10 @@ function decrypt(data) {
 async function testrsa()
 {
     const data = "cUw4fDSUDXYbFSDp5WUBYhpaKb3cdzaQyBFJVzAH3YJFgNb5dTSM";
-    const result = await encrypt(data);
+    const result = await rsaEncrypt(data);
     console.log("222");
     console.log(result);
-    decrypt(result);
+    rsaDecrypt(result);
 }
 
 testrsa();
