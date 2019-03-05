@@ -3,6 +3,29 @@
 ## 调用方法
 1. 连接Mysql
 
+```
+const mysql = require('mysql');
+
+let connection = mysql.createConnection({
+    host : 'localhost',
+    user : 'root', 
+    password : 'password',
+    database : 'test'
+});
+
+connection.connect(function(err) {
+  if (err) {
+    console.error('连接失败: ' + err.stack);
+    return;
+  }
+  console.log('连接成功 id ' + connection.threadId);
+});
+```
+2. 查询
+
+```
+
+```
 
 
 ## 封装
