@@ -40,7 +40,7 @@ connection.query('INSERT INTO t_user(username, pass) VALUES(?, ?)',['whg', '123'
     console.log(results);
 })
 ```
-4. 删除
+##### 4. 删除
 ```
 connection.query('DELETE FROM t_user  WHERE id = 1', (err, results) => {
     if(err){
@@ -49,7 +49,7 @@ connection.query('DELETE FROM t_user  WHERE id = 1', (err, results) => {
     console.log(results);
 })
 ```
-3. 更新
+##### 5. 更新
 ```
 connection.query('UPDATE t_user SET pass = "321" WHERE username = "whg"', (err, results) => {
     if(err){
