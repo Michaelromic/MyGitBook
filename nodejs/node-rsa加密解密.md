@@ -21,7 +21,6 @@ function generator() {
         console.log('私钥已保存！')
     })
 }
-generator();
 ```
 
 ## 加密
