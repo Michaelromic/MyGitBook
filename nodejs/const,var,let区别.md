@@ -17,8 +17,8 @@ var a = 1;
 // var a;//不会报错
 console.log('函数外var定义a：' + a);//可以输出a=1
 function change(){
-a = 4;
-console.log('函数内var定义a：' + a);//可以输出a=4
+    a = 4;
+    console.log('函数内var定义a：' + a);//可以输出a=4
 } 
 change();
 console.log('函数调用后var定义a为函数内部修改值：' + a);//可以输出a=4
@@ -29,8 +29,8 @@ console.log('函数调用后var定义a为函数内部修改值：' + a);//可以
 let c = 3;
 console.log('函数外let定义c：' + c);//输出c=3
 function change(){
-let c = 6;
-console.log('函数内let定义c：' + c);//输出c=6
+    let c = 6;
+    console.log('函数内let定义c：' + c);//输出c=6
 } 
 change();
 console.log('函数调用后let定义c不受函数内部定义影响：' + c);//输出c=3
