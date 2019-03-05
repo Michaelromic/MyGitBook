@@ -59,7 +59,7 @@ Koa 提供一个 Context 对象，表示一次对话的上下文（包括 HTTP �
 
 Koa 默认的返回类型是`text/plain`，如果想返回其他类型的内容，可以先用`ctx.request.accepts`判断一下，客户端希望接受什么数据（根据 HTTP Request 的`Accept`字段），然后使用`ctx.response.type`指定返回类型。请看下面的例子（完整代码看[这里](https://github.com/ruanyf/koa-demos/blob/master/demos/03.js)）。
 
-> <code class="language-javascript">// demos/03.js
+> // demos/03.js
 > const main = ctx => {
 > if (ctx.request.accepts('xml')) {
 > ctx.response.type = 'xml';
@@ -74,7 +74,7 @@ Koa 默认的返回类型是`text/plain`，如果想返回其他类型的内容�
 > ctx.response.type = 'text';
 > ctx.response.body = 'Hello World';
 > }
-> };</code>
+> };
 
 运行这个 demo。
 
