@@ -29,11 +29,11 @@ generator();
 加密 "hello world" 这个字符串
 ```
 function encrypt() {
-fs.readFile('./pem/private.pem', function (err, data) {
-var key = new NodeRSA(data);
-let cipherText = key.encryptPrivate('hello world', 'base64');
-console.log(cipherText);
-});
+    fs.readFile('./pem/private.pem', function (err, data) {
+        var key = new NodeRSA(data);
+        let cipherText = key.encryptPrivate('hello world', 'base64');
+        console.log(cipherText);
+    });
 }
 
 //generator();
