@@ -1,6 +1,6 @@
 # [Nodejs连接mysql的增、删、改、查操作](https://www.cnblogs.com/niejunchan/p/6439924.html)
 
-一、准备
+### 一、准备
 
 nodejs的教程，大多以操作mongodb为示例。但是mongodb有一些局限性，具体官网上有说。我打算用MySQL，因为多少还有点使用经验。先以研究为主。node-mysql，是目前最火的node下的mysql驱动。初步了用了一下，因为异步回调的这种方式，果然好多坑。
 
