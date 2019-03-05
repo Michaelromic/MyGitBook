@@ -54,5 +54,42 @@ function decrypt() {
 --------------------------------------------
 ## 上面的例子是私钥加密，公钥解密，下面自测，用公钥加密，私钥解密
 ```
+var cipherText;
+function encrypt(data) {
+    return new Promise((resolve,reject)=>{
+        fs.readFile('./rsa_key/rsa_public_key.pem', function (err, pubkey) {
+            if(err){
+                reject(console.log(err))
+            } else {
+                var key = new NodeRSA(pubkey);
+                cipherText = key.encrypt(data, 'base64');
 
+                console.log(data);
+                console.log(cipherText);
+                console.log("111");
+
+                resolve();
+            }
+        });
+    })
+}
+
+function decrypt(data) {
+    fs.readFile('./rsa_key/rsa_private_key.pem', function (err, privkey) {
+        var key = new NodeRSA(privkey);
+        let rawText = key.decrypt(data, 'utf8');
+        console.log(rawText);
+    });
+}
+
+async function testrsa()
+{
+    const data = "cUw4fDSUDXYbFSDp5WUBYhpaKb3cdzaQyBFJVzAH3YJFgNb5dTSM";
+    await encrypt(data);
+    console.log("222");
+    console.log(cipherText);
+    decrypt(cipherText);
+}
+
+testrsa();
 ```
