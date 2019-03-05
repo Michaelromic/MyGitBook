@@ -59,4 +59,4 @@ function decrypt() {
 decrypt();
 ```
 
-执行 `node index.js` 会发现又拿到 `hello world` 了
+
