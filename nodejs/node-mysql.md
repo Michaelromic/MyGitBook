@@ -31,7 +31,7 @@ connection.query('SELECT * FROM t_user WHERE username = "whg"', (err, results, f
     console.log(results);
 })
 ```
-3. 添加
+##### 3. 添加
 ```
 connection.query('INSERT INTO t_user(username, pass) VALUES(?, ?)',['whg', '123'], (err, results) => {
     if(err){
