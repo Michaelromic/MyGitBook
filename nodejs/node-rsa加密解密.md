@@ -46,11 +46,11 @@ encrypt();
 
 ```
 function decrypt() {
-fs.readFile('./pem/public.pem', function (err, data) {
-var key = new NodeRSA(data);
-let rawText = key.decryptPublic('fH1aVCUceJYVvt1tZ7WYc1Dh5dVCd952GY5CX283V/wK2229FLgT9WfRNAPMjbTtwL9ghVeYD4Lsi6yM1t4OqA==', 'utf8');
-console.log(rawText);
-});
+    fs.readFile('./pem/public.pem', function (err, data) {
+        var key = new NodeRSA(data);
+        let rawText = key.decryptPublic('fH1aVCUceJYVvt1tZ7WYc1Dh5dVCd952GY5CX283V/wK2229FLgT9WfRNAPMjbTtwL9ghVeYD4Lsi6yM1t4OqA==', 'utf8');
+        console.log(rawText);
+    });
 }
 
 //generator();
