@@ -43,3 +43,4 @@
         `git remote -v`
     * 切换到ssh：
         `git remote set-url git@github.com:drchen126/b0.git`
+也可以直接改当前git目录里面有个配置文件。
