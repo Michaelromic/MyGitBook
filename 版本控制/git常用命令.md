@@ -38,4 +38,4 @@
 `git clone -b branchname git@github.com:Michaelromic/MyGitBook.git ./branchname `
 
 ---
-* 
+* git切换ssh和http协议：
