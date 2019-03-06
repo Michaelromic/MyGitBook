@@ -40,3 +40,6 @@
 ---
 * git切换ssh和http协议：
     *  查看当前remote: 
+        `git remote -v`
+    * 切换到ssh：
+        `git remote set-url git@github.com:drchen126/b0.git`
