@@ -39,3 +39,4 @@
 
 ---
 * git切换ssh和http协议：
+    *  查看当前remote: 
