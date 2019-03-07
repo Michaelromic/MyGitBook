@@ -10,10 +10,10 @@ target_dir = 'D:/mmaww/targetdir/'
 
 d_read = pd.read_excel(source_file,None)
 
-# 获取源文件中每个sheet的名字
+\# 获取源文件中每个sheet的名字
 names=list(d_read.keys())
 
-# 创建保存目录
+\# 创建保存目录
 if not os.path.exists(target_dir):
     os.mkdir(target_dir)
 os.chdir(target_dir)
@@ -25,10 +25,4 @@ for name in names:
     tempsheet=pd.read_excel(source_file, sheet_name = name,header=None)
     savefile = target_dir + name + ".xlsx"
     tempsheet.to_excel(savefile, sheet_name = name, na_rep='', index = False, encoding='utf-8', header=None)
-
-
-
-
-
-
 ```
