@@ -44,3 +44,7 @@
 
 * [在线工具](./辅助工具/在线工具.md)
 
+## python
+
+* [使用pandas库将excel中多个sheet拆分为单个文件](./python/使用pandas库将excel中多个sheet拆分为单个文件.md)
+
