@@ -14,8 +14,10 @@ d_read = pd.read_excel(source_file,None)
 names=list(d_read.keys())
 
 # 创建保存目录
-if not os.path.exists(target_dir):
-    os.mkdir(target_dir)
+# shutil.rmtree 用于删除非空文件夹，os.removedirs仅可删除空文件夹
+if os.path.exists(target_dir):
+    shutil.rmtree(target_dir)
+os.mkdir(target_dir)
 os.chdir(target_dir)
 
 for name in names:
