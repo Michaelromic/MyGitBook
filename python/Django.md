@@ -37,4 +37,17 @@ mysite/
 
 ### 用于开发的简易服务器
 `python manage.py runserver`
-输出如下
+输出如下：
+```
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have unapplied migrations; your app may not work properly until they are applied.
+Run 'python manage.py migrate' to apply them.
+
+二月 28, 2019 - 15:50:53
+Django version 2.1, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+```
