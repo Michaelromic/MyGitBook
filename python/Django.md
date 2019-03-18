@@ -26,3 +26,4 @@ mysite/
         urls.py
         wsgi.py
 ```
+这些目录和文件的用处是：
