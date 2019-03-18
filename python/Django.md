@@ -36,6 +36,5 @@ mysite/
 * mysite/wsgi.py：作为你的项目的运行在 WSGI 兼容的Web服务器上的入口。阅读 如何使用 WSGI 进行部署 了解更多细节。
 
 ### 用于开发的简易服务器
-
 `python manage.py runserver`
 输出如下
