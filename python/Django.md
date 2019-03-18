@@ -2,6 +2,7 @@
 `pip install Django`
 
 ###### 验证
+
 ```
 >>> import django
 >>> print(django.get_version())
