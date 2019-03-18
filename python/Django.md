@@ -38,3 +38,4 @@ mysite/
 ### 用于开发的简易服务器
 
 `python manage.py runserver`
+输出如下
