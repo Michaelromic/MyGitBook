@@ -10,3 +10,5 @@
 ```
 或者
 `python -m django --version`
+
+### 创建项目
