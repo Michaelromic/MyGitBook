@@ -8,3 +8,5 @@
 >>> print(django.get_version())
 2.1
 ```
+或者
+`python -m django --version`
