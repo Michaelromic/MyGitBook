@@ -91,4 +91,24 @@ urlpatterns = [
     path('', views.index, name='index'),
 ]
 ```
+下一步是要在根 URLconf 文件中指定我们创建的 polls.urls 模块。在 mysite/urls.py 文件的 urlpatterns 列表里插入一个 include()
+```
+from django.contrib import admin
+from django.urls import include, path
 
+urlpatterns = [
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
+]
+```
+
+
+
+1
+11
+1
+1
+1
+1
+1
+1
