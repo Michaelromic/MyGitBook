@@ -122,4 +122,5 @@ urlpatterns = [
 
 ---
 ### 使用mysql
+`pip install pymysql`
 
