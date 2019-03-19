@@ -83,5 +83,13 @@ def index(request):
 为了创建 URLconf，请在 polls 目录里新建一个 urls.py 文件。
 
 打开 polls/urls.py
+```
+from django.urls import path
 
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+```
 
