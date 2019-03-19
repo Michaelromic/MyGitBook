@@ -51,5 +51,5 @@
 
 ## mysql
 
-* [使用pandas库将excel中多个sheet拆分为单个文件](./python/使用pandas库将excel中多个sheet拆分为单个文件.md)
+* [MySQL两种存储引擎: MyISAM和InnoDB 简单总结](./mysql/MySQL两种存储引擎: MyISAM和InnoDB 简单总结.md)
 
