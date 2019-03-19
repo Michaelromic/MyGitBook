@@ -12,8 +12,6 @@ Django的数据库层从Python代码生成SQL schemas。但是对于遗留的数
 
 ###  1.Django默认使用的是sqllit数据库？如何使用MySQL数据库？
 
- <a title="复制代码">![复制代码](https://common.cnblogs.com/images/copycode.gif)</a>
-
 #修改setting.py文件
 ```
 DATABASE = {
