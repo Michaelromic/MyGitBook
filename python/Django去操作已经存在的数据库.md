@@ -38,11 +38,11 @@ pymysql.install_as_MySQLdb()
 
  **然后呢，我们就需要根据数据库去自动生成新的models文件**
 
- python manage.py inspectdb    #简单可以看一下自动映射成的models中的内容
+ `python manage.py inspectdb    #简单可以看一下自动映射成的models中的内容`
 
 **导出并且去代替models.py**
 
- python manage.py inspectdb > models.py
+ `python manage.py inspectdb > models.py`
 
 这样你就会发现在manage.py的同级目录下生成了一个models.py文件
 
@@ -54,13 +54,13 @@ pymysql.install_as_MySQLdb()
 
 **此时，我们再去使models.py和数据库进行同步**
 
- python manage.py migrate
+ `python manage.py migrate`
 
 ### 这个时候就已经大功告成了！
 
  然我们来验证一下：
 
- python manage.py shell
+ `python manage.py shell`
 
 #一些查询语句
 
