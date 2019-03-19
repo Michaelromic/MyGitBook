@@ -55,6 +55,7 @@ Quit the server with CONTROL-C.
 
 ---
 ### 创建应用
+`py manage.py startapp polls`
 
 
 
