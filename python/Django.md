@@ -108,7 +108,7 @@ urlpatterns = [
 
 现在把 index 视图添加进了 URLconf。可以验证是否正常工作，运行下面的命令:
 `py manage.py runserver`
-
+访问 http://localhost:8000/polls/
 
 
 1
