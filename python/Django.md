@@ -55,6 +55,7 @@ Quit the server with CONTROL-C.
 
 ---
 ### 创建应用
+> 我们在的 manage.py 同级目录下创建投票应用。这样它就可以作为顶级模块导入，而不是 mysite 的子模块。
 `py manage.py startapp polls`
 创建了如下目录：
 ```
