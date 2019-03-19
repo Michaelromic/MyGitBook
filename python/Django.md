@@ -106,6 +106,10 @@ urlpatterns = [
 我们设计 include() 的理念是使其可以即插即用。因为投票应用有它自己的 URLconf( polls/urls.py )，他们能够被放在 "/polls/" ， "/fun_polls/" ，"/content/polls/"，或者其他任何路径下，这个应用都能够正常工作。
 当包括其它 URL 模式时你应该总是使用 include() ， admin.site.urls 是唯一例外。
 
+现在把 index 视图添加进了 URLconf。可以验证是否正常工作，运行下面的命令:
+`py manage.py runserver`
+
+
 
 1
 11
