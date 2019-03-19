@@ -51,5 +51,5 @@
 
 ## mysql
 
-* [MySQL两种存储引擎: MyISAM和InnoDB 简单总结](./mysql/MySQL两种存储引擎: MyISAM和InnoDB 简单总结.md)
+* [MySQL两种存储引擎:MyISAM和InnoDB简单总结](./mysql/MySQL两种存储引擎:MyISAM和InnoDB简单总结.md)
 
