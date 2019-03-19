@@ -85,7 +85,6 @@ def index(request):
 打开 polls/urls.py
 ```
 from django.urls import path
-
 from . import views
 
 urlpatterns = [
