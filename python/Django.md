@@ -56,6 +56,18 @@ Quit the server with CONTROL-C.
 ---
 ### 创建应用
 `py manage.py startapp polls`
+创建了如下目录：
+```
+polls/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+```
 
 
 
