@@ -48,7 +48,7 @@
 
 * [使用pandas库将excel中多个sheet拆分为单个文件](./python/使用pandas库将excel中多个sheet拆分为单个文件.md)
 * [Django](./python/Django.md)
-* [Django](./python/Django.md)
+* [Django去操作已经存在的数据库](./python/Django去操作已经存在的数据库.md)
 
 ## mysql
 
