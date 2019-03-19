@@ -102,7 +102,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 ```
-
+> 函数 include() 允许引用其它 URLconfs。每当 Django 遇到 :func：~django.urls.include 时，它会截断与此项匹配的 URL 的部分，并将剩余的字符串发送到 URLconf 以供进一步处理。
+我们设计 include() 的理念是使其可以即插即用。因为投票应用有它自己的 URLconf( polls/urls.py )，他们能够被放在 "/polls/" ， "/fun_polls/" ，"/content/polls/"，或者其他任何路径下，这个应用都能够正常工作。
+当包括其它 URL 模式时你应该总是使用 include() ， admin.site.urls 是唯一例外。
 
 
 1
