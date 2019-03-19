@@ -123,4 +123,18 @@ urlpatterns = [
 ---
 ### 使用mysql
 `pip install pymysql`
-
+在Django的settings.py文件中设置如下：
+```
+import pymysql         # 一定要添加这两行！           
+pymysql.install_as_MySQLdb()
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',   # 数据库引擎
+        'NAME': 'mysite',  # 数据库名，先前创建的
+        'USER': 'root',     # 用户名，可以自己创建用户
+        'PASSWORD': '****',  # 密码
+        'HOST': '192.168.1.121',  # mysql服务所在的主机ip
+        'PORT': '3306',         # mysql服务端口
+    }
+}
+```
