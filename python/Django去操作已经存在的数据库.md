@@ -15,7 +15,7 @@ Django的数据库层从Python代码生成SQL schemas。但是对于遗留的数
  <a title="复制代码">![复制代码](https://common.cnblogs.com/images/copycode.gif)</a>
 
 #修改setting.py文件
-
+```
 DATABASE = {
     'default':{
         'ENGINE':'django.db.backends.mysql',
@@ -26,9 +26,7 @@ DATABASE = {
         'PASSWORD':'密码',
     }
 }
- <a title="复制代码">![复制代码](https://common.cnblogs.com/images/copycode.gif)</a>
-
- <a title="复制代码">![复制代码](https://common.cnblogs.com/images/copycode.gif)</a>
+```
 
 #由于Django内部链接MySQL数据库的时候默认的是使用MySQLdb的
 #但是Python3中没有这个模块
