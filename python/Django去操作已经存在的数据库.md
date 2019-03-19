@@ -31,10 +31,10 @@ DATABASE = {
 #由于Django内部链接MySQL数据库的时候默认的是使用MySQLdb的
 #但是Python3中没有这个模块
 #所以我们要去修改他的project同名文件夹下的__init__文件
-
+```
 import pymysql
 pymysql.install_as_MySQLdb()
- <a title="复制代码">![复制代码](https://common.cnblogs.com/images/copycode.gif)</a>
+```
 
  **然后呢，我们就需要根据数据库去自动生成新的models文件**
 
