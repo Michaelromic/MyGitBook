@@ -44,7 +44,7 @@
 
 * [python爬虫](./python/python爬虫/README.md)
   * [README](./python/python爬虫/README.md)
-  * [编码_文件命名方式](./python/python爬虫/编码_文件命名方式.md)
+  * [编码+文件打开方式+文件命名方式](./python/python爬虫/编码+文件打开方式+文件命名方式.md)
 
 * [使用pandas库将excel中多个sheet拆分为单个文件](./python/使用pandas库将excel中多个sheet拆分为单个文件.md)
 * [Django](./python/Django.md)
