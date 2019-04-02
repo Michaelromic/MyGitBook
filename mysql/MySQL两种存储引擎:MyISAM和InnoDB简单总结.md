@@ -1,5 +1,4 @@
-#
-[MySQL两种存储引擎: MyISAM和InnoDB 简单总结](https://www.cnblogs.com/kevingrace/p/5685355.html)
+#[MySQL两种存储引擎: MyISAM和InnoDB 简单总结](https://www.cnblogs.com/kevingrace/p/5685355.html)
 
 MyISAM是MySQL的默认数据库引擎（5.5版之前），由早期的ISAM（Indexed Sequential Access Method：有索引的顺序访问方法）所改良。虽然性能极佳，但却有一个缺点：不支持事务处理（transaction）。不过，在这几年的发展下，MySQL也导入了InnoDB（另一种数据库引擎），以强化参考完整性与并发违规处理机制，后来就逐渐取代MyISAM。
 
