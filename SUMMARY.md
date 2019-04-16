@@ -28,6 +28,10 @@
 
 * [markdown语法](./文档编写/markdown语法.md)
 
+## 面试经验
+
+* [如何写出一份专业的技术简历](./面试经验/如何写出一份专业的技术简历.md)
+
 ## 测试工具
 
 * [jmeter压力测试](./测试工具/jmeter压力测试.md)
@@ -45,7 +49,6 @@
 * [python爬虫](./python/python爬虫/README.md)
   * [README](./python/python爬虫/README.md)
   * [编码+文件打开方式+文件命名方式](./python/python爬虫/编码+文件打开方式+文件命名方式.md)
-
 * [使用pandas库将excel中多个sheet拆分为单个文件](./python/使用pandas库将excel中多个sheet拆分为单个文件.md)
 * [Django](./python/Django.md)
 * [Django去操作已经存在的数据库](./python/Django去操作已经存在的数据库.md)
