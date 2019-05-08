@@ -32,6 +32,7 @@
 
 * [python](./面试经验/python/README.md)
   * [元类metaclass](./面试经验/python/元类metaclass.md)
+  * [迭代器和生成器](./面试经验/python/迭代器和生成器.md)
 * [如何写出一份专业的技术简历](./面试经验/如何写出一份专业的技术简历.md)
 
 ## 测试工具
