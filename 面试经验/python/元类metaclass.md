@@ -63,9 +63,11 @@ type就是Python在背后用来创建所有类的元类。
 ```
 type就是Python的内建元类，当然了，你也可以创建自己的元类。
 --
+```
 class Foo(object):
 	__metaclass__ = something…
 […]
+```
 你首先写下class Foo(object)，但是类对象Foo还没有在内存中创建。Python会在类的定义中寻找__metaclass__属性，如果找到了，Python就会用它来创建类Foo。
 如果Python没有找到__metaclass__，它会继续在Bar（父类）中寻找__metaclass__属性，并尝试做和前面同样的操作。如果Python在任何父类中都找不到__metaclass__，它就会在模块层次中去寻找__metaclass__，并尝试做同样的操作。如果还是找不到__metaclass__,Python就会用内置的type来创建这个类对象。
 --
