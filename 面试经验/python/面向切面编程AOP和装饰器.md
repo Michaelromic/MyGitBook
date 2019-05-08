@@ -90,9 +90,10 @@ class decorator ending
 '''
 ```
 
-* 引入functools模块, 该模块包含的funtools.wraps()函数, 可以将被装饰函数名称, 模块, 文档字符串(docstring)拷贝到它的包装纸中。
+* ##### 引入functools模块, 该模块包含的funtools.wraps()函数, 可以将被装饰函数名称, 模块, 文档字符串(docstring)拷贝到它的包装纸中。
 wraps本身也是一个装饰器。
 如果没有wraps装饰器，这里会输出 'with_logging' 和 None。
+
 ```
 from functools import wraps
 def logged(func):
