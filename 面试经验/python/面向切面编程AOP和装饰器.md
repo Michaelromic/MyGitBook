@@ -23,7 +23,6 @@ a = use_logging(foo)
 a()
 ```
 
-
 * 使用@语法糖
 ```
 def use_logging(func):
