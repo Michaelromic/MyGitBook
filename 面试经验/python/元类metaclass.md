@@ -53,12 +53,14 @@ b、type可以接受一个类的描述作为参数，然后返回一个类。
 MyClass = type('MyClass', (), {})
 type就是Python在背后用来创建所有类的元类。
 任何一个__class__的__class__属性是type：
+```
 >>> class Bar(object): pass
 >>> b = Bar()
 >>> b.__class__
 <class '__main__.Bar'>
 >>> b.__class__.__class__
 <type 'type'>
+```
 type就是Python的内建元类，当然了，你也可以创建自己的元类。
 --
 class Foo(object):
@@ -73,7 +75,7 @@ class Foo(object):
 3、返回修改之后的类
 
 例如：构造一个元类，使所有属性都改成大写形式
-
+```
 class UpperAttrMetaclass(type):
     def __new__(cls, name, bases, dct):
         attrs = ((name, value) for name, value in dct.items() if not name.startswith('__'))
@@ -95,3 +97,4 @@ print(f.BAR)
 # 输出：1
 f.say_MyClass('Hello')
 # 输出：MyClass,Hello!
+```
