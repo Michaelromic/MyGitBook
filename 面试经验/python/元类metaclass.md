@@ -65,8 +65,7 @@ type就是Python在背后用来创建所有类的元类。
 >>> b.__class__.__class__
 <type 'type'>
 ```
-type就是Python的内建元类，当然了，你也可以创建自己的元类。
---
++ type就是Python的内建元类，当然了，你也可以创建自己的元类。
 ```
 class Foo(object):
 	__metaclass__ = something…
