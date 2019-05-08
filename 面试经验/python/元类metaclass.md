@@ -1,5 +1,6 @@
 2、Python中的元类(metaclass)
 类也是对象：
+```
 >>> print ObjectCreator     # 你可以打印一个类，因为它其实也是一个对象
 <class '__main__.ObjectCreator'>
 >>> def echo(o):
@@ -17,6 +18,7 @@ foo
 >>> ObjectCreatorMirror = ObjectCreator # 你可以将类赋值给一个变量
 >>> print ObjectCreatorMirror()
 <__main__.ObjectCreator object at 0x8997b4c>
+```
 --
 动态地创建类：
 a、可以在函数中创建类，使用class关键字即可。
