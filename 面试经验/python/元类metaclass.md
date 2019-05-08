@@ -1,5 +1,5 @@
 2、Python中的元类(metaclass)
-类也是对象：
+* 类也是对象：
 ```
 >>> print ObjectCreator     # 你可以打印一个类，因为它其实也是一个对象
 <class '__main__.ObjectCreator'>
@@ -19,8 +19,8 @@ foo
 >>> print ObjectCreatorMirror()
 <__main__.ObjectCreator object at 0x8997b4c>
 ```
---
-动态地创建类：
+
+* 动态地创建类：
 a、可以在函数中创建类，使用class关键字即可。
 b、type可以接受一个类的描述作为参数，然后返回一个类。
 type(类名, 父类的元组（针对继承的情况，可以为空），包含属性的字典（名称和值）)
@@ -31,8 +31,9 @@ type(类名, 父类的元组（针对继承的情况，可以为空），包含�
 <class '__main__.MyShinyClass'>
 >>> print MyShinyClass()  #  创建一个该类的实例
 <__main__.MyShinyClass object at 0x8997cec>
-
+```
 用字典定义属性 + 继承 + 增加方法
+```
 >>> Foo = type('Foo', (), {'bar':True})
 >>> FooChild = type('FooChild', (Foo,),{})
 >>> print FooChild
