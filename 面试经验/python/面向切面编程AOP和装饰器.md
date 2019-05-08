@@ -7,6 +7,7 @@ https://foofish.net/python-decorator.html
 #### 装饰器就是”包装纸(wrapper)”, 也就是说, 装饰器允许你在被装饰的函数前后执行代码, 而不对函数本身做任何修改。
 
 * 装饰器示例
+
 ```
 def use_logging(func):
 
