@@ -9,6 +9,7 @@ https://foofish.net/python-decorator.html
 * 装饰器示例
 ```
 def use_logging(func):
+
     def wrapper():
         logging.warn("%s is running" % func.__name__)
         return func()
