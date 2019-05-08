@@ -23,34 +23,34 @@ foo
 动态地创建类：
 a、可以在函数中创建类，使用class关键字即可。
 b、type可以接受一个类的描述作为参数，然后返回一个类。
-	type(类名, 父类的元组（针对继承的情况，可以为空），包含属性的字典（名称和值）)
-	例如：
-	```
-	>>> MyShinyClass = type('MyShinyClass', (), {})  # 返回一个类对象
-	>>> print MyShinyClass
-	<class '__main__.MyShinyClass'>
-	>>> print MyShinyClass()  #  创建一个该类的实例
-	<__main__.MyShinyClass object at 0x8997cec>
+type(类名, 父类的元组（针对继承的情况，可以为空），包含属性的字典（名称和值）)
+例如：
+```
+>>> MyShinyClass = type('MyShinyClass', (), {})  # 返回一个类对象
+>>> print MyShinyClass
+<class '__main__.MyShinyClass'>
+>>> print MyShinyClass()  #  创建一个该类的实例
+<__main__.MyShinyClass object at 0x8997cec>
 
-	用字典定义属性 + 继承 + 增加方法
-	>>> Foo = type('Foo', (), {'bar':True})
-	>>> FooChild = type('FooChild', (Foo,),{})
-	>>> print FooChild
-	<class '__main__.FooChild'>
-	>>> print FooChild.bar   # bar属性是由Foo继承而来
-	True
-	>>> def echo_bar(self):
-	…       print self.bar
-	…
-	>>> FooChild = type('FooChild', (Foo,), {'echo_bar': echo_bar})
-	>>> hasattr(Foo, 'echo_bar')
-	False
-	>>> hasattr(FooChild, 'echo_bar')
-	True
-	>>> my_foo = FooChild()
-	>>> my_foo.echo_bar()
-	True
-	```
+用字典定义属性 + 继承 + 增加方法
+>>> Foo = type('Foo', (), {'bar':True})
+>>> FooChild = type('FooChild', (Foo,),{})
+>>> print FooChild
+<class '__main__.FooChild'>
+>>> print FooChild.bar   # bar属性是由Foo继承而来
+True
+>>> def echo_bar(self):
+…       print self.bar
+…
+>>> FooChild = type('FooChild', (Foo,), {'echo_bar': echo_bar})
+>>> hasattr(Foo, 'echo_bar')
+False
+>>> hasattr(FooChild, 'echo_bar')
+True
+>>> my_foo = FooChild()
+>>> my_foo.echo_bar()
+True
+```
 
 总结：在Python中，类也是对象，你可以动态的创建类。这就是当你使用关键字class时Python在幕后做的事情，而这就是通过元类来实现的。
 元类就是用来创建这些类（对象）的，元类就是类的类。
