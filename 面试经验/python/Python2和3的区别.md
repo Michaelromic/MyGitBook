@@ -152,7 +152,7 @@ print(type(range(3)))  # < class ‘range’>
 print(list(range(3)))  # [0, 1, 2]
 ```
 
-在 Python 3 中一些经常使用到的不再返回列表的函数和方法：
+    在 Python 3 中一些经常使用到的不再返回列表的函数和方法：
 zip()
 map()
 filter()
