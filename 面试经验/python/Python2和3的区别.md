@@ -85,6 +85,7 @@ raise IOError("file error")
 
 * ### Handling exceptions
 在 Python 3 中处理异常也轻微的改变了，在 Python 3 中我们现在使用 as 作为关键词。
+
 ```
 # python2
 try:
