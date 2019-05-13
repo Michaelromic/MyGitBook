@@ -23,4 +23,5 @@ allocated    newsize       new_size + new_allocated
 10           4             4 + 3
 20           9             9 + 7
 很显然,这个新长度小于原来的已分配空间长度,自然会导致 realloc 收缩内存。(不容易啊)
+
 引自《深入Python编程》
