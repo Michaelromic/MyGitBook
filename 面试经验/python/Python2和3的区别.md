@@ -39,6 +39,7 @@ python3 默认编码就是unicode，unicode编码会被直接认为是字符串�
 Python3有两种表示字符序列的类型：bytes和str。前者的实例包含原始的8位值，后者的实例包含Unicode字符。
 Python2也有两种表示字符序列的类型，分别叫做str和Unicode。与Python3不同的是，str实例包含原始的8位值；而unicode的实例，则包含Unicode字符。
 编写Python程序的时候，一定要把编码和解码操作放在界面最外围来做。程序的核心部分应该使用Unicode字符类型（也就是Python3中的str、Python2中的unicode）。
+
 ```
 # python 3
 print(type('\u03BC\u0394'))  # <class 'str'>
