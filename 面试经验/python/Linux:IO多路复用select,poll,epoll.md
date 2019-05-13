@@ -65,10 +65,12 @@ epoll_create是创建一个epoll句柄；epoll_ctl是注册要监听的事件类
     1. 当某个进程调用epoll_create方法时，内核会创建一个eventpoll对象。eventpoll对象含有一个 就绪队列rdlist。
     2. 还是假设有3个fd，通过epoll_ctl方法添加fd1、fd2、fd3的监视时，内核会将eventpoll添加到这三个fd的等待队列中。
     3. 当fd收到数据后，中断程序会给eventpoll的 就绪队列 添加fd引用。
+    
     eventpoll对象相当于是fd和进程之间的中介，fd的数据接收并不直接影响进程，而是通过改变eventpoll的就绪列表来改变进程状态。
     4. 当程序执行到epoll_wait时，如果rdlist已经引用了fd，那么epoll_wait直接返回，如果rdlist为空，阻塞进程。
     5. eventpoll同样有一个等待队列，进程A的程序执行到epoll_wait时，如果rdlist为空，会将进程A放入eventpoll的等待队列中，阻塞进程。
     6. 当fd接收到数据时，中断程序一方面修改rdlist，另一方面唤醒eventpoll等待队列中的进程，进程A再次进入运行状态。
+    
     也是因为rdlist的存在，进程A可以知道哪些fd发生了变化。
     7. 程序可能随时调用epoll_ctl添加监视fd，也可能随时删除。当删除时，若该fd已经存放在就绪列表中，它也应该被移除。
     
