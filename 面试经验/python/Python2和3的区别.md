@@ -48,6 +48,7 @@ print(type(b' bytes for storing data'))  # <class 'bytes'>，这个在python2中
 ```
 
 * ### xrange模块
+
 在 Python 2 中 xrange() 创建迭代对象的用法是非常流行的。比如： for 循环或者是列表/集合/字典推导式。
 因为直接创建一个迭代器，不用生成list，所以比range()执行更快。
 
