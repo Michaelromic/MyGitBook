@@ -33,6 +33,7 @@ print('3 // 2.0 =', 3 // 2.0)  # 1.0
 ```
 
 * ### Unicode
+
 python2 默认编码是系统默认编码(如linux是utf-8，windows是gbk)，并且有单独的 unicode类型。
 python3 默认编码就是unicode，unicode编码会被直接认为是字符串类型。
 
