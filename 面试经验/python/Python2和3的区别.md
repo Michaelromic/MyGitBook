@@ -101,7 +101,7 @@ except NameError as err:
 
 ```
 
-* ### next()函数 and .next()方法
+* ### next()函数 和 .next()方法
 python3 删除了.next()方法
 ```
 # python3
