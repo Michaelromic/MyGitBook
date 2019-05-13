@@ -16,6 +16,7 @@ print 在 Python 2 中是一个声明，而不是一个函数调用。
 当2个**整数**相除时，/ 在 python2 和 python3 中有区别： 
     python2是整除，结果是int
     python3不是整除，结果是float。
+
 ```
 # Python2
 print '3 / 2 =', 3 / 2  # 1
