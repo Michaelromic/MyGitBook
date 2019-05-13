@@ -120,7 +120,7 @@ print 'comprehension: ', [i for i in range(5)]  # comprehension: [0, 1, 2, 3, 4]
 print 'after: i =', i  # after: i = 4
 ```
 
-列表推导不再支持 [... for var in item1, item2, ...] 这样的语法。使用 [... for var in (item1, item2, ...)] 代替
+    列表推导不再支持 [... for var in item1, item2, ...] 这样的语法。使用 [... for var in (item1, item2, ...)] 代替
 ```
 # python 3
 print([i for i in range(5)])  # [0, 1, 2, 3, 4]
