@@ -73,6 +73,7 @@ Python 3 中 range 有一个新的 __contains__ 方法，__contains__ 方法可�
 
 * ### Raising exceptions
 Python 2 接受新旧两种语法标记，在 Python 3 中如果我不用小括号把异常参数括起来就会阻塞（并且反过来引发一个语法异常）。
+
 ```
 # python2，以下两种写法都支持
 raise IOError, "file error"
