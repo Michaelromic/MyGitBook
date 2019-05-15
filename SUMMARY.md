@@ -38,7 +38,14 @@
   * [单例模式](./面试经验/python/单例模式.md)
   * [Python的List的实现](./面试经验/python/Python的List的实现.md)
   * [Python2和3的区别](./面试经验/python/Python2和3的区别.md)
+* [操作系统](./面试经验/操作系统/README.md)
   * [Linux:IO多路复用select,poll,epoll](./面试经验/python/Linux:IO多路复用select,poll,epoll.md)
+  * [调度算法](./面试经验/python/调度算法.md)
+  * [死锁](./面试经验/python/死锁.md)
+  * [页面置换算法](./面试经验/python/页面置换算法.md)
+  * [epoll:边沿触发模式(ET)和水平触发模式(LT)](./面试经验/python/epoll:边沿触发模式(ET)和水平触发模式(LT).md)
+* [数据库](./面试经验/数据库/README.md)
+  * [数据库索引](./面试经验/python/数据库索引.md)
 * [如何写出一份专业的技术简历](./面试经验/如何写出一份专业的技术简历.md)
 
 ## 测试工具
