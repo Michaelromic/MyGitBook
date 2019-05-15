@@ -1,0 +1,1232 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>新式类和经典类 · MichaelromicGitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Michaelromic">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="单例模式.html" />
+    
+    
+    <link rel="prev" href="面向切面编程AOP和装饰器.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Michaelromic","repo":"MyGitBook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../linux/1-1.html">
+            
+                <a href="../../linux/1-1.html">
+            
+                    
+                    1-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">nodejs</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../nodejs/koa.html">
+            
+                <a href="../../nodejs/koa.html">
+            
+                    
+                    koa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../nodejs/const,var,let区别.html">
+            
+                <a href="../../nodejs/const,var,let区别.html">
+            
+                    
+                    const,var,let区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../nodejs/node-rsa加密解密.html">
+            
+                <a href="../../nodejs/node-rsa加密解密.html">
+            
+                    
+                    node-rsa加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../nodejs/node-mysql.html">
+            
+                <a href="../../nodejs/node-mysql.html">
+            
+                    
+                    node-mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">区块链</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../区块链/bitcoin/">
+            
+                <a href="../../区块链/bitcoin/">
+            
+                    
+                    bitcoin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../区块链/bitcoin/">
+            
+                <a href="../../区块链/bitcoin/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../区块链/eos/">
+            
+                <a href="../../区块链/eos/">
+            
+                    
+                    eos
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../区块链/eos/">
+            
+                <a href="../../区块链/eos/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../区块链/ethereum/">
+            
+                <a href="../../区块链/ethereum/">
+            
+                    
+                    ethereum
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../区块链/ethereum/">
+            
+                <a href="../../区块链/ethereum/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../区块链/其他/">
+            
+                <a href="../../区块链/其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../../区块链/其他/">
+            
+                <a href="../../区块链/其他/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">文档编写</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../文档编写/markdown语法.html">
+            
+                <a href="../../文档编写/markdown语法.html">
+            
+                    
+                    markdown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面试经验</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="元类metaclass.html">
+            
+                <a href="元类metaclass.html">
+            
+                    
+                    元类metaclass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="迭代器和生成器.html">
+            
+                <a href="迭代器和生成器.html">
+            
+                    
+                    迭代器和生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="面向切面编程AOP和装饰器.html">
+            
+                <a href="面向切面编程AOP和装饰器.html">
+            
+                    
+                    面向切面编程AOP和装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.1.4" data-path="新式类和经典类.html">
+            
+                <a href="新式类和经典类.html">
+            
+                    
+                    新式类和经典类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="单例模式.html">
+            
+                <a href="单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="Python的List的实现.html">
+            
+                <a href="Python的List的实现.html">
+            
+                    
+                    Python的List的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.7" data-path="Python2和3的区别.html">
+            
+                <a href="Python2和3的区别.html">
+            
+                    
+                    Python2和3的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../操作系统/">
+            
+                <a href="../操作系统/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../操作系统/Linux的IO多路复用select,poll,epoll.html">
+            
+                <a href="../操作系统/Linux的IO多路复用select,poll,epoll.html">
+            
+                    
+                    Linux的IO多路复用select,poll,epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../操作系统/调度算法.html">
+            
+                <a href="../操作系统/调度算法.html">
+            
+                    
+                    调度算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="../操作系统/死锁.html">
+            
+                <a href="../操作系统/死锁.html">
+            
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="../操作系统/页面置换算法.html">
+            
+                <a href="../操作系统/页面置换算法.html">
+            
+                    
+                    页面置换算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.5" data-path="../操作系统/epoll的边沿触发模式ET和水平触发模式LT.html">
+            
+                <a href="../操作系统/epoll的边沿触发模式ET和水平触发模式LT.html">
+            
+                    
+                    epoll的边沿触发模式ET和水平触发模式LT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../数据库/">
+            
+                <a href="../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../数据库/数据库索引.html">
+            
+                <a href="../数据库/数据库索引.html">
+            
+                    
+                    数据库索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../数据库/乐观锁和悲观锁.html">
+            
+                <a href="../数据库/乐观锁和悲观锁.html">
+            
+                    
+                    乐观锁和悲观锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.3" data-path="../数据库/MVCC及事务隔离性.html">
+            
+                <a href="../数据库/MVCC及事务隔离性.html">
+            
+                    
+                    MVCC及事务隔离性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../网络/">
+            
+                <a href="../网络/">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../网络/三次握手和四次挥手.html">
+            
+                <a href="../网络/三次握手和四次挥手.html">
+            
+                    
+                    三次握手和四次挥手
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../如何写出一份专业的技术简历.html">
+            
+                <a href="../如何写出一份专业的技术简历.html">
+            
+                    
+                    如何写出一份专业的技术简历
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">测试工具</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../测试工具/jmeter压力测试.html">
+            
+                <a href="../../测试工具/jmeter压力测试.html">
+            
+                    
+                    jmeter压力测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">版本控制</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../版本控制/git常用命令.html">
+            
+                <a href="../../版本控制/git常用命令.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计与架构</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../设计与架构/RESTful.html">
+            
+                <a href="../../设计与架构/RESTful.html">
+            
+                    
+                    RESTful
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">python</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../python/python爬虫/">
+            
+                <a href="../../python/python爬虫/">
+            
+                    
+                    python爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../python/python爬虫/">
+            
+                <a href="../../python/python爬虫/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../python/python爬虫/编码+文件打开方式+文件命名方式.html">
+            
+                <a href="../../python/python爬虫/编码+文件打开方式+文件命名方式.html">
+            
+                    
+                    编码+文件打开方式+文件命名方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../python/使用pandas库将excel中多个sheet拆分为单个文件.html">
+            
+                <a href="../../python/使用pandas库将excel中多个sheet拆分为单个文件.html">
+            
+                    
+                    使用pandas库将excel中多个sheet拆分为单个文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../python/Django.html">
+            
+                <a href="../../python/Django.html">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../../python/Django去操作已经存在的数据库.html">
+            
+                <a href="../../python/Django去操作已经存在的数据库.html">
+            
+                    
+                    Django去操作已经存在的数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">辅助工具</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../辅助工具/在线工具.html">
+            
+                <a href="../../辅助工具/在线工具.html">
+            
+                    
+                    在线工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">mysql</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../../mysql/MySQL两种存储引擎_MyISAM和InnoDB简单总结.html">
+            
+                <a href="../../mysql/MySQL两种存储引擎_MyISAM和InnoDB简单总结.html">
+            
+                    
+                    MySQL两种存储引擎:MyISAM和InnoDB简单总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >新式类和经典类</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x65B0;&#x5F0F;&#x7C7B;&#x548C;&#x7ECF;&#x5178;&#x7C7B; (python3&#x4E2D;&#x53EA;&#x6709;&#x65B0;&#x5F0F;&#x7C7B;&#xFF0C;&#x5728;python3&#x4E2D;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x5199;&#x6CD5;&#x5C31;&#x90FD;&#x8868;&#x793A;&#x65B0;&#x5F0F;&#x7C7B;)
+<a href="http://www.cnblogs.com/btchenguang/archive/2012/09/17/2689146.html" target="_blank">http://www.cnblogs.com/btchenguang/archive/2012/09/17/2689146.html</a></p>
+<h4 id="&#x65B0;&#x5F0F;&#x7C7B;"><a name="&#x65B0;&#x5F0F;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x5F0F;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B0;&#x5F0F;&#x7C7B;</h4>
+<p>class C(object):
+    pass</p>
+<h4 id="&#x7ECF;&#x5178;&#x7C7B;"><a name="&#x7ECF;&#x5178;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x7ECF;&#x5178;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7ECF;&#x5178;&#x7C7B;</h4>
+<p>class B:
+    pass
+&#x7B80;&#x5355;&#x7684;&#x8BF4;&#xFF0C;&#x65B0;&#x5F0F;&#x7C7B;&#x662F;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x7EE7;&#x627F;&#x5176;&#x4ED6;&#x7C7B;&#xFF0C;&#x6216;&#x8005;&#x7EE7;&#x627F;&#x5185;&#x7F6E;object&#x5BF9;&#x8C61;&#xFF08;&#x6216;&#x8005;&#x662F;&#x4ECE;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#xFF0C;&#x5982;list,dict&#x7B49;&#xFF09;&#xFF0C;&#x800C;&#x7ECF;&#x5178;&#x7C7B;&#x662F;&#x76F4;&#x63A5;&#x58F0;&#x660E;&#x7684;&#x3002;</p>
+<hr>
+<ul>
+<li><p>&#x5185;&#x7F6E;&#x7684;object&#x5BF9;&#x8C61;&#xFF1A;object&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7279;&#x6B8A;&#x7684;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;
+&#x4F7F;&#x7528;dir(class)&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;dir(C)</p>
+<ul>
+<li><p><strong>new</strong>&#xFF0C;<strong>init</strong>&#x65B9;&#x6CD5;
+&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x662F;&#x7528;&#x6765;&#x521B;&#x5EFA;object&#x7684;&#x5B50;&#x7C7B;&#x5BF9;&#x8C61;&#xFF0C;&#x9759;&#x6001;&#x65B9;&#x6CD5;<strong>new</strong>()&#x7528;&#x6765;&#x521B;&#x5EFA;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8C03;&#x7528;
+<strong>init</strong>()&#x6765;&#x521D;&#x59CB;&#x5316;&#x5B9E;&#x4F8B;&#x3002;</p>
+</li>
+<li><p><strong>delattr</strong>, <strong>getattribute</strong>, <strong>setattr</strong>&#x65B9;&#x6CD5;
+&#x5BF9;&#x8C61;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x6765;&#x5904;&#x7406;&#x5C5E;&#x6027;&#x7684;&#x8BBF;&#x95EE;</p>
+</li>
+<li><p><strong>hash</strong>, <strong>repr</strong>, <strong>str</strong>&#x65B9;&#x6CD5;
+print(someobj)&#x4F1A;&#x8C03;&#x7528;someobj.<strong>str</strong>()&#xFF0C; &#x5982;&#x679C;<strong>str</strong>&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#xFF0C;&#x5219;&#x4F1A;&#x8C03;&#x7528;someobj.<strong>repr</strong>()&#xFF0C;</p>
+</li>
+<li><p><strong>str</strong>()&#x548C;<strong>repr</strong>()&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
+<ul>
+<li><strong>repr</strong>&#x7684;&#x76EE;&#x6807;&#x662F;&#x5BF9;&#x8C61;&#x4FE1;&#x606F;&#x552F;&#x4E00;&#x6027;</li>
+<li><strong>str</strong>&#x7684;&#x76EE;&#x6807;&#x662F;&#x5BF9;&#x8C61;&#x4FE1;&#x606F;&#x7684;&#x53EF;&#x8BFB;&#x6027;</li>
+<li>&#x5BB9;&#x5668;&#x5BF9;&#x8C61;&#x7684;<strong>str</strong>&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5BF9;&#x8C61;&#x5143;&#x7D20;&#x7684;<strong>repr</strong></li>
+<li>&#x5982;&#x679C;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x4E86;<strong>repr</strong>&#xFF0C;&#x800C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;<strong>str</strong>&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x8C03;&#x7528;<strong>str</strong>&#x65F6;&#xFF0C;&#x8C03;&#x7528;&#x7684;&#x662F;<strong>repr</strong></li>
+<li>&#x597D;&#x7684;&#x7F16;&#x7A0B;&#x4E60;&#x60EF;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x7C7B;&#x90FD;&#x9700;&#x8981;&#x91CD;&#x5199;&#x4E00;&#x4E2A;<strong>repr</strong>&#x65B9;&#x6CD5;&#xFF0C;&#x7528;&#x4E8E;&#x63D0;&#x4F9B;&#x5BF9;&#x8C61;&#x7684;&#x53EF;&#x8BFB;&#x4FE1;&#x606F;&#xFF0C;</li>
+<li>&#x91CD;&#x5199;<strong>str</strong>&#x65B9;&#x6CD5;&#x662F;&#x53EF;&#x9009;&#x7684;&#x3002;&#x5B9E;&#x73B0;<strong>str</strong>&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x9700;&#x8981;&#x66F4;&#x52A0;&#x597D;&#x770B;&#x7684;&#x6253;&#x5370;&#x6548;&#x679C;&#xFF0C;&#x6BD4;&#x5982;&#x4F60;&#x8981;&#x5236;&#x4F5C;&#x4E00;&#x4E2A;&#x62A5;&#x8868;&#x7684;&#x65F6;&#x5019;&#x7B49;&#x3002;</li>
+</ul>
+<p>&#x53EF;&#x4EE5;&#x5141;&#x8BB8;object&#x7684;&#x5B50;&#x7C7B;&#x91CD;&#x8F7D;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x6216;&#x8005;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+</li>
+</ul>
+</li>
+<li><p>&#x65B0;&#x5F0F;&#x7C7B;</p>
+<ul>
+<li>&#x65B0;&#x5F0F;&#x7C7B;&#x9664;&#x4E86;&#x62E5;&#x6709;&#x7ECF;&#x5178;&#x7C7B;&#x7684;&#x5168;&#x90E8;&#x7279;&#x6027;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x65B0;&#x7684;&#x7279;&#x6027;&#x3002;&#x6BD4;&#x5982;<strong>init</strong>&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#xFF0C;&#x65B0;&#x589E;&#x4E86;&#x9759;&#x6001;&#x65B9;&#x6CD5;<strong>new</strong>&#x3002;</li>
+<li><p>new&#x662F;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;init&#x662F;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+</li>
+<li><p>&#x65B0;&#x5F0F;&#x7C7B;&#x90FD;&#x6709;&#x4E00;&#x4E2A;<strong>new</strong>&#x7684;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x7684;&#x539F;&#x578B;&#x662F;object.<strong>new</strong>(cls[, ...])</p>
+</li>
+<li>cls&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x5BF9;&#x8C61;&#xFF0C;&#x5F53;&#x4F60;&#x8C03;&#x7528;C(<em>args, **kargs)&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7C7B;C&#x7684;&#x5B9E;&#x4F8B;&#x65F6;&#xFF0C;python&#x7684;&#x5185;&#x90E8;&#x8C03;&#x7528;&#x662F;C.<strong>new</strong>(C, </em>args, **kargs)&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x7C7B;C&#x7684;&#x5B9E;&#x4F8B;c&#x3002;</li>
+<li>&#x5728;&#x786E;&#x8BA4;c&#x662F;C&#x7684;&#x5B9E;&#x4F8B;&#x540E;&#xFF0C;python&#x518D;&#x8C03;&#x7528;C.<strong>init</strong>(c, <em>args, *</em>kargs)&#x6765;&#x521D;&#x59CB;&#x5316;&#x5B9E;&#x4F8B;c&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>&#x5982;&#x679C;&#x91CD;&#x5199;&#x4E86;new&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x5FC5;&#x987B;&#x8C03;&#x7528;&#x8BE5;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;python&#x624D;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528;init&#x65B9;&#x6CD5;&#x6765;&#x521D;&#x59CB;&#x5316;&#x8BE5;&#x5B9E;&#x4F8B;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code># &#x65B0;&#x5F0F;&#x7C7B;
+class Test(object):
+    def __new__(cls, *args, **kwargs):
+        print(&apos;__new__&apos;)
+        print(args)
+        return super(Test, cls).__new__(cls)
+
+    def __init__(self,s):
+        print(&apos;__init__&apos;)
+        print(s)
+
+t = Test(&apos;hello&apos;)
+&apos;&apos;&apos;&#x8F93;&#x51FA;
+__new__
+(&apos;hello&apos;,)
+__init__
+hello
+&apos;&apos;&apos;
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;<strong>new</strong>&#x6765;&#x5B9E;&#x73B0;Singleton&#x5355;&#x4F8B;&#x6A21;&#x5F0F;</li>
+</ul>
+<pre class="language-"><code>class Singleton(object):
+    _singletons = {}
+    def __new__(cls):
+        if not cls in cls._singletons:            #&#x82E5;&#x8FD8;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5B9E;&#x4F8B;
+            cls._singletons[cls] = object.__new__(cls)  #&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;
+        return cls._singletons[cls]                             #&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;
+
+a = Singleton()
+b = Singleton()
+print(id(a))
+print(id(b))
+</code></pre><ul>
+<li><p>&#x65B0;&#x5F0F;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF1A;&#x9664;&#x4E86;&#x65B0;&#x5F0F;&#x7C7B;&#x672C;&#x8EAB;&#x5177;&#x6709;&#x65B0;&#x7684;&#x7279;&#x6027;&#x5916;&#xFF0C;&#x65B0;&#x5F0F;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x4E5F;&#x5177;&#x6709;&#x65B0;&#x7684;&#x7279;&#x6027;&#x3002;</p>
+<ul>
+<li><p>Property&#xFF1A;
+  &#x4F1A;&#x5BF9;&#x5C5E;&#x6027;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&#x4EA7;&#x751F;&#x5F71;&#x54CD;&#xFF0C;&#x8C03;&#x7528;proprety()&#x662F;&#x4E00;&#x79CD;&#x521B;&#x5EFA;data descriptor&#x7684;&#x4E00;&#x79CD;&#x7B80;&#x6D01;&#x7684;&#x65B9;&#x5F0F;&#x3002;
+  x = property(fget=None, fset=None, fdel=None, doc=None) #&#x8FD4;&#x56DE;&#x7684;&#x662F;property&#x5BF9;&#x8C61;&#xFF0C;&#x53EF;&#x4EE5;&#x8D4B;&#x503C;&#x7ED9;&#x67D0;&#x5C5E;&#x6027;&#x3002;
+  fget&#xFF0C;fset&#xFF0C;fdel &#x90FD;&#x662F;&#x5B9E;&#x4F8B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4F8B;&#x5982;&#x5B9E;&#x4F8B;a&#xFF1A;
+  a.x &#x5C31;&#x662F;&#x8C03;&#x7528;a.fget()
+  a.x = 1 &#x5C31;&#x662F;&#x8C03;&#x7528;a.fset(1)
+  del a.x &#x5C31;&#x662F;&#x8C03;&#x7528;a.fdel()</p>
+</li>
+<li><p><strong>slots</strong>&#x5C5E;&#x6027;
+  &#x901A;&#x5E38;&#x6BCF;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;x&#x90FD;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;<strong>dict</strong>&#x5C5E;&#x6027;&#xFF0C;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x5B9E;&#x4F8B;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x662F;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x5B9E;&#x4F8B;&#x7ED1;&#x5B9A;&#x4EFB;&#x610F;&#x7684;&#x5C5E;&#x6027;&#x3002;
+  &#x800C;<strong>slots</strong>&#x5C5E;&#x6027;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#xFF0C;&#x5F53;&#x7C7B;C&#x6709;&#x6BD4;&#x8F83;&#x5C11;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x800C;&#x4E14;&#x62E5;&#x6709;<strong>slots</strong>&#x5C5E;&#x6027;&#x65F6;&#xFF0C;&#x7C7B;C&#x7684;&#x5B9E;&#x4F8B; &#x5C31;&#x6CA1;&#x6709;<strong>dict</strong>&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x662F;&#x628A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x5730;&#x65B9;&#x3002;
+  &#x5982;&#x679C;&#x8BD5;&#x56FE;&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;<strong>slots</strong>&#x4E2D;&#x6CA1;&#x6709;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5B9E;&#x4F8B;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#x3002;
+  &#x8FD9;&#x6837;&#x64CD;&#x4F5C;&#x6709;&#x4EC0;&#x4E48;&#x597D;&#x5904;&#x5462;&#xFF1F;<strong>slots</strong>&#x5C5E;&#x6027;&#x867D;&#x7136;&#x4EE4;&#x5B9E;&#x4F8B;&#x5931;&#x53BB;&#x4E86;&#x7ED1;&#x5B9A;&#x4EFB;&#x610F;&#x5C5E;&#x6027;&#x7684;&#x4FBF;&#x5229;&#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x6CA1;&#x6709;<strong>dict</strong>&#x5C5E;&#x6027;&#xFF0C;&#x5374;&#x80FD;&#x6709;&#x6548;&#x8282;&#x7701;&#x6BCF;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x7684;&#x5185;&#x5B58;&#x6D88;&#x8017;&#xFF0C;&#x6709;&#x5229;&#x4E8E;&#x751F;&#x6210;&#x5C0F;&#x800C;&#x7CBE;&#x5E72;&#x7684;&#x5B9E;&#x4F8B;&#x3002;</p>
+<p>  &#x600E;&#x4E48;&#x53BB;&#x5B9A;&#x4E49;<strong>slots</strong>&#x5C5E;&#x6027;&#xFF1F;</p>
+<pre class="language-"><code>  class A(object):
+      def __init__(self):
+          self.x = 1
+          self.y = 2
+      __slots__ = &apos;x&apos;,&apos;y&apos;
+
+  a = A()
+  dir(a)  # &#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x5B9E;&#x4F8B;a&#x4E2D;&#x6CA1;&#x6709; __dict__&#x5B57;&#x5178;
+  a.z = 3  # &#x62A5;&#x9519;&#xFF0C;&#x5B9E;&#x4F8B;a&#x4E0D;&#x80FD;&#x968F;&#x610F;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B9A;&#x4E49;__slot__&#x5219;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x6DFB;&#x52A0;
+</code></pre><p>  &#x6CE8;&#x610F;&#xFF1A;</p>
+<ul>
+<li>&#x5F53;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x7236;&#x7C7B;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;<strong>slots</strong>&#x5C5E;&#x6027;&#xFF0C;&#x7236;&#x7C7B;&#x4E2D;&#x7684;<strong>dict</strong>&#x5C5E;&#x6027;&#x603B;&#x662F;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;<strong>slots</strong>&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x4E0D;&#x5728;&#x7236;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x662F;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x7684;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x4E86;<strong>slots&#x5C5E;&#x6027;&#xFF0C;&#x8FD8;&#x662F;&#x60F3;&#x5728;&#x4E4B;&#x540E;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x628A;&apos;</strong>dict<strong>&apos;&#x5B57;&#x7B26;&#x4E32;&#x6DFB;&#x52A0;&#x5230;</strong>slots__&#x7684;&#x5143;&#x7EC4;&#x91CC;&#x3002;</li>
+<li>&#x5B9A;&#x4E49;&#x4E86;<strong>slots</strong>&#x5C5E;&#x6027;&#xFF0C;&#x8FD8;&#x4F1A;&#x6D88;&#x5931;&#x7684;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x662F;<strong>weakref</strong>&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x652F;&#x6301;&#x5B9E;&#x4F8B;&#x7684;weak reference&#xFF0C;&#x5982;&#x679C;&#x8FD8;&#x662F;&#x60F3;&#x7528;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x540C;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&apos;<strong>weakref</strong>&apos;&#x5B57;&#x7B26;&#x4E32;&#x6DFB;&#x52A0;&#x5230;&#x5143;&#x7EC4;&#x91CC;&#x3002;</li>
+<li><strong>slots</strong>&#x529F;&#x80FD;&#x662F;&#x901A;&#x8FC7;descriptor&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x4F1A;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;descriptor&#x3002;</li>
+<li><strong>slots</strong>&#x7684;&#x529F;&#x80FD;&#x53EA;&#x5F71;&#x54CD;&#x5B9A;&#x4E49;&#x5B83;&#x7684;&#x7C7B;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5B50;&#x7C7B;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;<strong>slots</strong>&#x624D;&#x80FD;&#x6709;&#x5B83;&#x7684;&#x529F;&#x80FD;&#x3002;</li>
+</ul>
+</li>
+<li><p><strong>getattribute</strong>&#x65B9;&#x6CD5;
+  &#x5BF9;&#x65B0;&#x5F0F;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x6765;&#x8BF4;&#xFF0C;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x7684;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x901A;&#x8FC7;<strong>getattribute</strong>&#x5B8C;&#x6210;&#xFF0C;&#x8FD9;&#x662F;&#x7531;object&#x57FA;&#x7C7B;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x5982;&#x679C;&#x6709;&#x7279;&#x6B8A;&#x7684;&#x8981;&#x6C42;&#xFF0C;&#x53EF;&#x4EE5;&#x91CD;&#x8F7D;<strong>getattribute</strong>&#x65B9;&#x6CD5;&#x3002;</p>
+</li>
+<li><p>&#x5B9E;&#x4F8B;&#x7684;&#x65B9;&#x6CD5;</p>
+<ul>
+<li>&#x5B9E;&#x4F8B;&#x7684;&#x79C1;&#x6709;&#x5C5E;&#x6027;&#x4F1A;&#x8986;&#x76D6;&#x6389;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x540C;&#x540D;&#x5C5E;&#x6027;&#x3002;&#x4F8B;&#x5982;&#x7C7B;A&#x4E2D;&#x6709;&#x4E2A;&#x65B9;&#x6CD5; foo()&#xFF0C;&#x5B9E;&#x4F8B;&#x4E2D;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x81EA;&#x5DF1;&#x7684;foo()&#x65B9;&#x6CD5;&#xFF0C;&#x4F7F;&#x7528;a.foo = newfoo&#x5373;&#x53EF;&#x8986;&#x76D6;&#x3002;</li>
+<li><p>&#x9690;&#x5F0F;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x7684;&#x79C1;&#x6709;&#x7279;&#x6B8A;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#x548C;&#x7ECF;&#x5178;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#x8868;&#x73B0;&#x4E0A;&#x4E0D;&#x592A;&#x4E00;&#x6837;&#x3002;
+  &#x5728;&#x7ECF;&#x5178;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x663E;&#x793A;&#x8C03;&#x7528;&#x8FD8;&#x662F;&#x9690;&#x5F0F;&#x8C03;&#x7528;&#x7279;&#x6B8A;&#x65B9;&#x6CD5;&#xFF0C;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x4E2D;&#x540E;&#x7ED1;&#x5B9A;&#x7684;&#x7279;&#x6B8A;&#x65B9;&#x6CD5;&#x3002;
+  &#x800C;&#x5728;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x9664;&#x975E;&#x663E;&#x5F0F;&#x5730;&#x8C03;&#x7528;&#x5B9E;&#x4F8B;&#x7684;&#x7279;&#x6B8A;&#x65B9;&#x6CD5;&#xFF0C;&#x5426;&#x5219;python&#x603B;&#x662F;&#x4F1A;&#x53BB;&#x8C03;&#x7528;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x7279;&#x6B8A;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x62A5;&#x9519;&#x3002;
+  &#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>  def fakeGetItem(index):
+      return index + 1
+
+  Class A(object):
+      pass
+
+  a = A()
+  a.__getitem__ = fakeGetItem
+  print(a.__getitem__)  # &#x663E;&#x793A;&#x8C03;&#x7528;&#x4F1A;&#x6B63;&#x5E38;&#x8F93;&#x51FA;2
+  print(a[1])  # &#x8C03;&#x7528;a[1]&#xFF0C;&#x5C06;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x9690;&#x5F0F;&#x7684;__getitem__&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x5728;&#x65B0;&#x5F0F;&#x7C7B;&#x4E2D;&#xFF0C;&#x56E0;&#x4E3A;&#x7C7B;&#x4E2D;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;object&#x57FA;&#x7C7B;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x62A5;&#x9519;&#x3002;&#x9700;&#x8981;&#x663E;&#x793A;&#x5730;&#x8C03;&#x7528;&#x624D;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x3002;
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x6A21;&#x578B;
+&#x65B0;&#x5F0F;&#x7C7B;&#x80FD;&#x591F;&#x4ECE;python&#x7684;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x4E2D;&#x7EE7;&#x627F;&#xFF0C;&#x800C;&#x7ECF;&#x5178;&#x7C7B;&#x4E0D;&#x884C;&#x3002;</p>
+<ul>
+<li><p>&#x591A;&#x7EE7;&#x627F;&#xFF1A;&#x65B0;&#x5F0F;&#x7C7B;&#x540C;&#x6837;&#x652F;&#x6301;&#x591A;&#x7EE7;&#x627F;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x65B0;&#x5F0F;&#x7C7B;&#x60F3;&#x8981;&#x4ECE;&#x591A;&#x4E2A;&#x5185;&#x7F6E;&#x7C7B;&#x578B;&#x4E2D;&#x7EE7;&#x627F;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7C7B;&#x7684;&#x8BDD;&#xFF0C;&#x5219;&#x8FD9;&#x4E9B;&#x5185;&#x7F6E;&#x7C7B;&#x5FC5;&#x987B;&#x662F;&#x7ECF;&#x8FC7;&#x7CBE;&#x5FC3;&#x8BBE;&#x8BA1;&#xFF0C;&#x80FD;&#x591F;&#x4E92;&#x76F8;&#x517C;&#x5BB9;&#x7684;&#x3002;&#x663E;&#x7136;&#xFF0C;python&#x4E5F;&#x6CA1;&#x4F1A;&#x8BA9;&#x4F60;&#x968F;&#x610F;&#x7684;&#x4ECE;&#x591A;&#x4E2A;&#x5185;&#x7F6E;&#x7C7B;&#x4E2D;&#x8FDB;&#x884C;&#x591A;&#x7EE7;&#x627F;&#xFF0C;&#x60F3;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8D85;&#x7EA7;&#x7C7B;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x5BB9;&#x6613;&#x7684;&#x3002;&#x3002;&#x3002;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x81F3;&#x591A;&#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x4E00;&#x4E2A;&#x5185;&#x7F6E;&#x7C7B;&#xFF0C;&#x6BD4;&#x5982;list, set, dict&#x7B49;&#x3002;</p>
+</li>
+<li><p>MRO (Method Resolution Order&#xFF0C;&#x65B9;&#x6CD5;&#x89E3;&#x6790;&#x987A;&#x5E8F;)
+  &#x4E3E;&#x4F8B;&#xFF1A;B&#x548C;C&#x7EE7;&#x627F;D&#xFF0C;A&#x7EE7;&#x627F;B&#x548C;C</p>
+<pre class="language-"><code>  A
+ / \
+B   C
+ \ /
+  D
+</code></pre><p>  a&#x662F;A&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x73B0;&#x5728;a&#x8981;&#x4F7F;&#x7528;&#x5C5E;&#x6027;m&#x3002;
+  &#x5728;&#x7ECF;&#x5178;&#x7C7B;&#x4E2D;&#xFF0C;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;&#x7684;&#x67E5;&#x627E;&#x94FE;&#x662F;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#xFF0C;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x7684;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#x662F;&#xFF1A;A-&gt;B-&gt;D-&gt;C-&gt;A&#xFF0C;&#x5047;&#x5982; D&#x548C;C&#x90FD;&#x5B9A;&#x4E49;&#x4E86;&#x5C5E;&#x6027;m&#xFF0C;&#x8FD9;&#x91CC;&#x4F1A;&#x76F4;&#x63A5;&#x627E;&#x5230;D&#x7684;m&#x503C;&#x5E76;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x4E86;&#xFF0C;&#x4F1A;&#x7ED5;&#x8FC7;C&#x4E2D;&#x8986;&#x76D6;&#x7684;m&#x503C;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;C&#x7EE7;&#x627F;&#x4E86;D&#xFF0C;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;C&#x7684;m&#x503C;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;bug&#xFF0C;&#x5728;&#x65B0;&#x5F0F;&#x7C7B;&#x4E2D;&#x4FEE;&#x590D;&#x3002;
+  &#x65B0;&#x5F0F;&#x7C7B;&#x91C7;&#x7528;&#x7684;&#x662F;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#xFF0C;&#x5E7F;&#x5EA6;&#x6709;&#x9650;&#x5B9A;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#xFF0C;&#x6240;&#x4EE5;&#x67E5;&#x627E;&#x5FAA;&#x5E8F;&#x4E3A; A-&gt;B-&gt;C-&gt;D&#xFF0C;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x7C7B;C&#x7684;&#x5C5E;&#x6027;m&#x3002;
+  &#x8FD9;&#x4E2A;&#x987A;&#x5E8F;&#x7684;&#x5B9E;&#x73B0;&#x662F;&#x901A;&#x8FC7;&#x65B0;&#x5F0F;&#x7C7B;&#x4E2D;&#x7279;&#x6B8A;&#x7684;&#x53EA;&#x8BFB;&#x5C5E;&#x6027;<strong>mro</strong>&#xFF0C;&#x7C7B;&#x578B;&#x662F;&#x4E00;&#x4E2A;&#x5143;&#x7EC4;&#xFF0C;&#x4FDD;&#x5B58;&#x7740;&#x89E3;&#x6790;&#x987A;&#x5E8F;&#x4FE1;&#x606F;&#x3002;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x7C7B;&#x6765;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x5B9E;&#x4F8B;&#x8C03;&#x7528;&#x3002;</p>
+<pre class="language-"><code>  class D(object):
+      def __init__(self):
+          self.m = 1
+
+  class B(D):
+      pass
+
+  class C(D):
+      def __init__(self):
+          self.m = 2
+
+  # &#x56E0;&#x4E3A;&#x662F;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x7684;&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#xFF0C;&#x8FD9;&#x91CC;&#x5982;&#x679C;&#x662F;&#x5199;C,B&#xFF0C;&#x90A3;&#x4E48;&#x5219;&#x662F;C&#x5728;&#x524D;
+  class A(B,C):
+      pass
+
+  a = A()
+  print(a.m)  # &#x8F93;&#x51FA;2
+  print(A.__mro__)  # (<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;__main__.A&apos;</span><span class="token punctuation">&gt;</span></span>, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;__main__.B&apos;</span><span class="token punctuation">&gt;</span></span>, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;__main__.C&apos;</span><span class="token punctuation">&gt;</span></span>, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;__main__.D&apos;</span><span class="token punctuation">&gt;</span></span>, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;object&apos;</span><span class="token punctuation">&gt;</span></span>)
+</code></pre></li>
+<li><p>&#x534F;&#x4F5C;&#x5F0F;&#x8C03;&#x7528;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code>  class D(object):
+      def foo(self):
+          print(&quot;D&apos;s foo&quot;)
+
+  class B(D):
+      def foo(self):
+          print(&quot;B&apos;s foo&quot;)
+          # D.foo(self)
+          super(B, self).foo()
+
+  class C(D):
+      def foo(self):
+          print(&quot;C&apos;s foo&quot;)
+          # D.foo(self)
+          super(C, self).foo()
+
+  class A(B,C):
+      def foo(self):
+          print(&quot;A&apos;s foo&quot;)
+          # B.foo(self)
+          # C.foo(self)
+          super(A, self).foo()
+
+  a = A()
+  a.foo()
+  &apos;&apos;&apos;&#x8F93;&#x51FA;
+  # &#x5982;&#x679C;&#x662F;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#xFF0C;&#x4F1A;&#x8F93;&#x51FA;&#x4E24;&#x6B21; D&apos;s foo&#xFF0C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;
+  A&apos;s foo
+  B&apos;s foo
+  D&apos;s foo
+  C&apos;s foo
+  D&apos;s foo
+  # &#x5982;&#x679C;&#x662F;&#x4F7F;&#x7528;super&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;superobject(&#x8D85;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0D;&#x662F;&#x7B80;&#x5355;&#x7684;&#x7236;&#x7C7B;&#x7684;&#x5BF9;&#x8C61;)&#xFF0C;&#x4F7F;&#x7528;&#x8D85;&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x53EA;&#x88AB;&#x8FD0;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;
+  A&apos;s foo
+  B&apos;s foo
+  C&apos;s foo
+  D&apos;s foo
+  &apos;&apos;&apos;
+</code></pre><p>  &#x5982;&#x679C;&#x517B;&#x6210;&#x4E86;&#x4F7F;&#x7528;super&#x53BB;&#x8C03;&#x7528;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x7684;&#x4E60;&#x60EF;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x7684;&#x7C7B;&#x5C31;&#x53EF;&#x4EE5;&#x9002;&#x5E94;&#x65E0;&#x8BBA;&#x591A;&#x4E48;&#x590D;&#x6742;&#x7684;&#x7EE7;&#x627F;&#x8C03;&#x7528;&#x7ED3;&#x6784;&#x3002;
+  super()&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x662F;&#x66F4;&#x52A0;&#x5B89;&#x5168;&#x8C03;&#x7528;&#x7236;&#x7C7B;&#x65B9;&#x6CD5;&#x7684;&#x4E00;&#x79CD;&#x65B0;&#x65B9;&#x5F0F;&#x3002;</p>
+</li>
+</ul>
+</li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/Michaelromic" target="_blank">Michaelromic</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2019-05-15 09:02:48 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="面向切面编程AOP和装饰器.html" class="navigation navigation-prev " aria-label="Previous page: 面向切面编程AOP和装饰器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="单例模式.html" class="navigation navigation-next " aria-label="Next page: 单例模式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"新式类和经典类","level":"6.1.4","depth":2,"next":{"title":"单例模式","level":"6.1.5","depth":2,"path":"面试经验/python/单例模式.md","ref":"./面试经验/python/单例模式.md","articles":[]},"previous":{"title":"面向切面编程AOP和装饰器","level":"6.1.3","depth":2,"path":"面试经验/python/面向切面编程AOP和装饰器.md","ref":"./面试经验/python/面向切面编程AOP和装饰器.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","disqus","github-buttons","editlink","-ga","-highlight","prism","bibtex-indexed-cite","anchor-navigation-ex","page-footer-ex","splitter","todo","copy-code-button","expandable-chapters-small","-donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"ignore":["mermaid","eval-js"],"css":["prismjs/themes/prism-solarizedlight.css"]},"disqus":{"useIdentifier":false,"shortName":"MyGitBook"},"editlink":{"label":"Edit","multilingual":false,"base":"https://github.com/Michaelromic/MyGitBook/blob/master"},"todo":{},"page-footer-ex":{"copyright":"[Michaelromic](https://github.com/Michaelromic)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["MyGitBook"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"bibtex-indexed-cite":{"path":"/"},"github-buttons":{"buttons":[{"user":"Michaelromic","repo":"MyGitBook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Michaelromic","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"MichaelromicGitBook","bib":[],"gitbook":"*"},"file":{"path":"面试经验/python/新式类和经典类.md","mtime":"2019-05-15T09:02:48.941Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-15T09:03:43.287Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1154 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Python2和3的区别 · MichaelromicGitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Michaelromic">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../操作系统/" />
+    
+    
+    <link rel="prev" href="Python的List的实现.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Michaelromic","repo":"MyGitBook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../linux/1-1.html">
+            
+                <a href="../../linux/1-1.html">
+            
+                    
+                    1-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">nodejs</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../nodejs/koa.html">
+            
+                <a href="../../nodejs/koa.html">
+            
+                    
+                    koa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../nodejs/const,var,let区别.html">
+            
+                <a href="../../nodejs/const,var,let区别.html">
+            
+                    
+                    const,var,let区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../nodejs/node-rsa加密解密.html">
+            
+                <a href="../../nodejs/node-rsa加密解密.html">
+            
+                    
+                    node-rsa加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../nodejs/node-mysql.html">
+            
+                <a href="../../nodejs/node-mysql.html">
+            
+                    
+                    node-mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">区块链</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../区块链/bitcoin/">
+            
+                <a href="../../区块链/bitcoin/">
+            
+                    
+                    bitcoin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../区块链/bitcoin/">
+            
+                <a href="../../区块链/bitcoin/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../区块链/eos/">
+            
+                <a href="../../区块链/eos/">
+            
+                    
+                    eos
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../区块链/eos/">
+            
+                <a href="../../区块链/eos/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../区块链/ethereum/">
+            
+                <a href="../../区块链/ethereum/">
+            
+                    
+                    ethereum
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../区块链/ethereum/">
+            
+                <a href="../../区块链/ethereum/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../区块链/其他/">
+            
+                <a href="../../区块链/其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../../区块链/其他/">
+            
+                <a href="../../区块链/其他/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">文档编写</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../文档编写/markdown语法.html">
+            
+                <a href="../../文档编写/markdown语法.html">
+            
+                    
+                    markdown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面试经验</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="元类metaclass.html">
+            
+                <a href="元类metaclass.html">
+            
+                    
+                    元类metaclass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="迭代器和生成器.html">
+            
+                <a href="迭代器和生成器.html">
+            
+                    
+                    迭代器和生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="面向切面编程AOP和装饰器.html">
+            
+                <a href="面向切面编程AOP和装饰器.html">
+            
+                    
+                    面向切面编程AOP和装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="新式类和经典类.html">
+            
+                <a href="新式类和经典类.html">
+            
+                    
+                    新式类和经典类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="单例模式.html">
+            
+                <a href="单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="Python的List的实现.html">
+            
+                <a href="Python的List的实现.html">
+            
+                    
+                    Python的List的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.1.7" data-path="Python2和3的区别.html">
+            
+                <a href="Python2和3的区别.html">
+            
+                    
+                    Python2和3的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../操作系统/">
+            
+                <a href="../操作系统/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../操作系统/Linux的IO多路复用select,poll,epoll.html">
+            
+                <a href="../操作系统/Linux的IO多路复用select,poll,epoll.html">
+            
+                    
+                    Linux的IO多路复用select,poll,epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../操作系统/调度算法.html">
+            
+                <a href="../操作系统/调度算法.html">
+            
+                    
+                    调度算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="../操作系统/死锁.html">
+            
+                <a href="../操作系统/死锁.html">
+            
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="../操作系统/页面置换算法.html">
+            
+                <a href="../操作系统/页面置换算法.html">
+            
+                    
+                    页面置换算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.5" data-path="../操作系统/epoll的边沿触发模式ET和水平触发模式LT.html">
+            
+                <a href="../操作系统/epoll的边沿触发模式ET和水平触发模式LT.html">
+            
+                    
+                    epoll的边沿触发模式ET和水平触发模式LT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../数据库/">
+            
+                <a href="../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../数据库/数据库索引.html">
+            
+                <a href="../数据库/数据库索引.html">
+            
+                    
+                    数据库索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../数据库/乐观锁和悲观锁.html">
+            
+                <a href="../数据库/乐观锁和悲观锁.html">
+            
+                    
+                    乐观锁和悲观锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.3" data-path="../数据库/MVCC及事务隔离性.html">
+            
+                <a href="../数据库/MVCC及事务隔离性.html">
+            
+                    
+                    MVCC及事务隔离性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../网络/">
+            
+                <a href="../网络/">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../网络/三次握手和四次挥手.html">
+            
+                <a href="../网络/三次握手和四次挥手.html">
+            
+                    
+                    三次握手和四次挥手
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../如何写出一份专业的技术简历.html">
+            
+                <a href="../如何写出一份专业的技术简历.html">
+            
+                    
+                    如何写出一份专业的技术简历
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">测试工具</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../测试工具/jmeter压力测试.html">
+            
+                <a href="../../测试工具/jmeter压力测试.html">
+            
+                    
+                    jmeter压力测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">版本控制</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../版本控制/git常用命令.html">
+            
+                <a href="../../版本控制/git常用命令.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计与架构</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../设计与架构/RESTful.html">
+            
+                <a href="../../设计与架构/RESTful.html">
+            
+                    
+                    RESTful
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">python</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../python/python爬虫/">
+            
+                <a href="../../python/python爬虫/">
+            
+                    
+                    python爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../python/python爬虫/">
+            
+                <a href="../../python/python爬虫/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../python/python爬虫/编码+文件打开方式+文件命名方式.html">
+            
+                <a href="../../python/python爬虫/编码+文件打开方式+文件命名方式.html">
+            
+                    
+                    编码+文件打开方式+文件命名方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../python/使用pandas库将excel中多个sheet拆分为单个文件.html">
+            
+                <a href="../../python/使用pandas库将excel中多个sheet拆分为单个文件.html">
+            
+                    
+                    使用pandas库将excel中多个sheet拆分为单个文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../python/Django.html">
+            
+                <a href="../../python/Django.html">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../../python/Django去操作已经存在的数据库.html">
+            
+                <a href="../../python/Django去操作已经存在的数据库.html">
+            
+                    
+                    Django去操作已经存在的数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">辅助工具</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../辅助工具/在线工具.html">
+            
+                <a href="../../辅助工具/在线工具.html">
+            
+                    
+                    在线工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">mysql</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../../mysql/MySQL两种存储引擎_MyISAM和InnoDB简单总结.html">
+            
+                <a href="../../mysql/MySQL两种存储引擎_MyISAM和InnoDB简单总结.html">
+            
+                    
+                    MySQL两种存储引擎:MyISAM和InnoDB简单总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Python2和3的区别</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#python2&#x548C;3&#x7684;&#x533A;&#x522B;"><b></b>Python2&#x548C;3&#x7684;&#x533A;&#x522B;</a></li><ul><ul><li><span class="title-icon "></span><a href="#future&#x6A21;&#x5757;"><b></b>future&#x6A21;&#x5757;</a></li><li><span class="title-icon "></span><a href="#print&#x51FD;&#x6570;"><b></b>print&#x51FD;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x6574;&#x9664;"><b></b>&#x6574;&#x9664;</a></li><li><span class="title-icon "></span><a href="#unicode"><b></b>Unicode</a></li><li><span class="title-icon "></span><a href="#xrange&#x6A21;&#x5757;"><b></b>xrange&#x6A21;&#x5757;</a></li><li><span class="title-icon "></span><a href="#python3&#x4E2D;&#x7684;range&#x5BF9;&#x8C61;&#x7684;contains&#x65B9;&#x6CD5;"><b></b>Python3&#x4E2D;&#x7684;range&#x5BF9;&#x8C61;&#x7684;contains&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#raising-exceptions"><b></b>Raising exceptions</a></li><li><span class="title-icon "></span><a href="#handling-exceptions"><b></b>Handling exceptions</a></li><li><span class="title-icon "></span><a href="#next&#x51FD;&#x6570;-&#x548C;-next&#x65B9;&#x6CD5;"><b></b>next()&#x51FD;&#x6570; &#x548C; .next()&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#for&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x548C;&#x5168;&#x5C40;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x6CC4;&#x6F0F;"><b></b>For&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x548C;&#x5168;&#x5C40;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x6CC4;&#x6F0F;</a></li><li><span class="title-icon "></span><a href="#&#x6BD4;&#x8F83;&#x4E0D;&#x53EF;&#x6392;&#x5E8F;&#x7C7B;&#x578B;"><b></b>&#x6BD4;&#x8F83;&#x4E0D;&#x53EF;&#x6392;&#x5E8F;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x901A;&#x8FC7;input&#x89E3;&#x6790;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;"><b></b>&#x901A;&#x8FC7;input()&#x89E3;&#x6790;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;</a></li><li><span class="title-icon "></span><a href="#&#x8FD4;&#x56DE;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5217;&#x8868;"><b></b>&#x8FD4;&#x56DE;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5217;&#x8868;</a></li></ul></ul></ul></div><a href="#python2&#x548C;3&#x7684;&#x533A;&#x522B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="python2&#x548C;3&#x7684;&#x533A;&#x522B;"><a name="python2&#x548C;3&#x7684;&#x533A;&#x522B;" class="anchor-navigation-ex-anchor" href="#python2&#x548C;3&#x7684;&#x533A;&#x522B;"><i class="fa fa-link" aria-hidden="true"></i></a>Python2&#x548C;3&#x7684;&#x533A;&#x522B;</h1>
+<p><a href="https://chenqx.github.io/2014/11/10/Key-differences-between-Python-2-7-x-and-Python-3-x/" target="_blank">https://chenqx.github.io/2014/11/10/Key-differences-between-Python-2-7-x-and-Python-3-x/</a></p>
+<ul>
+<li><h3 id="future&#x6A21;&#x5757;"><a name="future&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#future&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a><strong>future</strong>&#x6A21;&#x5757;</h3>
+<p>Python 3.x &#x4ECB;&#x7ECD;&#x7684; &#x4E00;&#x4E9B;Python 2 &#x4E0D;&#x517C;&#x5BB9;&#x7684;&#x5173;&#x952E;&#x5B57;&#x548C;&#x7279;&#x6027;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728; Python 2 &#x7684;&#x5185;&#x7F6E; <strong>future</strong> &#x6A21;&#x5757;&#x5BFC;&#x5165;&#x3002;
+&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x60F3;&#x8981; &#x5728;Python 2 &#x4E2D;&#x8868;&#x73B0; Python 3.x &#x4E2D;&#x7684;&#x6574;&#x9664;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x5BFC;&#x5165;&#xFF1A;
+<code>from __future__ import division</code>
+&#x53EF;&#x4EE5;&#x5BFC;&#x5165;&#x7684;&#x6A21;&#x5757;&#x6709;&#xFF1A;
+nested_scopes&#x3001;generators&#x3001;division&#x3001;absolute_import&#x3001;with_statement&#x3001;print_function&#x3001;unicode_literals</p>
+</li>
+<li><h3 id="print&#x51FD;&#x6570;"><a name="print&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#print&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>print&#x51FD;&#x6570;</h3>
+<p>Python 2 &#x7684; print &#x58F0;&#x660E;&#x5DF2;&#x7ECF;&#x88AB; Python 3&#x4E2D;&#x7684; print() &#x51FD;&#x6570;&#x53D6;&#x4EE3;&#x4E86;&#x3002;
+print &#x5728; Python 2 &#x4E2D;&#x662F;&#x4E00;&#x4E2A;&#x58F0;&#x660E;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x3002;</p>
+</li>
+<li><h3 id="&#x6574;&#x9664;"><a name="&#x6574;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x6574;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6574;&#x9664;</h3>
+<p>&#x5F53;2&#x4E2A;<strong>&#x6574;&#x6570;</strong>&#x76F8;&#x9664;&#x65F6;&#xFF0C;/ &#x5728; python2 &#x548C; python3 &#x4E2D;&#x6709;&#x533A;&#x522B;&#xFF1A; 
+python2&#x662F;&#x6574;&#x9664;&#xFF0C;&#x7ED3;&#x679C;&#x662F;int
+python3&#x4E0D;&#x662F;&#x6574;&#x9664;&#xFF0C;&#x7ED3;&#x679C;&#x662F;float&#x3002;</p>
+</li>
+</ul>
+<pre class="language-"><code># Python2
+print &apos;3 / 2 =&apos;, 3 / 2  # 1
+print &apos;3 // 2 =&apos;, 3 // 2  # 1
+print &apos;3 / 2.0 =&apos;, 3 / 2.0  # 1.5
+print &apos;3 // 2.0 =&apos;, 3 // 2.0  # 1.0
+
+# Python3
+print(&apos;4 / 2 =&apos;, 4 / 2)  # 2.0
+print(&apos;3 / 2 =&apos;, 3 / 2)  # 1.5
+print(&apos;3 // 2 =&apos;, 3 // 2)  # 1
+print(&apos;3 / 2.0 =&apos;, 3 / 2.0)  # 1.5
+print(&apos;3 // 2.0 =&apos;, 3 // 2.0)  # 1.0
+</code></pre><ul>
+<li><h3 id="unicode"><a name="unicode" class="anchor-navigation-ex-anchor" href="#unicode"><i class="fa fa-link" aria-hidden="true"></i></a>Unicode</h3>
+</li>
+</ul>
+<p>python2 &#x9ED8;&#x8BA4;&#x7F16;&#x7801;&#x662F;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x7F16;&#x7801;(&#x5982;linux&#x662F;utf-8&#xFF0C;windows&#x662F;gbk)&#xFF0C;&#x5E76;&#x4E14;&#x6709;&#x5355;&#x72EC;&#x7684; unicode&#x7C7B;&#x578B;&#x3002;
+python3 &#x9ED8;&#x8BA4;&#x7F16;&#x7801;&#x5C31;&#x662F;unicode&#xFF0C;unicode&#x7F16;&#x7801;&#x4F1A;&#x88AB;&#x76F4;&#x63A5;&#x8BA4;&#x4E3A;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x3002;</p>
+<p>Python3&#x6709;&#x4E24;&#x79CD;&#x8868;&#x793A;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#x7684;&#x7C7B;&#x578B;&#xFF1A;bytes&#x548C;str&#x3002;&#x524D;&#x8005;&#x7684;&#x5B9E;&#x4F8B;&#x5305;&#x542B;&#x539F;&#x59CB;&#x7684;8&#x4F4D;&#x503C;&#xFF0C;&#x540E;&#x8005;&#x7684;&#x5B9E;&#x4F8B;&#x5305;&#x542B;Unicode&#x5B57;&#x7B26;&#x3002;
+Python2&#x4E5F;&#x6709;&#x4E24;&#x79CD;&#x8868;&#x793A;&#x5B57;&#x7B26;&#x5E8F;&#x5217;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x5206;&#x522B;&#x53EB;&#x505A;str&#x548C;Unicode&#x3002;&#x4E0E;Python3&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;str&#x5B9E;&#x4F8B;&#x5305;&#x542B;&#x539F;&#x59CB;&#x7684;8&#x4F4D;&#x503C;&#xFF1B;&#x800C;unicode&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5219;&#x5305;&#x542B;Unicode&#x5B57;&#x7B26;&#x3002;
+&#x7F16;&#x5199;Python&#x7A0B;&#x5E8F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x628A;&#x7F16;&#x7801;&#x548C;&#x89E3;&#x7801;&#x64CD;&#x4F5C;&#x653E;&#x5728;&#x754C;&#x9762;&#x6700;&#x5916;&#x56F4;&#x6765;&#x505A;&#x3002;&#x7A0B;&#x5E8F;&#x7684;&#x6838;&#x5FC3;&#x90E8;&#x5206;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;Unicode&#x5B57;&#x7B26;&#x7C7B;&#x578B;&#xFF08;&#x4E5F;&#x5C31;&#x662F;Python3&#x4E2D;&#x7684;str&#x3001;Python2&#x4E2D;&#x7684;unicode&#xFF09;&#x3002;</p>
+<pre class="language-"><code># python 3
+print(type(&apos;\u03BC\u0394&apos;))  # <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;str&apos;</span><span class="token punctuation">&gt;</span></span>
+print(type(b&apos; bytes for storing data&apos;))  # <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;bytes&apos;</span><span class="token punctuation">&gt;</span></span>&#xFF0C;&#x8FD9;&#x4E2A;&#x5728;python2&#x4E2D;&#x662F;str&#x7C7B;&#x578B;
+</code></pre><ul>
+<li><h3 id="xrange&#x6A21;&#x5757;"><a name="xrange&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#xrange&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>xrange&#x6A21;&#x5757;</h3>
+</li>
+</ul>
+<p>&#x5728; Python 2 &#x4E2D; xrange() &#x521B;&#x5EFA;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#x7684;&#x7528;&#x6CD5;&#x662F;&#x975E;&#x5E38;&#x6D41;&#x884C;&#x7684;&#x3002;&#x6BD4;&#x5982;&#xFF1A; for &#x5FAA;&#x73AF;&#x6216;&#x8005;&#x662F;&#x5217;&#x8868;/&#x96C6;&#x5408;/&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;&#x3002;
+&#x56E0;&#x4E3A;&#x76F4;&#x63A5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#xFF0C;&#x4E0D;&#x7528;&#x751F;&#x6210;list&#xFF0C;&#x6240;&#x4EE5;&#x6BD4;range()&#x6267;&#x884C;&#x66F4;&#x5FEB;&#x3002;</p>
+<p>python3&#x4E2D;&#x53BB;&#x9664;&#x4E86;range()&#xFF0C;&#x76F4;&#x63A5;&#x5C06;xrange()&#x91CD;&#x547D;&#x540D;&#x4E3A;range()&#x3002;
+&#x4F46;&#x5B9E;&#x9645;&#x4E0A; Python 3 &#x7684; range() &#x6BD4; Python 2 &#x7684; xrange() &#x8FD0;&#x884C;&#x6162;&#x3002;Python 3 &#x503E;&#x5411;&#x4E8E;&#x6BD4; Python 2 &#x8FD0;&#x884C;&#x7684;&#x6162;&#x4E00;&#x70B9;&#x3002;</p>
+<pre class="language-"><code># python2
+x = xrange(1,3)
+print type(x)  # <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span> <span class="token attr-name">&apos;xrange&apos;</span><span class="token punctuation">&gt;</span></span>
+
+x = range(1,3)
+print type(x)  # <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span> <span class="token attr-name">&apos;list&apos;</span><span class="token punctuation">&gt;</span></span>
+
+
+# python3
+x = range(1,3)
+print(type(x))  # <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;range&apos;</span><span class="token punctuation">&gt;</span></span>
+</code></pre><ul>
+<li><h3 id="python3&#x4E2D;&#x7684;range&#x5BF9;&#x8C61;&#x7684;contains&#x65B9;&#x6CD5;"><a name="python3&#x4E2D;&#x7684;range&#x5BF9;&#x8C61;&#x7684;contains&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#python3&#x4E2D;&#x7684;range&#x5BF9;&#x8C61;&#x7684;contains&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>Python3&#x4E2D;&#x7684;range&#x5BF9;&#x8C61;&#x7684;<strong>contains</strong>&#x65B9;&#x6CD5;</h3>
+<p>Python 3 &#x4E2D; range &#x6709;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <strong>contains</strong> &#x65B9;&#x6CD5;&#xFF0C;<strong>contains</strong> &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x52A0;&#x901F; &#x201C;&#x67E5;&#x627E;&#x201D; &#x5728; Python 3.x &#x4E2D;&#x663E;&#x8457;&#x7684;&#x6574;&#x6570;&#x548C;&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><h3 id="raising-exceptions"><a name="raising-exceptions" class="anchor-navigation-ex-anchor" href="#raising-exceptions"><i class="fa fa-link" aria-hidden="true"></i></a>Raising exceptions</h3>
+<p>Python 2 &#x63A5;&#x53D7;&#x65B0;&#x65E7;&#x4E24;&#x79CD;&#x8BED;&#x6CD5;&#x6807;&#x8BB0;&#xFF0C;&#x5728; Python 3 &#x4E2D;&#x5982;&#x679C;&#x6211;&#x4E0D;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#x628A;&#x5F02;&#x5E38;&#x53C2;&#x6570;&#x62EC;&#x8D77;&#x6765;&#x5C31;&#x4F1A;&#x963B;&#x585E;&#xFF08;&#x5E76;&#x4E14;&#x53CD;&#x8FC7;&#x6765;&#x5F15;&#x53D1;&#x4E00;&#x4E2A;&#x8BED;&#x6CD5;&#x5F02;&#x5E38;&#xFF09;&#x3002;</p>
+</li>
+</ul>
+<pre class="language-"><code># python2&#xFF0C;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x5199;&#x6CD5;&#x90FD;&#x652F;&#x6301;
+raise IOError, &quot;file error&quot;
+raise IOError(&quot;file error&quot;)
+
+# python3&#xFF0C;&#x53EA;&#x652F;&#x6301;&#x4E00;&#x79CD;&#x5199;&#x6CD5;
+raise IOError(&quot;file error&quot;)
+</code></pre><ul>
+<li><h3 id="handling-exceptions"><a name="handling-exceptions" class="anchor-navigation-ex-anchor" href="#handling-exceptions"><i class="fa fa-link" aria-hidden="true"></i></a>Handling exceptions</h3>
+&#x5728; Python 3 &#x4E2D;&#x5904;&#x7406;&#x5F02;&#x5E38;&#x4E5F;&#x8F7B;&#x5FAE;&#x7684;&#x6539;&#x53D8;&#x4E86;&#xFF0C;&#x5728; Python 3 &#x4E2D;&#x6211;&#x4EEC;&#x73B0;&#x5728;&#x4F7F;&#x7528; as &#x4F5C;&#x4E3A;&#x5173;&#x952E;&#x8BCD;&#x3002;</li>
+</ul>
+<pre class="language-"><code># python2
+try:
+    let_us_cause_a_NameError
+except NameError, err:
+    print err, &apos;--&gt; our error message&apos;
+
+# python3
+try:
+    let_us_cause_a_NameError
+except NameError as err:
+    print(err, &apos;--&gt; our error message&apos;)
+</code></pre><ul>
+<li><h3 id="next&#x51FD;&#x6570;-&#x548C;-next&#x65B9;&#x6CD5;"><a name="next&#x51FD;&#x6570;-&#x548C;-next&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#next&#x51FD;&#x6570;-&#x548C;-next&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>next()&#x51FD;&#x6570; &#x548C; .next()&#x65B9;&#x6CD5;</h3>
+<p>python3 &#x5220;&#x9664;&#x4E86;.next()&#x65B9;&#x6CD5;</p>
+<pre class="language-"><code># python3
+my_generator = (letter for letter in &apos;abcdefg&apos;)
+next(my_generator)  # a
+</code></pre></li>
+<li><h3 id="for&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x548C;&#x5168;&#x5C40;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x6CC4;&#x6F0F;"><a name="for&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x548C;&#x5168;&#x5C40;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x6CC4;&#x6F0F;" class="anchor-navigation-ex-anchor" href="#for&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x548C;&#x5168;&#x5C40;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x6CC4;&#x6F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>For&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x548C;&#x5168;&#x5C40;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x6CC4;&#x6F0F;</h3>
+<p>&#x5728; Python 3.x &#x4E2D; for &#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x4E0D;&#x4F1A;&#x518D;&#x5BFC;&#x81F4;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x6CC4;&#x6F0F;&#x3002;</p>
+<pre class="language-"><code># python 2 &#x4E2D;&#x4F7F;&#x7528;&#x5217;&#x8868;&#x63A8;&#x5BFC;&#x4F1A;&#x5BFC;&#x81F4;&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x53D8;&#x91CF;&#x6CC4;&#x9732;&#x8FDB;&#x5468;&#x56F4;&#x7684;&#x4F5C;&#x7528;&#x8303;&#x56F4;&#x57DF;
+print &apos;Python&apos;, python_version()
+i = 1
+print &apos;before: i =&apos;, i  # before: i = 1
+print &apos;comprehension: &apos;, [i for i in range(5)]  # comprehension: [0, 1, 2, 3, 4]
+print &apos;after: i =&apos;, i  # after: i = 4
+</code></pre></li>
+</ul>
+<p>&#x5217;&#x8868;&#x63A8;&#x5BFC;&#x4E0D;&#x518D;&#x652F;&#x6301; [... for var in item1, item2, ...] &#x8FD9;&#x6837;&#x7684;&#x8BED;&#x6CD5;&#x3002;&#x4F7F;&#x7528; [... for var in (item1, item2, ...)] &#x4EE3;&#x66FF;</p>
+<pre class="language-"><code># python 3
+print([i for i in range(5)])  # [0, 1, 2, 3, 4]
+print([i for i in [1,2,3]])  # [1, 2, 3]
+print([i for i in (1,2,3)])  # [1, 2, 3]
+</code></pre><ul>
+<li><h3 id="&#x6BD4;&#x8F83;&#x4E0D;&#x53EF;&#x6392;&#x5E8F;&#x7C7B;&#x578B;"><a name="&#x6BD4;&#x8F83;&#x4E0D;&#x53EF;&#x6392;&#x5E8F;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6BD4;&#x8F83;&#x4E0D;&#x53EF;&#x6392;&#x5E8F;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6BD4;&#x8F83;&#x4E0D;&#x53EF;&#x6392;&#x5E8F;&#x7C7B;&#x578B;</h3>
+<p>&#x5728; Python 3 &#x4E2D;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x53D8;&#x5316;&#x5C31;&#x662F;&#x5F53;&#x5BF9;&#x4E0D;&#x53EF;&#x6392;&#x5E8F;&#x7C7B;&#x578B;&#x505A;&#x6BD4;&#x8F83;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x629B;&#x51FA;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x9519;&#x8BEF;&#x3002;
+&#x800C;python 2&#x4E2D;&#x6BD4;&#x8F83; [1,2] &#x548C; &apos;foo&apos;&#x7684;&#x5927;&#x5C0F;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#x3002;</p>
+</li>
+<li><h3 id="&#x901A;&#x8FC7;input&#x89E3;&#x6790;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;"><a name="&#x901A;&#x8FC7;input&#x89E3;&#x6790;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x8FC7;input&#x89E3;&#x6790;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x8FC7;input()&#x89E3;&#x6790;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;</h3>
+<p>&#x5728; Python 3 &#x4E2D;&#x5DF2;&#x7ECF;&#x89E3;&#x51B3;&#x4E86;&#x628A;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#x5B58;&#x50A8;&#x4E3A;&#x4E00;&#x4E2A; str &#x5BF9;&#x8C61;&#x7684;&#x95EE;&#x9898;&#x3002;
+&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x5728; Python 2 &#x4E2D;&#x7684;&#x8BFB;&#x53D6;&#x975E;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#x5371;&#x9669;&#x884C;&#x4E3A;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x5F97;&#x4E0D;&#x4F7F;&#x7528; raw_input() &#x4EE3;&#x66FF;&#x3002;
+&#x5728;python2&#x4E2D;&#x4F7F;&#x7528;input()&#x8BFB;&#x53D6;&#x6570;&#x5B57;&#xFF0C;&#x4F1A;&#x5B58;&#x50A8;&#x4E3A;int&#x7C7B;&#x578B;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;raw_input()&#x8BFB;&#x53D6;&#x6570;&#x5B57;&#xFF0C;&#x4F1A;&#x5B58;&#x50A8;&#x4E3A;str&#x7C7B;&#x578B;&#x3002;</p>
+</li>
+<li><h3 id="&#x8FD4;&#x56DE;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5217;&#x8868;"><a name="&#x8FD4;&#x56DE;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5217;&#x8868;</h3>
+<p>&#x5047;&#x5982;&#x53EA;&#x904D;&#x5386;&#x4E00;&#x6B21;&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x8282;&#x7EA6;&#x5185;&#x5B58;&#x3002;
+&#x5982;&#x679C;&#x9700;&#x904D;&#x5386;&#x591A;&#x6B21;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;list()&#x51FD;&#x6570;&#x628A;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x3002;</p>
+</li>
+</ul>
+<pre class="language-"><code># python2
+print range(3)  # [0, 1, 2]
+print type(range(3))  # &lt; type &#x2018;list&#x2019;&gt;
+
+# python3
+print(range(3))  # range(0, 3)
+print(type(range(3)))  # &lt; class &#x2018;range&#x2019;&gt;
+print(list(range(3)))  # [0, 1, 2]
+</code></pre><p>&#x5728; Python 3 &#x4E2D;&#x4E00;&#x4E9B;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x4E0D;&#x518D;&#x8FD4;&#x56DE;&#x5217;&#x8868;&#x7684;&#x51FD;&#x6570;&#x548C;&#x65B9;&#x6CD5;&#xFF1A;
+zip()
+map()
+filter()
+dictionary&#x2019;s .keys() method
+dictionary&#x2019;s .values() method
+dictionary&#x2019;s .items() method</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/Michaelromic" target="_blank">Michaelromic</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2019-05-15 09:02:48 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Python的List的实现.html" class="navigation navigation-prev " aria-label="Previous page: Python的List的实现">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../操作系统/" class="navigation navigation-next " aria-label="Next page: 操作系统">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Python2和3的区别","level":"6.1.7","depth":2,"next":{"title":"操作系统","level":"6.2","depth":1,"path":"面试经验/操作系统/README.md","ref":"./面试经验/操作系统/README.md","articles":[{"title":"Linux的IO多路复用select,poll,epoll","level":"6.2.1","depth":2,"path":"面试经验/操作系统/Linux的IO多路复用select,poll,epoll.md","ref":"./面试经验/操作系统/Linux的IO多路复用select,poll,epoll.md","articles":[]},{"title":"调度算法","level":"6.2.2","depth":2,"path":"面试经验/操作系统/调度算法.md","ref":"./面试经验/操作系统/调度算法.md","articles":[]},{"title":"死锁","level":"6.2.3","depth":2,"path":"面试经验/操作系统/死锁.md","ref":"./面试经验/操作系统/死锁.md","articles":[]},{"title":"页面置换算法","level":"6.2.4","depth":2,"path":"面试经验/操作系统/页面置换算法.md","ref":"./面试经验/操作系统/页面置换算法.md","articles":[]},{"title":"epoll的边沿触发模式ET和水平触发模式LT","level":"6.2.5","depth":2,"path":"面试经验/操作系统/epoll的边沿触发模式ET和水平触发模式LT.md","ref":"./面试经验/操作系统/epoll的边沿触发模式ET和水平触发模式LT.md","articles":[]}]},"previous":{"title":"Python的List的实现","level":"6.1.6","depth":2,"path":"面试经验/python/Python的List的实现.md","ref":"./面试经验/python/Python的List的实现.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","disqus","github-buttons","editlink","-ga","-highlight","prism","bibtex-indexed-cite","anchor-navigation-ex","page-footer-ex","splitter","todo","copy-code-button","expandable-chapters-small","-donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"ignore":["mermaid","eval-js"],"css":["prismjs/themes/prism-solarizedlight.css"]},"disqus":{"useIdentifier":false,"shortName":"MyGitBook"},"editlink":{"label":"Edit","multilingual":false,"base":"https://github.com/Michaelromic/MyGitBook/blob/master"},"todo":{},"page-footer-ex":{"copyright":"[Michaelromic](https://github.com/Michaelromic)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["MyGitBook"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"bibtex-indexed-cite":{"path":"/"},"github-buttons":{"buttons":[{"user":"Michaelromic","repo":"MyGitBook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Michaelromic","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"MichaelromicGitBook","bib":[],"gitbook":"*"},"file":{"path":"面试经验/python/Python2和3的区别.md","mtime":"2019-05-15T09:02:48.941Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-15T09:03:43.287Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

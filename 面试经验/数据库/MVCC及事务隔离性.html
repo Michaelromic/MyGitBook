@@ -1,0 +1,1058 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MVCC及事务隔离性 · MichaelromicGitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Michaelromic">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../网络/" />
+    
+    
+    <link rel="prev" href="乐观锁和悲观锁.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Michaelromic","repo":"MyGitBook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../linux/1-1.html">
+            
+                <a href="../../linux/1-1.html">
+            
+                    
+                    1-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">nodejs</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../nodejs/koa.html">
+            
+                <a href="../../nodejs/koa.html">
+            
+                    
+                    koa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../nodejs/const,var,let区别.html">
+            
+                <a href="../../nodejs/const,var,let区别.html">
+            
+                    
+                    const,var,let区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../nodejs/node-rsa加密解密.html">
+            
+                <a href="../../nodejs/node-rsa加密解密.html">
+            
+                    
+                    node-rsa加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../nodejs/node-mysql.html">
+            
+                <a href="../../nodejs/node-mysql.html">
+            
+                    
+                    node-mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">区块链</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../区块链/bitcoin/">
+            
+                <a href="../../区块链/bitcoin/">
+            
+                    
+                    bitcoin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../区块链/bitcoin/">
+            
+                <a href="../../区块链/bitcoin/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../区块链/eos/">
+            
+                <a href="../../区块链/eos/">
+            
+                    
+                    eos
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../区块链/eos/">
+            
+                <a href="../../区块链/eos/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../区块链/ethereum/">
+            
+                <a href="../../区块链/ethereum/">
+            
+                    
+                    ethereum
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../区块链/ethereum/">
+            
+                <a href="../../区块链/ethereum/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../区块链/其他/">
+            
+                <a href="../../区块链/其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../../区块链/其他/">
+            
+                <a href="../../区块链/其他/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">文档编写</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../文档编写/markdown语法.html">
+            
+                <a href="../../文档编写/markdown语法.html">
+            
+                    
+                    markdown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面试经验</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../python/">
+            
+                <a href="../python/">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../python/元类metaclass.html">
+            
+                <a href="../python/元类metaclass.html">
+            
+                    
+                    元类metaclass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../python/迭代器和生成器.html">
+            
+                <a href="../python/迭代器和生成器.html">
+            
+                    
+                    迭代器和生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../python/面向切面编程AOP和装饰器.html">
+            
+                <a href="../python/面向切面编程AOP和装饰器.html">
+            
+                    
+                    面向切面编程AOP和装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../python/新式类和经典类.html">
+            
+                <a href="../python/新式类和经典类.html">
+            
+                    
+                    新式类和经典类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../python/单例模式.html">
+            
+                <a href="../python/单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="../python/Python的List的实现.html">
+            
+                <a href="../python/Python的List的实现.html">
+            
+                    
+                    Python的List的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.7" data-path="../python/Python2和3的区别.html">
+            
+                <a href="../python/Python2和3的区别.html">
+            
+                    
+                    Python2和3的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../操作系统/">
+            
+                <a href="../操作系统/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../操作系统/Linux的IO多路复用select,poll,epoll.html">
+            
+                <a href="../操作系统/Linux的IO多路复用select,poll,epoll.html">
+            
+                    
+                    Linux的IO多路复用select,poll,epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../操作系统/调度算法.html">
+            
+                <a href="../操作系统/调度算法.html">
+            
+                    
+                    调度算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="../操作系统/死锁.html">
+            
+                <a href="../操作系统/死锁.html">
+            
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="../操作系统/页面置换算法.html">
+            
+                <a href="../操作系统/页面置换算法.html">
+            
+                    
+                    页面置换算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.5" data-path="../操作系统/epoll的边沿触发模式ET和水平触发模式LT.html">
+            
+                <a href="../操作系统/epoll的边沿触发模式ET和水平触发模式LT.html">
+            
+                    
+                    epoll的边沿触发模式ET和水平触发模式LT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="数据库索引.html">
+            
+                <a href="数据库索引.html">
+            
+                    
+                    数据库索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="乐观锁和悲观锁.html">
+            
+                <a href="乐观锁和悲观锁.html">
+            
+                    
+                    乐观锁和悲观锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.3.3" data-path="MVCC及事务隔离性.html">
+            
+                <a href="MVCC及事务隔离性.html">
+            
+                    
+                    MVCC及事务隔离性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../网络/">
+            
+                <a href="../网络/">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../网络/三次握手和四次挥手.html">
+            
+                <a href="../网络/三次握手和四次挥手.html">
+            
+                    
+                    三次握手和四次挥手
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../如何写出一份专业的技术简历.html">
+            
+                <a href="../如何写出一份专业的技术简历.html">
+            
+                    
+                    如何写出一份专业的技术简历
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">测试工具</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../测试工具/jmeter压力测试.html">
+            
+                <a href="../../测试工具/jmeter压力测试.html">
+            
+                    
+                    jmeter压力测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">版本控制</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../版本控制/git常用命令.html">
+            
+                <a href="../../版本控制/git常用命令.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计与架构</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../设计与架构/RESTful.html">
+            
+                <a href="../../设计与架构/RESTful.html">
+            
+                    
+                    RESTful
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">python</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../python/python爬虫/">
+            
+                <a href="../../python/python爬虫/">
+            
+                    
+                    python爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../python/python爬虫/">
+            
+                <a href="../../python/python爬虫/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../python/python爬虫/编码+文件打开方式+文件命名方式.html">
+            
+                <a href="../../python/python爬虫/编码+文件打开方式+文件命名方式.html">
+            
+                    
+                    编码+文件打开方式+文件命名方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../python/使用pandas库将excel中多个sheet拆分为单个文件.html">
+            
+                <a href="../../python/使用pandas库将excel中多个sheet拆分为单个文件.html">
+            
+                    
+                    使用pandas库将excel中多个sheet拆分为单个文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../python/Django.html">
+            
+                <a href="../../python/Django.html">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../../python/Django去操作已经存在的数据库.html">
+            
+                <a href="../../python/Django去操作已经存在的数据库.html">
+            
+                    
+                    Django去操作已经存在的数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">辅助工具</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../辅助工具/在线工具.html">
+            
+                <a href="../../辅助工具/在线工具.html">
+            
+                    
+                    在线工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">mysql</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../../mysql/MySQL两种存储引擎_MyISAM和InnoDB简单总结.html">
+            
+                <a href="../../mysql/MySQL两种存储引擎_MyISAM和InnoDB简单总结.html">
+            
+                    
+                    MySQL两种存储引擎:MyISAM和InnoDB简单总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >MVCC及事务隔离性</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#mvcc-&#x5728;&#x4E8B;&#x52A1;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x5FEB;&#x7167;&#x4E0A;&#x8FDB;&#x884C;&#xFF0C;&#x5E76;&#x4E0D;&#x4FEE;&#x6539;&#x5B9E;&#x9645;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x63D0;&#x4EA4;&#x65F6;&#x624D;&#x4FEE;&#x6539;"><b></b>MVCC (&#x5728;&#x4E8B;&#x52A1;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x5FEB;&#x7167;&#x4E0A;&#x8FDB;&#x884C;&#xFF0C;&#x5E76;&#x4E0D;&#x4FEE;&#x6539;&#x5B9E;&#x9645;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x63D0;&#x4EA4;&#x65F6;&#x624D;&#x4FEE;&#x6539;)</a></li><ul><ul><li><span class="title-icon "></span><a href="#mysql&#x7684;innodb&#x5F15;&#x64CE;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;mvcc&#x7684;"><b></b>MySQL&#x7684;innodb&#x5F15;&#x64CE;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;MVCC&#x7684;</a></li><li><span class="title-icon "></span><a href="#&#x9694;&#x79BB;&#x6027;"><b></b>&#x9694;&#x79BB;&#x6027;</a></li></ul></ul></ul></div><a href="#mvcc-&#x5728;&#x4E8B;&#x52A1;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x5FEB;&#x7167;&#x4E0A;&#x8FDB;&#x884C;&#xFF0C;&#x5E76;&#x4E0D;&#x4FEE;&#x6539;&#x5B9E;&#x9645;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x63D0;&#x4EA4;&#x65F6;&#x624D;&#x4FEE;&#x6539;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mvcc-&#x5728;&#x4E8B;&#x52A1;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x5FEB;&#x7167;&#x4E0A;&#x8FDB;&#x884C;&#xFF0C;&#x5E76;&#x4E0D;&#x4FEE;&#x6539;&#x5B9E;&#x9645;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x63D0;&#x4EA4;&#x65F6;&#x624D;&#x4FEE;&#x6539;"><a name="mvcc-&#x5728;&#x4E8B;&#x52A1;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x5FEB;&#x7167;&#x4E0A;&#x8FDB;&#x884C;&#xFF0C;&#x5E76;&#x4E0D;&#x4FEE;&#x6539;&#x5B9E;&#x9645;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x63D0;&#x4EA4;&#x65F6;&#x624D;&#x4FEE;&#x6539;" class="anchor-navigation-ex-anchor" href="#mvcc-&#x5728;&#x4E8B;&#x52A1;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x5FEB;&#x7167;&#x4E0A;&#x8FDB;&#x884C;&#xFF0C;&#x5E76;&#x4E0D;&#x4FEE;&#x6539;&#x5B9E;&#x9645;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x63D0;&#x4EA4;&#x65F6;&#x624D;&#x4FEE;&#x6539;"><i class="fa fa-link" aria-hidden="true"></i></a>MVCC (&#x5728;&#x4E8B;&#x52A1;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x5FEB;&#x7167;&#x4E0A;&#x8FDB;&#x884C;&#xFF0C;&#x5E76;&#x4E0D;&#x4FEE;&#x6539;&#x5B9E;&#x9645;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x63D0;&#x4EA4;&#x65F6;&#x624D;&#x4FEE;&#x6539;)</h1>
+<blockquote>
+<p>&#x5168;&#x79F0;&#x662F;Multi-Version Concurrent Control&#xFF0C;&#x5373;&#x591A;&#x7248;&#x672C;&#x5E76;&#x53D1;&#x63A7;&#x5236;&#x3002;
+&#x5728;MVCC&#x534F;&#x8BAE;&#x4E0B;&#xFF0C;&#x6BCF;&#x4E2A;&#x8BFB;&#x64CD;&#x4F5C;&#x4F1A;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x4E00;&#x81F4;&#x6027;&#x7684;snapshot&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x975E;&#x963B;&#x585E;&#x7684;&#x8BFB;&#x3002;
+MVCC&#x5141;&#x8BB8;&#x6570;&#x636E;&#x5177;&#x6709;&#x591A;&#x4E2A;&#x7248;&#x672C;&#xFF0C;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x53EF;&#x4EE5;&#x662F;&#x65F6;&#x95F4;&#x6233;&#x6216;&#x8005;&#x662F;&#x5168;&#x5C40;&#x9012;&#x589E;&#x7684;&#x4E8B;&#x52A1;ID&#xFF0C;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x4E8B;&#x52A1;&#x770B;&#x5230;&#x7684;&#x6570;&#x636E;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;a=1&#xFF0C;A&#x4E8B;&#x52A1;&#x4E2D;&#x66F4;&#x65B0;&#x4E86;a=2&#xFF0C;&#x4F46;&#x8FD8;&#x6CA1;&#x6709;&#x63D0;&#x4EA4;&#xFF0C;&#x6B64;&#x65F6;A&#x4E8B;&#x52A1;&#x8BFB;&#x5230;&#x7684;A&#x662F;2&#xFF0C;B&#x4E8B;&#x52A1;&#x8BFB;&#x5230;&#x7684;A&#x662F;1&#x3002;</p>
+</blockquote>
+<ul>
+<li><h3 id="mysql&#x7684;innodb&#x5F15;&#x64CE;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;mvcc&#x7684;"><a name="mysql&#x7684;innodb&#x5F15;&#x64CE;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;mvcc&#x7684;" class="anchor-navigation-ex-anchor" href="#mysql&#x7684;innodb&#x5F15;&#x64CE;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;mvcc&#x7684;"><i class="fa fa-link" aria-hidden="true"></i></a>MySQL&#x7684;innodb&#x5F15;&#x64CE;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;MVCC&#x7684;</h3>
+innodb&#x4F1A;&#x4E3A;&#x6BCF;&#x4E00;&#x884C;&#x6DFB;&#x52A0;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x5206;&#x522B;&#x8868;&#x793A;&#x8BE5;&#x884C;&#x521B;&#x5EFA;&#x7684;&#x7248;&#x672C;&#x548C;&#x5220;&#x9664;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x586B;&#x5165;&#x7684;&#x662F;&#x4E8B;&#x52A1;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x53F7;&#x968F;&#x7740;&#x4E8B;&#x52A1;&#x7684;&#x521B;&#x5EFA;&#x4E0D;&#x65AD;&#x9012;&#x589E;&#x3002;
+&#x5728;repeated read&#x7684;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#xFF08;&#x4E8B;&#x52A1;&#x7684;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#x8BF7;&#x770B;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#xFF09;&#x4E0B;&#xFF0C;&#x5177;&#x4F53;&#x5404;&#x79CD;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;<ul>
+<li>select&#xFF1A;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;innodb&#x4F1A;&#x8FD4;&#x56DE;&#x8BE5;&#x884C;&#x6570;&#x636E;&#xFF1A;<ul>
+<li>&#x8BE5;&#x884C;&#x7684;&#x521B;&#x5EFA;&#x7248;&#x672C;&#x53F7;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x5F53;&#x524D;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x7528;&#x4E8E;&#x4FDD;&#x8BC1;&#x5728;select&#x64CD;&#x4F5C;&#x4E4B;&#x524D;&#x6240;&#x6709;&#x7684;&#x64CD;&#x4F5C;&#x5DF2;&#x7ECF;&#x6267;&#x884C;&#x843D;&#x5730;&#x3002;</li>
+<li>&#x8BE5;&#x884C;&#x7684;&#x5220;&#x9664;&#x7248;&#x672C;&#x53F7;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x7248;&#x672C;&#x6216;&#x8005;&#x4E3A;&#x7A7A;&#x3002;&#x5220;&#x9664;&#x7248;&#x672C;&#x53F7;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x7248;&#x672C;&#x610F;&#x5473;&#x7740;&#x6709;&#x4E00;&#x4E2A;&#x5E76;&#x53D1;&#x4E8B;&#x52A1;&#x5C06;&#x8BE5;&#x884C;&#x5220;&#x9664;&#x4E86;&#x3002;</li>
+</ul>
+</li>
+<li>insert&#xFF1A;&#x5C06;&#x65B0;&#x63D2;&#x5165;&#x7684;&#x884C;&#x7684;&#x521B;&#x5EFA;&#x7248;&#x672C;&#x53F7;&#x8BBE;&#x7F6E;&#x4E3A;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x7684;&#x7248;&#x672C;&#x53F7;&#x3002;</li>
+<li>delete&#xFF1A;&#x5C06;&#x8981;&#x5220;&#x9664;&#x7684;&#x884C;&#x7684;&#x5220;&#x9664;&#x7248;&#x672C;&#x53F7;&#x8BBE;&#x7F6E;&#x4E3A;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x7684;&#x7248;&#x672C;&#x53F7;&#x3002;</li>
+<li>update&#xFF1A;&#x4E0D;&#x6267;&#x884C;&#x539F;&#x5730;update&#xFF0C;&#x800C;&#x662F;&#x8F6C;&#x6362;&#x6210;insert + delete&#x3002;&#x5C06;&#x65E7;&#x884C;&#x7684;&#x5220;&#x9664;&#x7248;&#x672C;&#x53F7;&#x8BBE;&#x7F6E;&#x4E3A;&#x5F53;&#x524D;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x5E76;&#x5C06;&#x65B0;&#x884C;insert&#x540C;&#x65F6;&#x8BBE;&#x7F6E;&#x521B;&#x5EFA;&#x7248;&#x672C;&#x53F7;&#x4E3A;&#x5F53;&#x524D;&#x7248;&#x672C;&#x53F7;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x5199;&#x64CD;&#x4F5C;&#xFF08;insert&#x3001;delete&#x548C;update&#xFF09;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x53F7;&#x9012;&#x589E;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x65E7;&#x6570;&#x636E;&#x5E76;&#x4E0D;&#x771F;&#x6B63;&#x7684;&#x5220;&#x9664;&#xFF0C;&#x6240;&#x4EE5;&#x5FC5;&#x987B;&#x5BF9;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6E05;&#x7406;&#xFF0C;innodb&#x4F1A;&#x5F00;&#x542F;&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#xFF0C;&#x5177;&#x4F53;&#x7684;&#x89C4;&#x5219;&#x662F;&#x5C06;&#x5220;&#x9664;&#x7248;&#x672C;&#x53F7;&#x5C0F;&#x4E8E;&#x5F53;&#x524D;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x7684;&#x884C;&#x5220;&#x9664;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x53EB;&#x505A;purge&#x3002;</p>
+<p>&#x901A;&#x8FC7;MVCC&#x5F88;&#x597D;&#x7684;&#x5B9E;&#x73B0;&#x4E86;&#x4E8B;&#x52A1;&#x7684;&#x9694;&#x79BB;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x8FBE;&#x5230;repeated read&#x7EA7;&#x522B;&#xFF0C;&#x8981;&#x5B9E;&#x73B0;serializable&#x8FD8;&#x5FC5;&#x987B;&#x52A0;&#x9501;&#x3002;</p>
+</blockquote>
+<ul>
+<li><h3 id="&#x9694;&#x79BB;&#x6027;"><a name="&#x9694;&#x79BB;&#x6027;" class="anchor-navigation-ex-anchor" href="#&#x9694;&#x79BB;&#x6027;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9694;&#x79BB;&#x6027;</h3>
+<ul>
+<li><p>&#x5728;&#x4E8B;&#x52A1;&#x5E76;&#x53D1;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x7684;&#x95EE;&#x9898;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x810F;&#x8BFB;&#xFF1A;&#x8FD8;&#x662F;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5047;&#x5982;B&#x4E8B;&#x52A1;&#x8BFB;&#x5230;&#x7684;&#x662F;A&#x4E8B;&#x52A1;&#x8FD8;&#x6CA1;&#x6709;&#x63D0;&#x4EA4;&#x7684;2&#xFF0C;&#x7136;&#x540E;A&#x53C8;&#x63D0;&#x4EA4;&#x5931;&#x8D25;&#x4E86;&#xFF0C;B&#x8BFB;&#x5230;&#x7684;&#x5C31;&#x662F;&#x810F;&#x6570;&#x636E;&#x3002;</li>
+<li>&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#xFF1A;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x4EFD;&#x6570;&#x636E;&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x4E00;&#x81F4;&#x3002;&#x5047;&#x5982;B&#x4E8B;&#x52A1;&#x5728;A&#x63D0;&#x4EA4;&#x524D;&#x8BFB;&#x5230;&#x7684;&#x662F;1&#xFF0C;A&#x63D0;&#x4EA4;&#x540E;&#x8BFB;&#x5230;&#x7684;&#x662F;2&#xFF0C;&#x5C31;&#x662F;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x3002;</li>
+<li>&#x5E7B;&#x8BFB;&#xFF1A;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x591A;&#x6B21;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x4E0D;&#x4E00;&#x81F4;&#x3002;&#x5047;&#x5982;A&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x6761;&#x8BB0;&#x5F55; b=3&#xFF0C;B&#x5728;A&#x63D0;&#x4EA4;&#x524D;&#x53EA;&#x8BFB;&#x5230;&#x4E00;&#x884C;&#x6570;&#x636E;&#xFF0C;&#x5728;A&#x63D0;&#x4EA4;&#x540E;&#x8BFB;&#x5230;&#x4E24;&#x884C;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x5E7B;&#x8BFB;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x4E8B;&#x52A1;&#x7684;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#x4ECE;&#x4F4E;&#x5230;&#x9AD8;&#x6709;&#xFF1A;</p>
+<ul>
+<li>Read Uncommitted(&#x8BFB;&#x53D6;&#x672A;&#x63D0;&#x4EA4;)&#xFF1A;&#x6700;&#x4F4E;&#x7684;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#xFF0C;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x9700;&#x8981;&#x505A;&#xFF0C;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x53EF;&#x4EE5;&#x8BFB;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x672A;&#x63D0;&#x4EA4;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x6240;&#x6709;&#x7684;&#x5E76;&#x53D1;&#x4E8B;&#x52A1;&#x95EE;&#x9898;&#x90FD;&#x4F1A;&#x53D1;&#x751F;&#x3002;</li>
+<li>Read Committed(&#x8BFB;&#x53D6;&#x5DF2;&#x63D0;&#x4EA4;)&#xFF1A;&#x53EA;&#x6709;&#x5728;&#x4E8B;&#x52A1;&#x63D0;&#x4EA4;&#x540E;&#xFF0C;&#x5176;&#x66F4;&#x65B0;&#x7ED3;&#x679C;&#x624D;&#x4F1A;&#x88AB;&#x5176;&#x4ED6;&#x4E8B;&#x52A1;&#x770B;&#x89C1;&#x3002;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x810F;&#x8BFB;&#x95EE;&#x9898;&#x3002;</li>
+<li>Repeated Read&#xFF08;&#x53EF;&#x91CD;&#x8BFB;&#xFF09;&#xFF1A;&#x5728;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x4EFD;&#x6570;&#x636E;&#x7684;&#x8BFB;&#x53D6;&#x7ED3;&#x679C;&#x603B;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x6709;&#x5176;&#x4ED6;&#x4E8B;&#x52A1;&#x5BF9;&#x8FD9;&#x4EFD;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x4EE5;&#x53CA;&#x8FD9;&#x4E2A;&#x4E8B;&#x52A1;&#x662F;&#x5426;&#x63D0;&#x4EA4;&#x3002;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x810F;&#x8BFB;&#x3001;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x3002;&#x4F46;&#x5E7B;&#x8BFB;&#x4ECD;&#x6709;&#x53EF;&#x80FD;&#x53D1;&#x751F;&#x3002;</li>
+<li>Serialization(&#x53EF;&#x4E32;&#x884C;&#x5316;)&#xFF1A;&#x4E8B;&#x52A1;&#x4E32;&#x884C;&#x5316;&#x6267;&#x884C;&#xFF0C;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#x6700;&#x9AD8;&#xFF0C;&#x727A;&#x7272;&#x4E86;&#x7CFB;&#x7EDF;&#x7684;&#x5E76;&#x53D1;&#x6027;&#x3002;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x5E76;&#x53D1;&#x4E8B;&#x52A1;&#x7684;&#x6240;&#x6709;&#x95EE;&#x9898;&#x3002;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/Michaelromic" target="_blank">Michaelromic</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2019-05-15 09:02:48 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="乐观锁和悲观锁.html" class="navigation navigation-prev " aria-label="Previous page: 乐观锁和悲观锁">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../网络/" class="navigation navigation-next " aria-label="Next page: 网络">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MVCC及事务隔离性","level":"6.3.3","depth":2,"next":{"title":"网络","level":"6.4","depth":1,"path":"面试经验/网络/README.md","ref":"./面试经验/网络/README.md","articles":[{"title":"三次握手和四次挥手","level":"6.4.1","depth":2,"path":"面试经验/网络/三次握手和四次挥手.md","ref":"./面试经验/网络/三次握手和四次挥手.md","articles":[]}]},"previous":{"title":"乐观锁和悲观锁","level":"6.3.2","depth":2,"path":"面试经验/数据库/乐观锁和悲观锁.md","ref":"./面试经验/数据库/乐观锁和悲观锁.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","disqus","github-buttons","editlink","-ga","-highlight","prism","bibtex-indexed-cite","anchor-navigation-ex","page-footer-ex","splitter","todo","copy-code-button","expandable-chapters-small","-donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"ignore":["mermaid","eval-js"],"css":["prismjs/themes/prism-solarizedlight.css"]},"disqus":{"useIdentifier":false,"shortName":"MyGitBook"},"editlink":{"label":"Edit","multilingual":false,"base":"https://github.com/Michaelromic/MyGitBook/blob/master"},"todo":{},"page-footer-ex":{"copyright":"[Michaelromic](https://github.com/Michaelromic)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["MyGitBook"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"bibtex-indexed-cite":{"path":"/"},"github-buttons":{"buttons":[{"user":"Michaelromic","repo":"MyGitBook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Michaelromic","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"MichaelromicGitBook","bib":[],"gitbook":"*"},"file":{"path":"面试经验/数据库/MVCC及事务隔离性.md","mtime":"2019-05-15T09:02:48.941Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-15T09:03:43.287Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

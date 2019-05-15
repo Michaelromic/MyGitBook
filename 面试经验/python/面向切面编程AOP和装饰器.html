@@ -1,0 +1,1143 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>面向切面编程AOP和装饰器 · MichaelromicGitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Michaelromic">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-bibtex-indexed-cite/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="新式类和经典类.html" />
+    
+    
+    <link rel="prev" href="迭代器和生成器.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Michaelromic","repo":"MyGitBook","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">linux</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../linux/1-1.html">
+            
+                <a href="../../linux/1-1.html">
+            
+                    
+                    1-1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">nodejs</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../nodejs/koa.html">
+            
+                <a href="../../nodejs/koa.html">
+            
+                    
+                    koa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../nodejs/const,var,let区别.html">
+            
+                <a href="../../nodejs/const,var,let区别.html">
+            
+                    
+                    const,var,let区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../nodejs/node-rsa加密解密.html">
+            
+                <a href="../../nodejs/node-rsa加密解密.html">
+            
+                    
+                    node-rsa加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../nodejs/node-mysql.html">
+            
+                <a href="../../nodejs/node-mysql.html">
+            
+                    
+                    node-mysql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">区块链</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../区块链/bitcoin/">
+            
+                <a href="../../区块链/bitcoin/">
+            
+                    
+                    bitcoin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../区块链/bitcoin/">
+            
+                <a href="../../区块链/bitcoin/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../区块链/eos/">
+            
+                <a href="../../区块链/eos/">
+            
+                    
+                    eos
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../区块链/eos/">
+            
+                <a href="../../区块链/eos/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../区块链/ethereum/">
+            
+                <a href="../../区块链/ethereum/">
+            
+                    
+                    ethereum
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../区块链/ethereum/">
+            
+                <a href="../../区块链/ethereum/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../../区块链/其他/">
+            
+                <a href="../../区块链/其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.4.1" data-path="../../区块链/其他/">
+            
+                <a href="../../区块链/其他/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">文档编写</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../文档编写/markdown语法.html">
+            
+                <a href="../../文档编写/markdown语法.html">
+            
+                    
+                    markdown语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">面试经验</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="元类metaclass.html">
+            
+                <a href="元类metaclass.html">
+            
+                    
+                    元类metaclass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="迭代器和生成器.html">
+            
+                <a href="迭代器和生成器.html">
+            
+                    
+                    迭代器和生成器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.1.3" data-path="面向切面编程AOP和装饰器.html">
+            
+                <a href="面向切面编程AOP和装饰器.html">
+            
+                    
+                    面向切面编程AOP和装饰器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="新式类和经典类.html">
+            
+                <a href="新式类和经典类.html">
+            
+                    
+                    新式类和经典类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="单例模式.html">
+            
+                <a href="单例模式.html">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="Python的List的实现.html">
+            
+                <a href="Python的List的实现.html">
+            
+                    
+                    Python的List的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.7" data-path="Python2和3的区别.html">
+            
+                <a href="Python2和3的区别.html">
+            
+                    
+                    Python2和3的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../操作系统/">
+            
+                <a href="../操作系统/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.2.1" data-path="../操作系统/Linux的IO多路复用select,poll,epoll.html">
+            
+                <a href="../操作系统/Linux的IO多路复用select,poll,epoll.html">
+            
+                    
+                    Linux的IO多路复用select,poll,epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.2" data-path="../操作系统/调度算法.html">
+            
+                <a href="../操作系统/调度算法.html">
+            
+                    
+                    调度算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.3" data-path="../操作系统/死锁.html">
+            
+                <a href="../操作系统/死锁.html">
+            
+                    
+                    死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.4" data-path="../操作系统/页面置换算法.html">
+            
+                <a href="../操作系统/页面置换算法.html">
+            
+                    
+                    页面置换算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2.5" data-path="../操作系统/epoll的边沿触发模式ET和水平触发模式LT.html">
+            
+                <a href="../操作系统/epoll的边沿触发模式ET和水平触发模式LT.html">
+            
+                    
+                    epoll的边沿触发模式ET和水平触发模式LT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../数据库/">
+            
+                <a href="../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.3.1" data-path="../数据库/数据库索引.html">
+            
+                <a href="../数据库/数据库索引.html">
+            
+                    
+                    数据库索引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.2" data-path="../数据库/乐观锁和悲观锁.html">
+            
+                <a href="../数据库/乐观锁和悲观锁.html">
+            
+                    
+                    乐观锁和悲观锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3.3" data-path="../数据库/MVCC及事务隔离性.html">
+            
+                <a href="../数据库/MVCC及事务隔离性.html">
+            
+                    
+                    MVCC及事务隔离性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../网络/">
+            
+                <a href="../网络/">
+            
+                    
+                    网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.4.1" data-path="../网络/三次握手和四次挥手.html">
+            
+                <a href="../网络/三次握手和四次挥手.html">
+            
+                    
+                    三次握手和四次挥手
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../如何写出一份专业的技术简历.html">
+            
+                <a href="../如何写出一份专业的技术简历.html">
+            
+                    
+                    如何写出一份专业的技术简历
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">测试工具</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../测试工具/jmeter压力测试.html">
+            
+                <a href="../../测试工具/jmeter压力测试.html">
+            
+                    
+                    jmeter压力测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">版本控制</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../版本控制/git常用命令.html">
+            
+                <a href="../../版本控制/git常用命令.html">
+            
+                    
+                    git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">设计与架构</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../设计与架构/RESTful.html">
+            
+                <a href="../../设计与架构/RESTful.html">
+            
+                    
+                    RESTful
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">python</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../python/python爬虫/">
+            
+                <a href="../../python/python爬虫/">
+            
+                    
+                    python爬虫
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../python/python爬虫/">
+            
+                <a href="../../python/python爬虫/">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../python/python爬虫/编码+文件打开方式+文件命名方式.html">
+            
+                <a href="../../python/python爬虫/编码+文件打开方式+文件命名方式.html">
+            
+                    
+                    编码+文件打开方式+文件命名方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../../python/使用pandas库将excel中多个sheet拆分为单个文件.html">
+            
+                <a href="../../python/使用pandas库将excel中多个sheet拆分为单个文件.html">
+            
+                    
+                    使用pandas库将excel中多个sheet拆分为单个文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../../python/Django.html">
+            
+                <a href="../../python/Django.html">
+            
+                    
+                    Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../../python/Django去操作已经存在的数据库.html">
+            
+                <a href="../../python/Django去操作已经存在的数据库.html">
+            
+                    
+                    Django去操作已经存在的数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">辅助工具</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../辅助工具/在线工具.html">
+            
+                <a href="../../辅助工具/在线工具.html">
+            
+                    
+                    在线工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">mysql</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../../mysql/MySQL两种存储引擎_MyISAM和InnoDB简单总结.html">
+            
+                <a href="../../mysql/MySQL两种存储引擎_MyISAM和InnoDB简单总结.html">
+            
+                    
+                    MySQL两种存储引擎:MyISAM和InnoDB简单总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >面向切面编程AOP和装饰器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#aop"><b></b>AOP</a></li><li><span class="title-icon "></span><a href="#&#x88C5;&#x9970;&#x5668;"><b></b>&#x88C5;&#x9970;&#x5668;</a></li></ul></div><a href="#aop" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="aop"><a name="aop" class="anchor-navigation-ex-anchor" href="#aop"><i class="fa fa-link" aria-hidden="true"></i></a>AOP</h1>
+<h4 id="&#x8FD9;&#x79CD;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x52A8;&#x6001;&#x5730;&#x5C06;&#x4EE3;&#x7801;&#x5207;&#x5165;&#x5230;&#x7C7B;&#x7684;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x3001;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x7F16;&#x7A0B;&#x601D;&#x60F3;&#x5C31;&#x662F;&#x9762;&#x5411;&#x5207;&#x9762;&#x7684;&#x7F16;&#x7A0B;&#x3002;"><a name="&#x8FD9;&#x79CD;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x52A8;&#x6001;&#x5730;&#x5C06;&#x4EE3;&#x7801;&#x5207;&#x5165;&#x5230;&#x7C7B;&#x7684;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x3001;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x7F16;&#x7A0B;&#x601D;&#x60F3;&#x5C31;&#x662F;&#x9762;&#x5411;&#x5207;&#x9762;&#x7684;&#x7F16;&#x7A0B;&#x3002;" class="anchor-navigation-ex-anchor" href="#&#x8FD9;&#x79CD;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x52A8;&#x6001;&#x5730;&#x5C06;&#x4EE3;&#x7801;&#x5207;&#x5165;&#x5230;&#x7C7B;&#x7684;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x3001;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x7F16;&#x7A0B;&#x601D;&#x60F3;&#x5C31;&#x662F;&#x9762;&#x5411;&#x5207;&#x9762;&#x7684;&#x7F16;&#x7A0B;&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD9;&#x79CD;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x52A8;&#x6001;&#x5730;&#x5C06;&#x4EE3;&#x7801;&#x5207;&#x5165;&#x5230;&#x7C7B;&#x7684;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x3001;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x7F16;&#x7A0B;&#x601D;&#x60F3;&#x5C31;&#x662F;&#x9762;&#x5411;&#x5207;&#x9762;&#x7684;&#x7F16;&#x7A0B;&#x3002;</h4>
+<blockquote>
+<p>&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x7279;&#x70B9;&#x662F;&#x7EE7;&#x627F;&#x3001;&#x591A;&#x6001;&#x548C;&#x5C01;&#x88C5;&#x3002;&#x800C;&#x5C01;&#x88C5;&#x5C31;&#x8981;&#x6C42;&#x5C06;&#x529F;&#x80FD;&#x5206;&#x6563;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#x53BB;&#xFF0C;&#x8FD9;&#x5728;&#x8F6F;&#x4EF6;&#x8BBE;&#x8BA1;&#x4E2D;&#x5F80;&#x5F80;&#x79F0;&#x4E3A;&#x804C;&#x8D23;&#x5206;&#x914D;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x8BA9;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x8BBE;&#x8BA1;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x6837;&#x4EE3;&#x7801;&#x5C31;&#x5206;&#x6563;&#x5230;&#x4E00;&#x4E2A;&#x4E2A;&#x7684;&#x7C7B;&#x4E2D;&#x53BB;&#x4E86;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x597D;&#x5904;&#x662F;&#x964D;&#x4F4E;&#x4E86;&#x4EE3;&#x7801;&#x7684;&#x590D;&#x6742;&#x7A0B;&#x5EA6;&#xFF0C;&#x4F7F;&#x7C7B;&#x53EF;&#x91CD;&#x7528;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x4EBA;&#x4EEC;&#x4E5F;&#x53D1;&#x73B0;&#xFF0C;&#x5728;&#x5206;&#x6563;&#x4EE3;&#x7801;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x4E5F;&#x589E;&#x52A0;&#x4E86;&#x4EE3;&#x7801;&#x7684;&#x91CD;&#x590D;&#x6027;&#x3002;&#x4EC0;&#x4E48;&#x610F;&#x601D;&#x5462;&#xFF1F;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4E24;&#x4E2A;&#x7C7B;&#x4E2D;&#xFF0C;&#x53EF;&#x80FD;&#x90FD;&#x9700;&#x8981;&#x5728;&#x6BCF;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x505A;&#x65E5;&#x5FD7;&#x3002;&#x6309;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x8BBE;&#x8BA1;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5FC5;&#x987B;&#x5728;&#x4E24;&#x4E2A;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#x90FD;&#x52A0;&#x5165;&#x65E5;&#x5FD7;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x4E5F;&#x8BB8;&#x4ED6;&#x4EEC;&#x662F;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x4F46;&#x5C31;&#x662F;&#x56E0;&#x4E3A;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x8BBE;&#x8BA1;&#x8BA9;&#x7C7B;&#x4E0E;&#x7C7B;&#x4E4B;&#x95F4;&#x65E0;&#x6CD5;&#x8054;&#x7CFB;&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x5C06;&#x8FD9;&#x4E9B;&#x91CD;&#x590D;&#x7684;&#x4EE3;&#x7801;&#x7EDF;&#x4E00;&#x8D77;&#x6765;&#x3002;</p>
+<p>&#x4E5F;&#x8BB8;&#x6709;&#x4EBA;&#x4F1A;&#x8BF4;&#xFF0C;&#x90A3;&#x597D;&#x529E;&#x554A;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x5199;&#x5728;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x7C7B;&#x72EC;&#x7ACB;&#x7684;&#x65B9;&#x6CD5;&#x91CC;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5728;&#x8FD9;&#x4E24;&#x4E2A;&#x7C7B;&#x4E2D;&#x8C03;&#x7528;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x8FD9;&#x6837;&#x4E00;&#x6765;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x7C7B;&#x8DDF;&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;&#x72EC;&#x7ACB;&#x7684;&#x7C7B;&#x5C31;&#x6709;&#x8026;&#x5408;&#x4E86;&#xFF0C;&#x5B83;&#x7684;&#x6539;&#x53D8;&#x4F1A;&#x5F71;&#x54CD;&#x8FD9;&#x4E24;&#x4E2A;&#x7C7B;&#x3002;&#x90A3;&#x4E48;&#xFF0C;&#x6709;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x529E;&#x6CD5;&#xFF0C;&#x80FD;&#x8BA9;&#x6211;&#x4EEC;&#x5728;&#x9700;&#x8981;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x968F;&#x610F;&#x5730;&#x52A0;&#x5165;&#x4EE3;&#x7801;&#x5462;&#xFF1F;&#x8FD9;&#x79CD;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x52A8;&#x6001;&#x5730;&#x5C06;&#x4EE3;&#x7801;&#x5207;&#x5165;&#x5230;&#x7C7B;&#x7684;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x3001;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x4E0A;&#x7684;&#x7F16;&#x7A0B;&#x601D;&#x60F3;&#x5C31;&#x662F;&#x9762;&#x5411;&#x5207;&#x9762;&#x7684;&#x7F16;&#x7A0B;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x800C;&#x8A00;&#xFF0C;&#x6211;&#x4EEC;&#x7BA1;&#x5207;&#x5165;&#x5230;&#x6307;&#x5B9A;&#x7C7B;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x7684;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x79F0;&#x4E3A;&#x5207;&#x9762;&#xFF0C;&#x800C;&#x5207;&#x5165;&#x5230;&#x54EA;&#x4E9B;&#x7C7B;&#x3001;&#x54EA;&#x4E9B;&#x65B9;&#x6CD5;&#x5219;&#x53EB;&#x5207;&#x5165;&#x70B9;&#x3002;&#x6709;&#x4E86;AOP&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x628A;&#x51E0;&#x4E2A;&#x7C7B;&#x5171;&#x6709;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x62BD;&#x53D6;&#x5230;&#x4E00;&#x4E2A;&#x5207;&#x7247;&#x4E2D;&#xFF0C;&#x7B49;&#x5230;&#x9700;&#x8981;&#x65F6;&#x518D;&#x5207;&#x5165;&#x5BF9;&#x8C61;&#x4E2D;&#x53BB;&#xFF0C;&#x4ECE;&#x800C;&#x6539;&#x53D8;&#x5176;&#x539F;&#x6709;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x770B;&#x6765;&#xFF0C;AOP&#x5176;&#x5B9E;&#x53EA;&#x662F;OOP&#x7684;&#x8865;&#x5145;&#x800C;&#x5DF2;&#x3002;OOP&#x4ECE;&#x6A2A;&#x5411;&#x4E0A;&#x533A;&#x5206;&#x51FA;&#x4E00;&#x4E2A;&#x4E2A;&#x7684;&#x7C7B;&#x6765;&#xFF0C;&#x800C;AOP&#x5219;&#x4ECE;&#x7EB5;&#x5411;&#x4E0A;&#x5411;&#x5BF9;&#x8C61;&#x4E2D;&#x52A0;&#x5165;&#x7279;&#x5B9A;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x6709;&#x4E86;AOP&#xFF0C;OOP&#x53D8;&#x5F97;&#x7ACB;&#x4F53;&#x4E86;&#x3002;&#x5982;&#x679C;&#x52A0;&#x4E0A;&#x65F6;&#x95F4;&#x7EF4;&#x5EA6;&#xFF0C;AOP&#x4F7F;OOP&#x7531;&#x539F;&#x6765;&#x7684;&#x4E8C;&#x7EF4;&#x53D8;&#x4E3A;&#x4E09;&#x7EF4;&#x4E86;&#xFF0C;&#x7531;&#x5E73;&#x9762;&#x53D8;&#x6210;&#x7ACB;&#x4F53;&#x4E86;&#x3002;&#x4ECE;&#x6280;&#x672F;&#x4E0A;&#x6765;&#x8BF4;&#xFF0C;AOP&#x57FA;&#x672C;&#x4E0A;&#x662F;&#x901A;&#x8FC7;&#x4EE3;&#x7406;&#x673A;&#x5236;&#x5B9E;&#x73B0;&#x7684;&#x3002;      </p>
+<p>AOP&#x5728;&#x7F16;&#x7A0B;&#x5386;&#x53F2;&#x4E0A;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x91CC;&#x7A0B;&#x7891;&#x5F0F;&#x7684;&#xFF0C;&#x5BF9;OOP&#x7F16;&#x7A0B;&#x662F;&#x4E00;&#x79CD;&#x5341;&#x5206;&#x6709;&#x76CA;&#x7684;&#x8865;&#x5145;&#x3002;</p>
+</blockquote>
+<hr>
+<h1 id="&#x88C5;&#x9970;&#x5668;"><a name="&#x88C5;&#x9970;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x88C5;&#x9970;&#x5668;</h1>
+<p><a href="http://kissg.me/2016/07/16/translation-about-python-decorator/" target="_blank">http://kissg.me/2016/07/16/translation-about-python-decorator/</a>
+<a href="https://foofish.net/python-decorator.html" target="_blank">https://foofish.net/python-decorator.html</a></p>
+<p>&#x88C5;&#x9970;&#x5668;&#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x8457;&#x540D;&#x7684;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#xFF0C;&#x7ECF;&#x5E38;&#x88AB;&#x7528;&#x4E8E;&#x6709;&#x5207;&#x9762;&#x9700;&#x6C42;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x8F83;&#x4E3A;&#x7ECF;&#x5178;&#x7684;&#x6709;&#x63D2;&#x5165;&#x65E5;&#x5FD7;&#x3001;&#x6027;&#x80FD;&#x6D4B;&#x8BD5;&#x3001;&#x4E8B;&#x52A1;&#x5904;&#x7406;&#x7B49;&#x3002;&#x88C5;&#x9970;&#x5668;&#x662F;&#x89E3;&#x51B3;&#x8FD9;&#x7C7B;&#x95EE;&#x9898;&#x7684;&#x7EDD;&#x4F73;&#x8BBE;&#x8BA1;&#xFF0C;&#x6709;&#x4E86;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x62BD;&#x79BB;&#x51FA;&#x5927;&#x91CF;&#x51FD;&#x6570;&#x4E2D;&#x4E0E;&#x51FD;&#x6570;&#x529F;&#x80FD;&#x672C;&#x8EAB;&#x65E0;&#x5173;&#x7684;&#x96F7;&#x540C;&#x4EE3;&#x7801;&#x5E76;&#x7EE7;&#x7EED;&#x91CD;&#x7528;&#x3002;
+&#x88C5;&#x9970;&#x5668;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x4E3A;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<h4 id="&#x88C5;&#x9970;&#x5668;&#x5C31;&#x662F;&#x5305;&#x88C5;&#x7EB8;wrapper-&#x4E5F;&#x5C31;&#x662F;&#x8BF4;-&#x88C5;&#x9970;&#x5668;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x51FD;&#x6570;&#x524D;&#x540E;&#x6267;&#x884C;&#x4EE3;&#x7801;-&#x800C;&#x4E0D;&#x5BF9;&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x3002;"><a name="&#x88C5;&#x9970;&#x5668;&#x5C31;&#x662F;&#x5305;&#x88C5;&#x7EB8;wrapper-&#x4E5F;&#x5C31;&#x662F;&#x8BF4;-&#x88C5;&#x9970;&#x5668;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x51FD;&#x6570;&#x524D;&#x540E;&#x6267;&#x884C;&#x4EE3;&#x7801;-&#x800C;&#x4E0D;&#x5BF9;&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x3002;" class="anchor-navigation-ex-anchor" href="#&#x88C5;&#x9970;&#x5668;&#x5C31;&#x662F;&#x5305;&#x88C5;&#x7EB8;wrapper-&#x4E5F;&#x5C31;&#x662F;&#x8BF4;-&#x88C5;&#x9970;&#x5668;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x51FD;&#x6570;&#x524D;&#x540E;&#x6267;&#x884C;&#x4EE3;&#x7801;-&#x800C;&#x4E0D;&#x5BF9;&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x88C5;&#x9970;&#x5668;&#x5C31;&#x662F;&#x201D;&#x5305;&#x88C5;&#x7EB8;(wrapper)&#x201D;, &#x4E5F;&#x5C31;&#x662F;&#x8BF4;, &#x88C5;&#x9970;&#x5668;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x51FD;&#x6570;&#x524D;&#x540E;&#x6267;&#x884C;&#x4EE3;&#x7801;, &#x800C;&#x4E0D;&#x5BF9;&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x3002;</h4>
+<ul>
+<li><h5 id="&#x88C5;&#x9970;&#x5668;&#x793A;&#x4F8B;"><a name="&#x88C5;&#x9970;&#x5668;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x88C5;&#x9970;&#x5668;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x88C5;&#x9970;&#x5668;&#x793A;&#x4F8B;</h5>
+</li>
+</ul>
+<pre class="language-"><code>def use_logging(func):
+
+    def wrapper():
+        logging.warn(&quot;%s is running&quot; % func.__name__)
+        return func()
+    return wrapper
+
+def foo():
+    print(&quot;i am foo&quot;)
+
+a = use_logging(foo)
+a()
+</code></pre><ul>
+<li><h5 id="&#x4F7F;&#x7528;&#x8BED;&#x6CD5;&#x7CD6;"><a name="&#x4F7F;&#x7528;&#x8BED;&#x6CD5;&#x7CD6;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x8BED;&#x6CD5;&#x7CD6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;@&#x8BED;&#x6CD5;&#x7CD6;</h5>
+</li>
+</ul>
+<pre class="language-"><code>def use_logging(func):
+
+    def wrapper():
+        logging.warn(&quot;%s is running&quot; % func.__name__)
+        return func()
+    return wrapper
+
+@use_logging
+def foo():
+    print(&quot;i am foo&quot;)
+
+foo()
+</code></pre><p>use_logging &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5B83;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x628A;&#x6267;&#x884C;&#x771F;&#x6B63;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x7684;&#x51FD;&#x6570; func &#x5305;&#x88F9;&#x5728;&#x5176;&#x4E2D;&#xFF0C;&#x770B;&#x8D77;&#x6765;&#x50CF; foo &#x88AB; use_logging &#x88C5;&#x9970;&#x4E86;&#x4E00;&#x6837;&#xFF0C;use_logging &#x8FD4;&#x56DE;&#x7684;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x540D;&#x5B57;&#x53EB; wrapper&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x51FD;&#x6570;&#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;&#x65F6; &#xFF0C;&#x88AB;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x6A2A;&#x5207;&#x9762;&#xFF0C;&#x8FD9;&#x79CD;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x88AB;&#x79F0;&#x4E3A;&#x9762;&#x5411;&#x5207;&#x9762;&#x7684;&#x7F16;&#x7A0B;&#x3002;</p>
+<ul>
+<li><h5 id="&#x88C5;&#x9970;&#x5668;&#x53EF;&#x4EE5;&#x5E26;&#x53C2;&#x6570;&#xFF1A;"><a name="&#x88C5;&#x9970;&#x5668;&#x53EF;&#x4EE5;&#x5E26;&#x53C2;&#x6570;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x88C5;&#x9970;&#x5668;&#x53EF;&#x4EE5;&#x5E26;&#x53C2;&#x6570;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x88C5;&#x9970;&#x5668;&#x53EF;&#x4EE5;&#x5E26;&#x53C2;&#x6570;&#xFF1A;</h5>
+&#x8FD9;&#x91CC;wrapper&#x63A5;&#x6536;&#x7684;&#x53C2;&#x6570;&#x5C31;&#x662F;foo&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x8FD9;&#x91CC;&#x7528;<em>args, *</em>kwargs&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x88C5;&#x9970;&#x5668;&#x3002;<h4 id="&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x88C5;&#x9970;&#x5668;&#x3002;&#x4E00;&#x4E2A;&#x80FD;&#x63A5;&#x6536;&#x4EFB;&#x610F;&#x53C2;&#x6570;&#x7684;&#x88C5;&#x9970;&#x5668;&#x4EE3;&#x7801;&#x7247;&#x6BB5;decorator&#x3002;-&#x7136;&#x540E;-&#x6211;&#x4EEC;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x51FD;&#x6570;uselogging&#x6765;&#x521B;&#x5EFA;&#x6211;&#x4EEC;&#x7684;&#x88C5;&#x9970;&#x5668;-&#x4EE5;&#x63A5;&#x6536;&#x53C2;&#x6570;&#x3002;"><a name="&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x88C5;&#x9970;&#x5668;&#x3002;&#x4E00;&#x4E2A;&#x80FD;&#x63A5;&#x6536;&#x4EFB;&#x610F;&#x53C2;&#x6570;&#x7684;&#x88C5;&#x9970;&#x5668;&#x4EE3;&#x7801;&#x7247;&#x6BB5;decorator&#x3002;-&#x7136;&#x540E;-&#x6211;&#x4EEC;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x51FD;&#x6570;uselogging&#x6765;&#x521B;&#x5EFA;&#x6211;&#x4EEC;&#x7684;&#x88C5;&#x9970;&#x5668;-&#x4EE5;&#x63A5;&#x6536;&#x53C2;&#x6570;&#x3002;" class="anchor-navigation-ex-anchor" href="#&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x88C5;&#x9970;&#x5668;&#x3002;&#x4E00;&#x4E2A;&#x80FD;&#x63A5;&#x6536;&#x4EFB;&#x610F;&#x53C2;&#x6570;&#x7684;&#x88C5;&#x9970;&#x5668;&#x4EE3;&#x7801;&#x7247;&#x6BB5;decorator&#x3002;-&#x7136;&#x540E;-&#x6211;&#x4EEC;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x51FD;&#x6570;uselogging&#x6765;&#x521B;&#x5EFA;&#x6211;&#x4EEC;&#x7684;&#x88C5;&#x9970;&#x5668;-&#x4EE5;&#x63A5;&#x6536;&#x53C2;&#x6570;&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x88C5;&#x9970;&#x5668;&#x3002;&#x4E00;&#x4E2A;&#x80FD;&#x63A5;&#x6536;&#x4EFB;&#x610F;&#x53C2;&#x6570;&#x7684;&#x88C5;&#x9970;&#x5668;&#x4EE3;&#x7801;&#x7247;&#x6BB5;(decorator)&#x3002; &#x7136;&#x540E;, &#x6211;&#x4EEC;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x51FD;&#x6570;(use_logging)&#x6765;&#x521B;&#x5EFA;&#x6211;&#x4EEC;&#x7684;&#x88C5;&#x9970;&#x5668;, &#x4EE5;&#x63A5;&#x6536;&#x53C2;&#x6570;&#x3002;</h4>
+@use_logging(level=&quot;warn&quot;)&#x7B49;&#x4EF7;&#x4E8E;@decorator (&#x5F53;&#x7136;&#x8FD8;&#x662F;&#x4F1A;&#x4F18;&#x5148;&#x6267;&#x884C;use_logging&#x7684;&#x5185;&#x5BB9;)</li>
+</ul>
+<pre class="language-"><code>def use_logging(level):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            if level == &quot;warn&quot;:
+                logging.warn(&quot;%s is running&quot; % func.__name__)
+            elif level == &quot;info&quot;:
+                logging.info(&quot;%s is running&quot; % func.__name__)
+            return func(*args)
+        return wrapper
+
+    return decorator
+
+@use_logging(level=&quot;warn&quot;)
+def foo(name=&apos;foo&apos;):
+    print(&quot;i am %s&quot; % name)
+
+foo()
+</code></pre><ul>
+<li><h5 id="&#x7C7B;&#x88C5;&#x9970;&#x5668;&#xFF1A;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x7C7B;&#xFF0C;&#x76F8;&#x6BD4;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x5177;&#x6709;&#x7075;&#x6D3B;&#x5EA6;&#x5927;&#x3001;&#x9AD8;&#x5185;&#x805A;&#x3001;&#x5C01;&#x88C5;&#x6027;&#x7B49;&#x4F18;&#x70B9;&#x3002;&#x4F7F;&#x7528;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x4E3B;&#x8981;&#x4F9D;&#x9760;&#x7C7B;&#x7684;call&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x4F7F;&#x7528;--&#x5F62;&#x5F0F;&#x5C06;&#x88C5;&#x9970;&#x5668;&#x9644;&#x52A0;&#x5230;&#x51FD;&#x6570;&#x4E0A;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x3002;"><a name="&#x7C7B;&#x88C5;&#x9970;&#x5668;&#xFF1A;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x7C7B;&#xFF0C;&#x76F8;&#x6BD4;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x5177;&#x6709;&#x7075;&#x6D3B;&#x5EA6;&#x5927;&#x3001;&#x9AD8;&#x5185;&#x805A;&#x3001;&#x5C01;&#x88C5;&#x6027;&#x7B49;&#x4F18;&#x70B9;&#x3002;&#x4F7F;&#x7528;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x4E3B;&#x8981;&#x4F9D;&#x9760;&#x7C7B;&#x7684;call&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x4F7F;&#x7528;--&#x5F62;&#x5F0F;&#x5C06;&#x88C5;&#x9970;&#x5668;&#x9644;&#x52A0;&#x5230;&#x51FD;&#x6570;&#x4E0A;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x3002;" class="anchor-navigation-ex-anchor" href="#&#x7C7B;&#x88C5;&#x9970;&#x5668;&#xFF1A;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x7C7B;&#xFF0C;&#x76F8;&#x6BD4;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x5177;&#x6709;&#x7075;&#x6D3B;&#x5EA6;&#x5927;&#x3001;&#x9AD8;&#x5185;&#x805A;&#x3001;&#x5C01;&#x88C5;&#x6027;&#x7B49;&#x4F18;&#x70B9;&#x3002;&#x4F7F;&#x7528;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x4E3B;&#x8981;&#x4F9D;&#x9760;&#x7C7B;&#x7684;call&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x4F7F;&#x7528;--&#x5F62;&#x5F0F;&#x5C06;&#x88C5;&#x9970;&#x5668;&#x9644;&#x52A0;&#x5230;&#x51FD;&#x6570;&#x4E0A;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7C7B;&#x88C5;&#x9970;&#x5668;&#xFF1A;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x7C7B;&#xFF0C;&#x76F8;&#x6BD4;&#x51FD;&#x6570;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x5177;&#x6709;&#x7075;&#x6D3B;&#x5EA6;&#x5927;&#x3001;&#x9AD8;&#x5185;&#x805A;&#x3001;&#x5C01;&#x88C5;&#x6027;&#x7B49;&#x4F18;&#x70B9;&#x3002;&#x4F7F;&#x7528;&#x7C7B;&#x88C5;&#x9970;&#x5668;&#x4E3B;&#x8981;&#x4F9D;&#x9760;&#x7C7B;&#x7684;<strong>call</strong>&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x4F7F;&#x7528; @ &#x5F62;&#x5F0F;&#x5C06;&#x88C5;&#x9970;&#x5668;&#x9644;&#x52A0;&#x5230;&#x51FD;&#x6570;&#x4E0A;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x3002;</h5>
+</li>
+</ul>
+<pre class="language-"><code>class Foo(object):
+    def __init__(self, func):
+        self._func = func
+
+    def __call__(self):
+        print (&apos;class decorator runing&apos;)
+        self._func()
+        print (&apos;class decorator ending&apos;)
+
+@Foo
+def bar():
+    print (&apos;bar&apos;)
+
+bar()
+&apos;&apos;&apos;&#x8F93;&#x51FA;
+class decorator runing
+bar
+class decorator ending
+&apos;&apos;&apos;
+</code></pre><ul>
+<li><h5 id="&#x5F15;&#x5165;functools&#x6A21;&#x5757;-&#x8BE5;&#x6A21;&#x5757;&#x5305;&#x542B;&#x7684;funtoolswraps&#x51FD;&#x6570;-&#x53EF;&#x4EE5;&#x5C06;&#x88AB;&#x88C5;&#x9970;&#x51FD;&#x6570;&#x540D;&#x79F0;-&#x6A21;&#x5757;-&#x6587;&#x6863;&#x5B57;&#x7B26;&#x4E32;docstring&#x62F7;&#x8D1D;&#x5230;&#x5B83;&#x7684;&#x5305;&#x88C5;&#x7EB8;&#x4E2D;&#x3002;"><a name="&#x5F15;&#x5165;functools&#x6A21;&#x5757;-&#x8BE5;&#x6A21;&#x5757;&#x5305;&#x542B;&#x7684;funtoolswraps&#x51FD;&#x6570;-&#x53EF;&#x4EE5;&#x5C06;&#x88AB;&#x88C5;&#x9970;&#x51FD;&#x6570;&#x540D;&#x79F0;-&#x6A21;&#x5757;-&#x6587;&#x6863;&#x5B57;&#x7B26;&#x4E32;docstring&#x62F7;&#x8D1D;&#x5230;&#x5B83;&#x7684;&#x5305;&#x88C5;&#x7EB8;&#x4E2D;&#x3002;" class="anchor-navigation-ex-anchor" href="#&#x5F15;&#x5165;functools&#x6A21;&#x5757;-&#x8BE5;&#x6A21;&#x5757;&#x5305;&#x542B;&#x7684;funtoolswraps&#x51FD;&#x6570;-&#x53EF;&#x4EE5;&#x5C06;&#x88AB;&#x88C5;&#x9970;&#x51FD;&#x6570;&#x540D;&#x79F0;-&#x6A21;&#x5757;-&#x6587;&#x6863;&#x5B57;&#x7B26;&#x4E32;docstring&#x62F7;&#x8D1D;&#x5230;&#x5B83;&#x7684;&#x5305;&#x88C5;&#x7EB8;&#x4E2D;&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F15;&#x5165;functools&#x6A21;&#x5757;, &#x8BE5;&#x6A21;&#x5757;&#x5305;&#x542B;&#x7684;funtools.wraps()&#x51FD;&#x6570;, &#x53EF;&#x4EE5;&#x5C06;&#x88AB;&#x88C5;&#x9970;&#x51FD;&#x6570;&#x540D;&#x79F0;, &#x6A21;&#x5757;, &#x6587;&#x6863;&#x5B57;&#x7B26;&#x4E32;(docstring)&#x62F7;&#x8D1D;&#x5230;&#x5B83;&#x7684;&#x5305;&#x88C5;&#x7EB8;&#x4E2D;&#x3002;</h5>
+wraps&#x672C;&#x8EAB;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x3002;
+&#x5982;&#x679C;&#x6CA1;&#x6709;wraps&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x8FD9;&#x91CC;&#x4F1A;&#x8F93;&#x51FA; &apos;with_logging&apos; &#x548C; None&#x3002;</li>
+</ul>
+<pre class="language-"><code>from functools import wraps
+def logged(func):
+    @wraps(func)
+    def with_logging(*args, **kwargs):
+        print func.__name__      # &#x8F93;&#x51FA; &apos;f&apos;
+        print func.__doc__       # &#x8F93;&#x51FA; &apos;does some math&apos;
+        return func(*args, **kwargs)
+    return with_logging
+
+@logged
+def f(x):
+   &quot;&quot;&quot;does some math&quot;&quot;&quot;
+   return x + x * x
+</code></pre><ul>
+<li><h5 id="&#x88C5;&#x9970;&#x5668;&#x987A;&#x5E8F;&#xFF1A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8FD8;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;"><a name="&#x88C5;&#x9970;&#x5668;&#x987A;&#x5E8F;&#xFF1A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8FD8;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x88C5;&#x9970;&#x5668;&#x987A;&#x5E8F;&#xFF1A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8FD8;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x88C5;&#x9970;&#x5668;&#x987A;&#x5E8F;&#xFF1A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x8FD8;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;</h5>
+</li>
+</ul>
+<pre class="language-"><code>@a
+@b
+@c
+def f ():
+    pass
+
+# &#x5B83;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x662F;&#x4ECE;&#x91CC;&#x5230;&#x5916;&#xFF0C;&#x6700;&#x5148;&#x8C03;&#x7528;&#x6700;&#x91CC;&#x5C42;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x6700;&#x540E;&#x8C03;&#x7528;&#x6700;&#x5916;&#x5C42;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5B83;&#x7B49;&#x6548;&#x4E8E;
+f = a(b(c(f)))
+</code></pre><ul>
+<li><h5 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;"><a name="&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;</h5>
+<ul>
+<li>&#x7ECF;&#x5178;&#x7684;&#x7528;&#x6CD5;&#x662F;, &#x62D3;&#x5C55;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x5E93;&#x51FD;&#x6570;(&#x4F60;&#x65E0;&#x6CD5;&#x4FEE;&#x6539;&#x5B83;)&#x7684;&#x529F;&#x80FD;, &#x6216;&#x8005;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;(&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x4E34;&#x65F6;&#x7684;, &#x4F60;&#x5E76;&#x4E0D;&#x60F3;&#x8FDB;&#x884C;&#x4FEE;&#x6539;).</li>
+<li>&#x5F53;&#x7136;, &#x88C5;&#x9970;&#x5668;&#x7684;&#x597D;&#x5904;&#x662F;, &#x5BF9;&#x4E8E;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x4E1C;&#x897F;, &#x5728;&#x4E0D;&#x91CD;&#x5199;&#x7684;&#x60C5;&#x51B5;, &#x9A6C;&#x4E0A;&#x53EF;&#x7528;.</li>
+</ul>
+</li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> <a href="https://github.com/Michaelromic" target="_blank">Michaelromic</a> </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2019-05-15 09:02:48 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="迭代器和生成器.html" class="navigation navigation-prev " aria-label="Previous page: 迭代器和生成器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="新式类和经典类.html" class="navigation navigation-next " aria-label="Next page: 新式类和经典类">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"面向切面编程AOP和装饰器","level":"6.1.3","depth":2,"next":{"title":"新式类和经典类","level":"6.1.4","depth":2,"path":"面试经验/python/新式类和经典类.md","ref":"./面试经验/python/新式类和经典类.md","articles":[]},"previous":{"title":"迭代器和生成器","level":"6.1.2","depth":2,"path":"面试经验/python/迭代器和生成器.md","ref":"./面试经验/python/迭代器和生成器.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","-sharing","disqus","github-buttons","editlink","-ga","-highlight","prism","bibtex-indexed-cite","anchor-navigation-ex","page-footer-ex","splitter","todo","copy-code-button","expandable-chapters-small","-donate"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"ignore":["mermaid","eval-js"],"css":["prismjs/themes/prism-solarizedlight.css"]},"disqus":{"useIdentifier":false,"shortName":"MyGitBook"},"editlink":{"label":"Edit","multilingual":false,"base":"https://github.com/Michaelromic/MyGitBook/blob/master"},"todo":{},"page-footer-ex":{"copyright":"[Michaelromic](https://github.com/Michaelromic)","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["MyGitBook"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"bibtex-indexed-cite":{"path":"/"},"github-buttons":{"buttons":[{"user":"Michaelromic","repo":"MyGitBook","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Michaelromic","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"bibCount":0,"variables":{},"title":"MichaelromicGitBook","bib":[],"gitbook":"*"},"file":{"path":"面试经验/python/面向切面编程AOP和装饰器.md","mtime":"2019-05-15T09:02:48.941Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-15T09:03:43.287Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
