@@ -171,7 +171,7 @@ PUT http://api.qc.com/v1/profile: 更新个人资料
 * 415 Unsupported Media Type - 如果请求中的内容类型是错误的
 * 422 Unprocessable Entity - 用来表示校验错误
 * 429 Too Many Requests - 由于请求频次达到上限而被拒绝访问
-
+* 500 服务器内部错误
 
 # 3. 总结
 好了，理解了RESTful的概念，究竟如何应用，这是个问题。根据项目的需求不同，我们的API设计规范也存在差别，完全看自身理解，满足自身需求，大的理念不变，根据需求制定项目的API规范就是好的RESTful。
