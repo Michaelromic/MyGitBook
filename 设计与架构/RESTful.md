@@ -152,7 +152,7 @@ DELETE 用来删除资源。
 比如：
 DELETE http://api.qc.com/v1/friends: 删除某人的好友 （在http parameter指定好友id）
 POST http://api.qc.com/v1/friends: 添加好友
-UPDATE http://api.qc.com/v1/profile: 更新个人资料
+PUT http://api.qc.com/v1/profile: 更新个人资料
 四、Server和Client之间传递某资源的一个表现形式，比如用JSON，XML传输文本，或者用JPG，WebP传输图片等。当然还可以压缩HTTP传输时的数据（on-wire data compression）。
 五、用 HTTP Status Code传递Server的状态信息。比如最常用的 200 表示成功，500 表示Server内部错误等。
 
