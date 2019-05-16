@@ -145,10 +145,12 @@ http://api.qc.com/v1/newsfeed: 获取某人的新鲜; 
 http://api.qc.com/v1/friends: 获取某人的好友列表;
 http://api.qc.com/v1/profile: 获取某人的详细信息;
 三、用HTTP协议里的动词来实现资源的添加，修改，删除等操作。即通过HTTP动词来实现资源的状态扭转：
-GET 用来获取资源，
-POST 用来新建资源（也可以用于更新资源），
-PUT 用来更新资源，
+GET 用来获取资源。
+POST 用来新建资源（也可以用于更新资源）。
+PUT 用来更新资源，客户端提供完整的资源数据。
+PATCH 更新资源，客户端提供部分的资源数据。
 DELETE 用来删除资源。
+
 比如：
 DELETE http://api.qc.com/v1/friends: 删除某人的好友 （在http parameter指定好友id）
 POST http://api.qc.com/v1/friends: 添加好友
